@@ -1,0 +1,10 @@
+:root {
+    --violet: #6f20f0;
+    --white: #ffffff;
+  }
+
+.leer-mas:hover{
+    background-color: var(--violet);
+    transform: translateY(-2px);
+    transition: all .5s;
+}
