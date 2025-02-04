@@ -1,19 +1,73 @@
+"use client"
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import seopng from '@/app/assets/seo.png';
-import installationPng from '@/app/assets/installation.png';
-import networkPng from '@/app/assets/network.png';
-import emailMarketingPng from '@/app/assets/emailmarketing.png';
-import announcementPng from '@/app/assets/announcement.png';
-import marketAnalysisPng from '@/app/assets/marketanalysis.png';
+import goAPng from '@/app/assets/goA.png'
+import socialMediaPng from '@/app/assets/socialMedia.png'
+import fondoAPng from '@/app/assets/fondoA.png'
+import Link from 'next/link';
+import { useState } from 'react';
 
 const Home = () => {
+
+    const [isVisible, setVisible] = useState(false)
+    const [animate, setAnimate] = useState(false)
+
+    const openFormFunc = () => {
+        setVisible(!isVisible)
+        setAnimate(false)
+        setTimeout(() => {
+            setAnimate(true)
+        }, 50)
+        console.log(isVisible)
+    }
+
     return(
         <>
-            <div className='go-image-container mx-auto pt-20 pb-20'>
+            {isVisible && (
+                <>
+                <div className='back-form'></div>
+                <div className={` form-container ${animate ? 'show' : ''} bg-slate-800`}>
+                <form className='p-4'>
+                    <h2 className='text-center text-xl'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
+                    <div className='mt-4 mb-6'>
+                        <div className='form-group flex items-center justify-between '>
+                                <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name"  placeholder='Nombre' required />
+                                <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Apellido' required />
+                        </div>
+                        <div className='form-group flex items-center justify-between '>
+                                <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name"  placeholder='Email' required />
+                                <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Movil o whatsapp' required />
+                        </div>
+                        <div className='form-group flex items-center justify-between '>
+                                <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name"  placeholder='Cargo (no obligatorio)' />
+                                <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Empresa (no obligatorio)' />
+                        </div>
+                        <div className='form-group flex items-center justify-between '>
+                                <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name"  placeholder='País' required />
+                        </div>
+                    </div>
+                    <div>
+                        <p>¿Necesitas una pagina web?</p>
+                        <div className='flex items-center'>
+                            <input type='checkbox'></input>
+                            <label className='mr-2'>Si</label>
+                        </div>
+                        <div className='flex items-center'>
+                            <input type='checkbox'></input>
+                            <label className='mr-2'>No</label>
+                        </div>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+                </div>
+                </>
+            )}
+            <div className='go-image-container mx-auto'>
                 <img src={prueba.src}></img>
             </div>
-            <div className='text-center'>
+            <div className='text-center pt-20 pb-20'>
+                <img className='mx-auto mb-12' src={goAPng.src} width={170} height={170} alt="" />
                 <h2 className='text-3xl text-violet-500 font-medium'>TRANSFORMA TU PRESENCIA DIGITAL CON NOSOTROS</h2>
                 <br></br>
                 <p className='text-2xl'>Creamos estrategias únicas y a medida para potenciar tu inversión y llevar tu negocio al siguiente nivel en el mundo digital.</p>
@@ -32,62 +86,86 @@ const Home = () => {
                         <p className='text-lg mt-5'>
                         El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
                         </p>
+                        <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/programacion">Conoce más</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='estrategies p-4 mt-10'>
                     <div>
-                        <img className='mx-auto' src={installationPng.src} alt=""></img>
+                        <img className='mx-auto' src={seopng.src} alt=""></img>
                     </div>
                     <div className='mt-6'>
                         <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
                         <p className='text-lg mt-5'>
                         El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
                         </p>
+                        <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/MercadoTendencias">Conoce más</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='estrategies p-4 mt-10'>
                     <div>
-                        <img className='mx-auto' src={networkPng.src} alt=""></img>
+                        <img className='mx-auto' src={seopng.src} alt=""></img>
                     </div>
                     <div className='mt-6'>
                         <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
                         <p className='text-lg mt-5'>
                         El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
                         </p>
+                        <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/MarketingDigital">Conoce más</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='estrategies p-4 mt-10'>
                     <div>
-                        <img className='mx-auto' src={emailMarketingPng.src} alt=""></img>
+                        <img className='mx-auto' src={seopng.src} alt=""></img>
                     </div>
                     <div className='mt-6'>
                         <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
                         <p className='text-lg mt-5'>
                         El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
                         </p>
+                         <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/Branding">Conoce más</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='estrategies p-4 mt-10'>
                     <div>
-                        <img className='mx-auto' src={announcementPng.src} alt=""></img>
+                        <img className='mx-auto' src={seopng.src} alt=""></img>
                     </div>
                     <div className='mt-6'>
                         <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
                         <p className='text-lg mt-5'>
                         El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
                         </p>
+                         <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/PublicidadDigital">Conoce más</Link>
+                        </div>
                     </div>
                 </div>
                 <div className='estrategies p-4 mt-10'>
                     <div>
-                        <img className='mx-auto' src={marketAnalysisPng.src} alt=""></img>
+                        <img className='mx-auto' src={seopng.src} alt=""></img>
                     </div>
                     <div className='mt-6'>
                         <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
-                        <p className='text-lg mt-5'>
-                        El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
-                        </p>
+                        <p className='text-lg mt-5'>El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.</p>
+                         <div className='text-center mt-12'>
+                            <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/RedesSociales">Conoce más</Link>
+                        </div>
+                     
                     </div>
+                </div>
+            </div>
+            <div className='relative'>
+                <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
+                <div className='publicidad-online-text absolute text-center'>
+                    <p className='text-4xl'>¿Quieres atraer más clientes a tu website? Lemon, Agencia de publicidad online</p>
+                    <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>
             </div>
             <div className='text-center mt-28 mx-auto' style={{width:'80vw'}}>
@@ -97,10 +175,49 @@ const Home = () => {
                 <br></br>
                 <p className='text-xl'>Somos un equipo comprometido con tu crecimiento. Nos enfocamos en los objetivos de tu negocio y en las expectativas de tus clientes, convirtiéndonos en tu Aliado Estratégico para impulsar tu presencia digital y alcanzar resultados escalables y medibles.</p>
             </div>
-            <div  className='mx-auto mt-12 mb-6' style={{width: '80%'}}><iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=F%C3%A9lix%20Bogado%20326+(Go%20Market)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-            <form>
-                
-            </form>
+            <div className='hacer-crecer-negocio mt-28 pt-20 pb-20'>
+                <div className='text-center'>
+                    <h1 className='text-4xl'>¿Cómo nuestra agencia de Publicidad Digital hacer crecer tu negocio?</h1>
+                </div>
+                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                    <div className='negocio-img mx-6 mt-6'>
+                        <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
+                        <p>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                    </div>
+                    <div className='negocio-img mx-6'>
+                        <img src={fondoAPng.src} alt=""></img>
+                    </div>
+                </div>
+                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                    <div className='negocio-img mx-6'>
+                        <img src={fondoAPng.src} alt=""></img>
+                    </div>
+                    <div className='negocio-img mx-6 mt-6'>
+                        <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
+                        <p>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                    </div>
+                </div>
+                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                    <div className='negocio-img mx-6 mt-6'>
+                        <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
+                        <p>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                    </div>
+                    <div className='negocio-img mx-6'>
+                        <img src={fondoAPng.src} alt=""></img>
+                    </div>
+                </div>
+            </div>
+            <div className='relative'>
+                <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
+                <div className='publicidad-online-text absolute text-center'>
+                    <h2 className='text-5xl'>Agencia de Marketing digital que te lleva al siguiente nivel</h2>
+                    <p className='text-3xl mt-10'>¿Trabajamos juntos?</p>
+                    <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
+                </div>
+            </div>
+            <div  className='mx-auto mt-12 mb-12' style={{width: '80%'}}>
+                <h3 className='text-3xl text-center mb-6'>Puedes encontrarnos en:</h3>
+                <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=F%C3%A9lix%20Bogado%20326+(Go%20Market)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
         </>
     )
 }

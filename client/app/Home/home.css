@@ -1,5 +1,60 @@
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    max-width: 700px;
+    width: 100%;
+    z-index: 9999;  /* Asegura que esté por encima de todo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Transiciones */
+  }
+  
+  .form-container.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Animación de aparición */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+
+    .back-form{
+        position: fixed;
+        top:0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        opacity: 0.7;
+    }
+
 .go-image-container{
-    width: 76vw;
+    width: 100%;
 }
 
 .estrategies-container{
@@ -13,4 +68,45 @@
 
 .ds{
     width: 700px;
+}
+
+.conoce-mas:hover{
+    transform: translateY(20vh);
+    background-color: #6937BE;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: all .7s;
+}
+
+.publicidad-online{
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(.5);
+}
+
+.publicidad-online-text{
+    top:30%;
+    bottom:50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.publicidad-online-text button:hover{
+    background-color: white;
+    color:#6937BE;
+    transition: all .5s;
+}
+
+.hacer-crecer-negocio{
+    background-color: #334663;;
+}
+
+.negocio-img{
+    width: 100%;
+}
+
+.negocio-img img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
 }

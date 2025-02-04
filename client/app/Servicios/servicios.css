@@ -1,0 +1,32 @@
+.serv-first-secundary{
+    width: 500px;
+}
+
+.as{
+    background-color: #15253F;
+}
+
+.servicios-container{
+    width: 90vw;
+}
+
+.servicios{
+    width: 24vw;
+}
+
+.ss{
+    background-color: #334663;
+}
+
+.ssb{
+   background-color: #0e2346
+}
+
+.ssb > div{
+    width: 35vw;
+}
+
+.somos-agencia{
+    background-color: black;
+    background-image: url("../assets/windows-w79mIrYKcK4-unsplash.jpg");
+}

@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import '@/app/components/NavBar/navbar.css'
 import UserContext from "@/app/context/sessionContext"
 import Link from "next/link"
-import twitterPng from '@/app/assets/twitter.png'
+import goBPng from '@/app/assets/goB.png'
 import userPng from '@/app/assets/user.png'
 import googlePng from '@/app/assets/google.png'
 import applePng from '@/app/assets/apple.png'
@@ -95,14 +95,12 @@ const NavBar = () => {
         <>
         {openSessionForm && <SessionForm/>}
         <nav className="nav flex items-center justify-between bg-slate-800 pl-10 pr-10">
-            <img src={twitterPng.src} width={50} height={50} alt=""/>
+            <img src={goBPng.src} width={120} height={120} alt=""/>
             <div className="flex justify-between" style={{width:'60%'}}>
                 <Link href="/Home" className="pt-4 pb-4 pl-5 pr-5 text-xl">Inicio</Link>
-                <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</button>
-                <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</button>
-                <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Contacto</button>
                 <Link href="/Blogs" className="pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
-                <Link href="/Events" className="pt-4 pb-4 pl-5 pr-5 text-xl">Eventos</Link>
+                <Link href="/Servicios" className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</Link>
+                <Link href="/Nosotros" className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
             </div>
             {session.length <= 0 ? 
             <button onClick={() => openForms()}>
@@ -119,3 +117,14 @@ const NavBar = () => {
 }
 
 export default NavBar;
+
+/**
+ * <Link href="/Home" className="pt-4 pb-4 pl-5 pr-5 text-xl">Inicio</Link>
+ *   <Link href="/Blogs" className="pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
+ *    <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</button>
+      <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</button>
+
+
+      <Link href="/Events" className="pt-4 pb-4 pl-5 pr-5 text-xl">Eventos</Link>
+                <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Contacto</button>
+ */
