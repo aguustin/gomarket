@@ -26,8 +26,8 @@ const Home = () => {
         <>
             {isVisible && (
                 <>
-                <div className='back-form'></div>
-                <div className={` form-container ${animate ? 'show' : ''} bg-slate-800`}>
+                <div className={`back-form ${animate ? 'show' : ''} bg-slate-800`} onClick={() => setVisible(false)}></div>
+                <div className={`form-container ${animate ? 'show' : ''} bg-slate-800`}>
                 <form className='p-4'>
                     <h2 className='text-center text-xl'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
                     <div className='mt-4 mb-6'>
@@ -49,16 +49,74 @@ const Home = () => {
                     </div>
                     <div>
                         <p>¿Necesitas una pagina web?</p>
-                        <div className='flex items-center'>
+                        <div className='inline-block items-center mt-1'>
                             <input type='checkbox'></input>
                             <label className='mr-2'>Si</label>
                         </div>
-                        <div className='flex items-center'>
+                        <div className='inline-block items-center'>
                             <input type='checkbox'></input>
                             <label className='mr-2'>No</label>
                         </div>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <div className='block mt-3'>
+                        <p>Servicio(s) de interés</p>
+                        <div className='flex justify-between mt-1'>
+                            <div className='block'>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Pagina Web</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Aplicacion movil</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Consultoría en Marketing Digital</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Branding e Identidad Visual</label>
+                                </div>
+                            </div>
+                            <div className='block'>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Estrategias de Publicidad Digital</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Contenido para Redes Sociales</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Investigación de Mercado</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Análisis de Tendencias</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='block mt-3'>
+                        <p>¿Estarías disponible para una videollamada con nuestro equipo?</p>
+                        <div className='flex justify-between mt-1'>
+                            <div className='block'>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>Si</label>
+                                </div>
+                                <div className='mt-2'>
+                                    <input type='checkbox'></input>
+                                    <label className='mr-2'>No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea className='mt-6 bg-slate-900 p-1' name="description" placeholder="Por favor guíanos ¿Cómo podemos ayudarte?" rows={6} style={{width: '100%'}} maxLength={250}></textarea>
+                    <label className='mt-2'>Limite de caracteres 250</label>
+                    <button className='mt-6 bg-lime-700' type="submit">Enviar</button>
                 </form>
                 </div>
                 </>

@@ -89,22 +89,21 @@ body {
     border: 2px dashed black;
   }
   
+  .mostrar-mas:hover{
+      filter: brightness(120%);
+      transform: translateY(-2px);
+      transition: all .5s;
+  }
 
-.mostrar-mas:hover{
-    filter: brightness(120%);
-    transform: translateY(-2px);
-    transition: all .5s;
-}
+  .event-title{
+      width: 500px;
+  }
 
-.event-title{
-    width: 500px;
-}
+  .event-search-form{
+      height: 200px;
+  }
 
-.event-search-form{
-    height: 200px;
-}
-
-.event-search-form input{
-    width: 24vw;
-    min-width: 400px;
-}
+  .event-search-form input{
+      width: 24vw;
+      min-width: 400px;
+  }

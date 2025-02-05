@@ -13,6 +13,8 @@
     width: 100%;
     z-index: 9999;  /* Asegura que esté por encima de todo */
     transition: opacity 0.6s ease, transform 0.6s ease; /* Transiciones */
+    overflow-y: scroll;
+    height: 96vh;
   }
   
   .form-container.show {
@@ -20,7 +22,15 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); /* Animación de aparición */
   }
+  .form-container::-webkit-scrollbar-thumb{
+    background-color: #9b61ff;
+  }
   
+  .form-container::-webkit-scrollbar{
+    width: 7px;
+    background-color: #5930a0;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -33,14 +43,10 @@
   }
   
   form button {
-    background-color: #4caf50;
+    
     color: white;
     border: none;
     cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #45a049;
   }
 
     .back-form{
@@ -50,6 +56,12 @@
         left: 0;
         right: 0;
         background-color: black;
+        opacity: 0;
+        z-index: 4;
+        transition: opacity 0.6s ease;
+    }
+
+    .back-form.show{
         opacity: 0.7;
     }
 

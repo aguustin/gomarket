@@ -48,7 +48,7 @@ const NavBar = () => {
            <button type="submit" className="bg-blue-800 text-white pt-3 pb-3 w-full rounded-lg mb-6 mt-6">Entrar</button>
            <div className="flex items-center">
              <p className="text-slate-400">Ya tienes cuenta?</p>
-             <button className="text-sky-500" onClick={() => openForms()}>Registrate aqui</button>
+             <button className="text-sky-500 mt-3" onClick={() => openForms()}>Registrate aqui</button>
            </div>
          </form>
            :
@@ -83,7 +83,7 @@ const NavBar = () => {
               <button type="submit" className="bg-blue-800 text-white pt-3 pb-3 w-full rounded-lg mb-6 mt-6">Crear cuenta</button>
               <div className="flex items-center">
                 <p className="text-slate-400">Ya tienes cuenta?</p>
-                <button className="text-sky-500" onClick={() => setSignInForm(true)}>Ingresar aqui</button>
+                <button className="text-sky-500 mt-3" onClick={() => setSignInForm(true)}>Ingresar aqui</button>
               </div>
             </form>
            } 
@@ -93,7 +93,7 @@ const NavBar = () => {
 
     return(
         <>
-        {openSessionForm && <SessionForm/>}
+        {/*openSessionForm && <SessionForm/>*/}
         <nav className="nav flex items-center justify-between bg-slate-800 pl-10 pr-10">
             <img src={goBPng.src} width={120} height={120} alt=""/>
             <div className="flex justify-between" style={{width:'60%'}}>
