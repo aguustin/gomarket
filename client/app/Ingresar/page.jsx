@@ -30,7 +30,7 @@ const Ingresar = () => {
             
             {signForm 
             ?
-            <form className="forms bg-slate-800 pt-6 pb-6 pl-8 pr-8 rounded-lg mx-auto mt-10 mb-10" style={{width:'500px'}}>
+            <form className="forms relative bg-slate-800 pt-6 pb-6 pl-8 pr-8 rounded-lg mx-auto mt-10 mb-10" style={{width:'500px'}}>
              <button onClick={() => closeForms()} className="absolute right-6 top-5"><img src={closePng.src} alt=""></img></button>
             <div>
                 <h3 className="text-2xl mb-4">Ingresa tu cuenta</h3>
@@ -50,7 +50,7 @@ const Ingresar = () => {
             </div>
           </form>
             :
-            <form className="forms bg-slate-800 pt-6 pb-6 pl-8 pr-8 rounded-lg mx-auto mt-10 mb-10" style={{width:'500px'}}>
+            <form className="forms relative bg-slate-800 pt-6 pb-6 pl-8 pr-8 rounded-lg mx-auto mt-10 mb-10" style={{width:'500px'}}>
              <button onClick={() => closeForms()} className="absolute right-6 top-5"><img src={closePng.src} alt=""></img></button>
                <div>
                    <h3 className="text-2xl mb-4">Crea tu cuenta</h3>

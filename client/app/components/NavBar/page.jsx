@@ -11,9 +11,10 @@ import closePng from '@/app/assets/close.png'
 
 const NavBar = () => {
     
+    const {session, setCreateBlogForm} = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
-    const {session} = useContext(UserContext)
+    
 
 
     const openForms = () => {
@@ -94,15 +95,23 @@ const NavBar = () => {
     return(
         <>
         {/*openSessionForm && <SessionForm/>*/}
-        <nav className="nav flex items-center justify-between bg-slate-800 pl-10 pr-10">
-            <img src={goBPng.src} width={120} height={120} alt=""/>
+        <nav className="nav relative flex items-center justify-center bg-slate-800 pl-10 pr-10">
+            <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/>
             <div className="flex justify-between" style={{width:'60%'}}>
                 <Link href="/Home" className="pt-4 pb-4 pl-5 pr-5 text-xl">Inicio</Link>
                 <Link href="/Blogs" className="pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
                 <Link href="/Servicios" className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</Link>
                 <Link href="/Nosotros" className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
+                {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
-            {session.length <= 0 ? 
+           {session?.length < 0 && 
+            <div>
+                <ul>
+                    <li><button onClick={() => setCreateBlogForm(true)}>Crear blog</button></li>
+                    <li><button>Salir</button></li>
+                </ul>
+            </div>}
+            {/*session.length <= 0 ? 
             <button onClick={() => openForms()}>
                 <p>Iniciar sesion</p>
             </button>
@@ -110,21 +119,10 @@ const NavBar = () => {
             <button>
                 <img src={userPng.src}></img>
             </button>
-            }
+            */}
         </nav>
         </>
     )
 }
 
 export default NavBar;
-
-/**
- * <Link href="/Home" className="pt-4 pb-4 pl-5 pr-5 text-xl">Inicio</Link>
- *   <Link href="/Blogs" className="pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
- *    <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</button>
-      <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</button>
-
-
-      <Link href="/Events" className="pt-4 pb-4 pl-5 pr-5 text-xl">Eventos</Link>
-                <button className="pt-4 pb-4 pl-5 pr-5 text-xl">Contacto</button>
- */

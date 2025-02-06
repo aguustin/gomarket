@@ -1,8 +1,9 @@
 import './blogs.css'
 import prueba from '@/app/assets/prueba.jpg';
 import search from '@/app/assets/search.png';
-
+import deletePng from '@/app/assets/delete.png';
 const Blogs = () => {
+
     return(
         <>
             <div className='relative flex items-center justify-right' style={{height:'80px'}}>
@@ -11,7 +12,8 @@ const Blogs = () => {
                 </form>
             </div>
             <div className='flex flex-wrap pt-20 pb-20 justify-between' style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
-            <div style={{width:'720px'}}>
+            <div className='relative' style={{width:'720px'}}>
+                    <button className='absolute right-10 top-5'><img src={deletePng.src} alt=""></img></button>
                     <img src={prueba.src} alt="" className='blog-img' style={{width: '100%', height:'450px'}}></img>
                     <div className='mt-2 mb-2'>
                         <h3 className='text-3xl'>Las mejores herramientas de editor de fotos IA para 2025</h3>
