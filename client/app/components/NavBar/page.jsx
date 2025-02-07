@@ -104,7 +104,7 @@ const NavBar = () => {
                 <Link href="/Nosotros" className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
-           {session?.length < 0 && 
+           {//session?.length < 0 && 
             <div>
                 <ul>
                     <li><button onClick={() => setCreateBlogForm(true)}>Crear blog</button></li>

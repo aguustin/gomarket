@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
-const blogSchema = mongoose.Schema({
+const blogModel = mongoose.Schema({
     image:{type:String},
     title:{type:String},
-    description:{type:String}
+    description:{type:String},
+    blogDate:{type: Date}
 })
 
-export default mongoose.model('blog', blogSchema)
+export default mongoose.model('blog', blogModel)

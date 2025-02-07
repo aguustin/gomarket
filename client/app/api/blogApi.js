@@ -1,7 +1,9 @@
 import axios from "axios"
 
-export const createBlogRequest = () => axios.post('/createBlog', createBlogController)
+export const createBlogRequest = (blogData) => axios.post('/createBlog', blogData)
 
-export const updateBlogRequest = () => axios.post('/updateBlog', updateBlogController)
+export const updateBlogRequest = (blogData) => axios.post('/updateBlog', blogData)
 
-export const deleteBlogRequest = () => axios.get('/deleteBlog', deleteBlogController)
+export const getAllBlogsRequest = () => axios.get('/getAllBlogs')
+
+export const deleteBlogRequest = (blogId) => axios.put(`/deleteBlog/${blogId}`)

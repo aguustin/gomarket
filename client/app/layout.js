@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "./components/NavBar/page";
 import { UserContextProvider } from "./context/sessionContext";
 import Footer from "./components/Footer/footer";
+import CreateBlog from "./components/createBlog/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       >
         <UserContextProvider>
           <NavBar/>
+          <CreateBlog/>
           {children}
           <Footer/>
         </UserContextProvider>
