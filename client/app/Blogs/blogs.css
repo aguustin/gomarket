@@ -8,3 +8,21 @@
     transform: translateY(-2px);
     transition: all .5s;
 }
+
+.blog-img{
+  box-shadow: 2px 4px 7px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 4px 7px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 4px 7px 1px rgba(0,0,0,0.75);
+}
+
+.leer-blog h1{
+  font-size: 34px;
+}
+
+.leer-blog p{
+  font-size: 14px;
+}
+
+.leer-desc{
+  width: 1000px;
+}

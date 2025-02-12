@@ -80,6 +80,24 @@ export const AnimationC = ({ children }) => {
     )
 }
 
+export const AnimationCB = ({ children }) => {
+    const { ref: ref3, inView: inView3 } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <motion.div
+            ref={ref3}
+            initial={{ opacity: 0, x: -100 }}  // Inicialmente oculto y desplazado
+            animate={{ opacity: inView3 ? 1 : 0, x: inView3 ? 0 : 100 }}  // Animación de opacidad y desplazamiento
+            transition={{ duration: 0.8 }}    // Duración de la animación
+            >
+            {children}
+        </motion.div>
+    )
+}
+
 export const AnimationD = ({ children }) => {
     const { ref: ref4, inView: inView4 } = useInView({
         triggerOnce: true,

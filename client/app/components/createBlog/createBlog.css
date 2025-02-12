@@ -1,0 +1,12 @@
+.forms{
+    overflow-y: scroll;
+}
+
+.forms::-webkit-scrollbar-thumb{
+    background-color: #9b61ff;
+  }
+  
+.forms::-webkit-scrollbar{
+    width: 7px;
+    background-color: #5930a0;
+  }

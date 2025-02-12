@@ -8,14 +8,13 @@ import userPng from '@/app/assets/user.png'
 import googlePng from '@/app/assets/google.png'
 import applePng from '@/app/assets/apple.png'
 import closePng from '@/app/assets/close.png'
+import { redirect } from 'next/navigation'
 
 const NavBar = () => {
     
-    const {session, setCreateBlogForm} = useContext(UserContext)
+    const {session, setSession, setCreateBlogForm} = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
-    
-
 
     const openForms = () => {
       setOpenSessionForm(true)
@@ -25,6 +24,12 @@ const NavBar = () => {
     const closeForms = () => {
       setSignInForm(false)
       setOpenSessionForm(false)
+    }
+
+    const logout = () => {
+        setSession(null)
+        localStorage.clear()
+        redirect('/Home')
     }
 
     const SessionForm = () => {
@@ -46,7 +51,7 @@ const NavBar = () => {
                <label className="text-white">Contraseña</label>
                <input type="text" placeholder="ejemplo@gmail.com" className="bg-slate-700 p-2 rounded-lg w-full"></input>
            </div>
-           <button type="submit" className="bg-blue-800 text-white pt-3 pb-3 w-full rounded-lg mb-6 mt-6">Entrar</button>
+           <button type="submit" className="loginb bg-blue-800 text-white pt-3 pb-3 w-full rounded-lg mb-6 mt-6">Entrar</button>
            <div className="flex items-center">
              <p className="text-slate-400">Ya tienes cuenta?</p>
              <button className="text-sky-500 mt-3" onClick={() => openForms()}>Registrate aqui</button>
@@ -104,15 +109,15 @@ const NavBar = () => {
                 <Link href="/Nosotros" className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
-           {//session?.length < 0 && 
-            <div>
-                <ul>
-                    <li><button onClick={() => setCreateBlogForm(true)}>Crear blog</button></li>
-                    <li><button>Salir</button></li>
+           {session?.length > 0 && 
+            <div className="absolute right-5">
+                <ul className="flex">
+                    <li className="pr-10"><button onClick={() => setCreateBlogForm(true)}>Crear blog</button></li>
+                    <li className="pr-10"><button onClick={() => logout()}>Salir</button></li>
                 </ul>
             </div>}
             {/*session.length <= 0 ? 
-            <button onClick={() => openForms()}>
+            <button className="absolute right-20" onClick={() => openForms()}>
                 <p>Iniciar sesion</p>
             </button>
             :

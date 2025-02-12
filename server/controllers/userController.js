@@ -29,9 +29,9 @@ export const signInController = async (req, res) => {
 }
 
 export const loginController = async (req, res) => {
-    const {username, password} = req.params
-
-    const findUser = await userModel.find({username: username})
+    const {mail, password} = req.body
+    console.log('erererre', mail, password)
+    const findUser = await userModel.find({mail: mail})
 
     if(findUser.length > 0){
         const desencryptPass = await bcrypt.compare(password, findUser[0].password)

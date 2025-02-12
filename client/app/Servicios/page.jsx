@@ -5,11 +5,11 @@ import socialMediaPng from '@/app/assets/socialMedia.png'
 import './servicios.css'
 import Link from 'next/link'
 import fondoAPng from '@/app/assets/fondoA.png'
-import { AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page'
+import { AnimationB, AnimationC, AnimationCB, AnimationD } from '../animations/AnimationA/page'
 const Servicios = () => {
     return (
         <>
-            <div className="ss flex items-center justify-around  mt-9" style={{ padding: '80px' }}>
+            <div className="ss flex items-center justify-around  mt-9" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px' }}>
                 <AnimationC>
                     <div className='serv-first-secundary'>
                         <img src={deligencePng.src} alt=""></img>
@@ -111,9 +111,9 @@ const Servicios = () => {
 
             <div className='ss p-16 text-black-500'>
                 <div className='mx-auto text-center' style={{ width: '60vw' }}>
-                    <AnimationC>
+                    <AnimationCB>
                         <img className='mx-auto mb-12' src={socialMediaPng.src} alt=""></img>
-                    </AnimationC>
+                    </AnimationCB>
                     <AnimationB>
                         <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no genera ingresos?</h3>
                         <p>¿Tienes un website DIVINO, pero aún así tu página web no te está generando ingresos?.</p>

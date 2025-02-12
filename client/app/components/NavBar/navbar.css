@@ -11,6 +11,13 @@
     height: 90px;
 }
 
+.loginb:hover{
+    cursor: pointer;
+    background-color: rebeccapurple;
+    transform: translateY(-5px);
+    transition: background-color, transform .5s;
+}
+
 /*.forms{
     top: 50%;
     left: 50%;
