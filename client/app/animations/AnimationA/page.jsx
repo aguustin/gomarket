@@ -1,3 +1,4 @@
+"use server"
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion';
 
