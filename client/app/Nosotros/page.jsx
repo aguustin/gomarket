@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { AnimationA, AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page'
 import './nosotros.css'
 import socialMediaPng from '@/app/assets/socialMedia.png'

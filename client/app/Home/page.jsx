@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import seopng from '@/app/assets/seo.png';
