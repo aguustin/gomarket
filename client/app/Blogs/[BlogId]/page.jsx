@@ -9,7 +9,7 @@ const LeerBlog = ({params}) => {
     //console.log("y pam", params.BlogId)
     const [readBlog, setReadBlog] = useState([])
     const blogId = React.use(params).BlogId
-    console.log(blogId)
+    
     useEffect(() => {
         const getBlog = async () => {
             
