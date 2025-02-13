@@ -1,15 +1,11 @@
 "use client"
-"use server"
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import seopng from '@/app/assets/seo.png';
 import goAPng from '@/app/assets/goA.png'
-import socialMediaPng from '@/app/assets/socialMedia.png'
 import fondoAPng from '@/app/assets/fondoA.png'
 import Link from 'next/link';
 import { useState } from 'react';
-import { useInView } from 'react-intersection-observer'
-import { motion } from 'framer-motion';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
 
 const Home = () => {
