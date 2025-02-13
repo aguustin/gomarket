@@ -1,4 +1,5 @@
-//"use client"
+"use client"
+"use server"
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import seopng from '@/app/assets/seo.png';
