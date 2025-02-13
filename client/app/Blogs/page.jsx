@@ -1,11 +1,8 @@
 "use client"
 import './blogs.css'
-import prueba from '@/app/assets/prueba.jpg';
-import search from '@/app/assets/search.png';
 import deletePng from '@/app/assets/delete.png';
 import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
-import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 
 const Blogs = () => {

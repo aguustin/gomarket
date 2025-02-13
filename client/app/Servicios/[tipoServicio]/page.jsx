@@ -1,4 +1,4 @@
-'use client'
+
 import socialMediaPng from '@/app/assets/socialMedia.png'
 import deligencePng from '@/app/assets/diligence.png'
 import happyfacePng from '@/app/assets/happyface.png'
