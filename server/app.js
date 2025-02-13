@@ -1,4 +1,4 @@
-import * as express from "express";
+import express from "express"
 import morgan from "morgan"
 import { PORT } from "./config.js"
 import connection from "./database.js"
