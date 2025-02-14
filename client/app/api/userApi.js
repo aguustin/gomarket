@@ -1,10 +1,10 @@
 import axios from "axios"
 
-export const signInRequest = (userData) => axios.post('https://https://gomarket-xs2f.onrender.com/signIn', userData)
+export const signInRequest = (userData) => axios.post('https://gomarket-xs2f.onrender.com/signIn', userData)
 
-export const loginRequest = (loginData) => axios.post('https://https://gomarket-xs2f.onrender.com/login', loginData)
+export const loginRequest = (loginData) => axios.post('https://gomarket-xs2f.onrender.com/login', loginData)
 
-export const getUsersRequest = () => axios.get('https://https://gomarket-xs2f.onrender.com/getUsers')
+export const getUsersRequest = () => axios.get('https://gomarket-xs2f.onrender.com/getUsers')
 
 
 /*export const signInRequest = (userData) => axios.post('http://127.0.0.1:4000/signIn', userData)
