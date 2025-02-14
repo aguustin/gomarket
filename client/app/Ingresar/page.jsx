@@ -2,9 +2,6 @@
 import { useContext, useState } from "react"
 import '@/app/components/NavBar/navbar.css'
 import UserContext from "@/app/context/sessionContext"
-import Link from "next/link"
-import goBPng from '@/app/assets/goB.png'
-import userPng from '@/app/assets/user.png'
 import googlePng from '@/app/assets/google.png'
 import applePng from '@/app/assets/apple.png'
 import closePng from '@/app/assets/close.png'
