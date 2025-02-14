@@ -67,7 +67,7 @@ export const updateBlogController = async (req, res) => {
 
 export const getAllBlogsController = async (req, res) => {
     const getAllBlogs = await blogModel.find()
-
+    
     res.send(getAllBlogs)
 }
 
