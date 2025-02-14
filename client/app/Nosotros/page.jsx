@@ -10,7 +10,7 @@ const Nosotros = () => {
             <h1 className='text-4xl'>Que es ser GoMarket</h1><br></br>
             <h2 className='text-3xl mt-6'>Nuestra fórmula al servicio de tu éxito digital</h2>
         </div>
-        <div className='flex items-center justify-around mt-12'>
+        <div className='flex items-center justify-around mt-12 ml-12'>
             <AnimationC>
             <div style={{width:'600px'}}>
                 <h3 className='text-3xl text-center'>Un equipo humano que aporta arte, diseño y tecnología</h3>
@@ -19,7 +19,7 @@ const Nosotros = () => {
             </div>
             </AnimationC>
             <AnimationD>
-            <div style={{width:'600px'}}>
+            <div style={{width:'600px'}} className='mr-6'>
                 <h3 className='text-3xl text-center'>Apoyamos tus procesos de manera estratégica</h3>
                 <p className='mt-6'>Los desafíos digitales se han multiplicado en los últimos años, ser competitivos en los medios digitales hoy en día, puede determinar el éxito o fracaso de tu negocio.</p><br></br>
                 <p className='mt-2'>Somos LEMON Leads Marketing on-line, un experimentado equipo que suma a tu empresa diversos talentos creativos, artísticos, tecnológicos y especializados en marketing para expandir tu marca en los canales digitales más relevantes a tu público objetivo, para conseguir resultados tangibles totalmente alineados a tus objetivos comerciales.</p>

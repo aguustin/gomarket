@@ -8,13 +8,12 @@ import Link from 'next/link';
 const Blogs = () => {
 
     const {blogs} = useContext(UserContext)
-    console.log('blogs: ', blogs)
     
     return(
         <>
             <div className='relative flex items-center justify-right' style={{height:'80px'}}>
                 <form className='absolute right-10'>
-                    <input type="text" placeholder='Buscar evento' className='bg-slate-900 p-2'></input>
+                    <input type="text" placeholder='Buscar blog' className='bg-slate-900 p-2'></input>
                 </form>
             </div>
             <div className='flex flex-wrap pt-20 pb-20 justify-between' style={{paddingLeft: '10vw', paddingRight: '10vw'}} >

@@ -2,7 +2,7 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion';
 
-export const AnimationTi = async ({ children }) => {
+export const AnimationTi =  ({ children }) => {
 
     const { ref, inView } = useInView({
         triggerOnce: true,  // Se ejecuta solo una vez cuando el elemento entra en la vista
@@ -22,7 +22,7 @@ export const AnimationTi = async ({ children }) => {
     )
 }
 
-export const AnimationA = async ({ children }) => {
+export const AnimationA =  ({ children }) => {
 
     const { ref, inView } = useInView({
         triggerOnce: true,  // Se ejecuta solo una vez cuando el elemento entra en la vista
@@ -42,7 +42,7 @@ export const AnimationA = async ({ children }) => {
     )
 }
 
-export const AnimationB = async ({ children }) => {
+export const AnimationB =  ({ children }) => {
     const { ref: ref2, inView: inView2 } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -63,7 +63,7 @@ export const AnimationB = async ({ children }) => {
     )
 }
 
-export const AnimationC = async ({ children }) => {
+export const AnimationC =  ({ children }) => {
     const { ref: ref3, inView: inView3 } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -81,7 +81,7 @@ export const AnimationC = async ({ children }) => {
     )
 }
 
-export const AnimationCB = async ({ children }) => {
+export const AnimationCB =  ({ children }) => {
     const { ref: ref3, inView: inView3 } = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -99,7 +99,7 @@ export const AnimationCB = async ({ children }) => {
     )
 }
 
-export const AnimationD = async ({ children }) => {
+export const AnimationD =  ({ children }) => {
     const { ref: ref4, inView: inView4 } = useInView({
         triggerOnce: true,
         threshold: 0.1,
