@@ -7,44 +7,55 @@ const Nosotros = () => {
     return(
         <>
         <div className="text-center mt-12">
-            <h1 className='text-4xl'>Que es ser GoMarket</h1><br></br>
-            <h2 className='text-3xl mt-6'>Nuestra fórmula al servicio de tu éxito digital</h2>
+            <h1 className='text-4xl'>El equipo detrás de Go Market 🚀</h1><br></br>
+        </div>
+        <AnimationA>
+        <div className='mx-auto'>
+                <div className='flex mx-auto justify-center' style={{width:'600px'}}>
+                <p>En Go Market, creemos que el marketing es más que estrategias y números; es pasión, creatividad y el sueño de construir algo grande. Nuestra historia comenzó con dos personas con habilidades diferentes, pero con un mismo objetivo: <b>crear una agencia de marketing digital que ayude a negocios y emprendedores a crecer en el mundo digital.</b></p>
+                </div>
+        </div>
+        </AnimationA>
+        <div className='text-center'>
+            <h3 className='text-3xl mt-20'>💡 Los Fundadores de Go Market</h3>
         </div>
         <div className='flex items-center justify-around mt-12 ml-12'>
             <AnimationC>
             <div style={{width:'600px'}}>
-                <h3 className='text-3xl text-center'>Un equipo humano que aporta arte, diseño y tecnología</h3>
-                <p className='mt-6'>Los desafíos digitales se han multiplicado en los últimos años, ser competitivos en los medios digitales hoy en día, puede determinar el éxito o fracaso de tu negocio.</p><br></br>
-                <p className='mt-2'>Somos LEMON Leads Marketing on-line, un experimentado equipo que suma a tu empresa diversos talentos creativos, artísticos, tecnológicos y especializados en marketing para expandir tu marca en los canales digitales más relevantes a tu público objetivo, para conseguir resultados tangibles totalmente alineados a tus objetivos comerciales.</p>
+                <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>
+                <p className='mt-6'>Desde siempre, Maxi tuvo una visión clara: ayudar a marcas y emprendedores a potenciar su presencia digital con estrategias bien pensadas y orientadas a resultados. Con experiencia en marketing digital, branding y contenido, se convirtió en el motor detrás de la estrategia de Go Market</p><br></br>
+                <p>Para Maxi, el marketing no es solo vender, es conectar. Cada cliente es único, y por eso, en Go Market, cada estrategia es personalizada y diseñada para generar impacto real. Su pasión por el emprendimiento lo llevó a fundar la agencia y a desarrollar Go Ticket, una plataforma innovadora de venta de entradas, junto a su socio Agustín</p><br></br>
+                <b>📌 "No se trata solo de hacer marketing, se trata de transformar negocios y ayudar a cumplir sueños."</b>
             </div>
             </AnimationC>
+            <AnimationB>
+            <div className='mx-auto mt-12 mb-12' style={{width: '600px'}}>
+                <img className='mx-auto' src={socialMediaPng.src} alt=""></img>
+            </div>
+            </AnimationB>
             <AnimationD>
             <div style={{width:'600px'}} className='mr-6'>
-                <h3 className='text-3xl text-center'>Apoyamos tus procesos de manera estratégica</h3>
-                <p className='mt-6'>Los desafíos digitales se han multiplicado en los últimos años, ser competitivos en los medios digitales hoy en día, puede determinar el éxito o fracaso de tu negocio.</p><br></br>
-                <p className='mt-2'>Somos LEMON Leads Marketing on-line, un experimentado equipo que suma a tu empresa diversos talentos creativos, artísticos, tecnológicos y especializados en marketing para expandir tu marca en los canales digitales más relevantes a tu público objetivo, para conseguir resultados tangibles totalmente alineados a tus objetivos comerciales.</p>
+                <h3 className='text-3xl text-center'>💻 Agustín Molé – Co-Fundador & Programador</h3>
+                <p className='mt-6'>La tecnología y la innovación siempre fueron parte de la vida de Agustín. Como programador, su objetivo es crear soluciones digitales que hagan la vida más fácil a emprendedores y marcas.</p><br></br>
+                <p className='mt-2'>Junto con Maximiliano, decidió dar el salto y fundar Go Market, combinando su talento en desarrollo web y aplicaciones con la visión estratégica del marketing. También es la mente detrás de la programación en Go Ticket, la plataforma que crearon juntos para revolucionar la venta de entradas online.</p><br></br>
+                <b>📌 "No hay límites cuando combinas estrategia, tecnología y pasión por lo que haces."</b>
             </div>
             </AnimationD>
         </div>
-        <AnimationB>
-        <div className='mt-12 mb-12'>
-            <img className='mx-auto' src={socialMediaPng.src} alt=""></img>
-        </div>
-        </AnimationB>
+     
         <AnimationA>
-        <div className='mx-auto'>
-                <h3 className='text-3xl text-center'>Apoyamos tus procesos de manera estratégica</h3>
-                <div className='flex justify-center mt-6'>
-                    <ul className=''>
-                        <li><b>Adaptabilidad:</b> Nos adaptamos a un ambiente digital que cambia de manera acelerada y profunda, de la misma manera que nos adaptamos al entorno.</li>
-                        <li><b>Colaboración:</b> Entendiendo la colaboración como respeto, compromiso, cooperación y en concordancia con los objetivos.</li>
-                        <li><b>Resultados:</b> Los resultados nos mueven, son nuestra razón de ser y es donde ponemos el corazón día a día.</li>
-                    </ul>
+        <div className='mx-auto mt-6'>
+                <h3 className='text-3xl text-center'>💪 Un Sueño Convertido en Realidad</h3>
+                <div className='mx-auto justify-center mt-6' style={{width:'600px'}}>
+                <p>Maxi y Agustín no solo fundaron una agencia, crearon un equipo comprometido con el éxito de cada cliente. En Go Market, entendemos el esfuerzo que implica emprender, porque nosotros también empezamos desde cero.</p><br></br>
+                <p>Hoy, seguimos creciendo y ayudando a negocios a lograr lo mismo. No somos solo una agencia, somos aliados estratégicos que trabajamos con compromiso, creatividad y visión para que cada marca alcance su máximo potencial.</p><br></br>
+                <b>📌 Tu éxito es nuestro éxito.</b><br></br>
+                <b>➡ Conocé más sobre cómo podemos ayudarte 🚀</b>
                 </div>
         </div>
         </AnimationA>
         <div className='as flex items-center justify-center mt-12 mb-12' style={{height:'170px'}}>
-            <em className='text-2xl'>Poner frase motivacional aca para que quede bien</em>
+            <em className='text-2xl'> ¡Haz algo imposible de ignorar!</em>
         </div>
         </>
     )

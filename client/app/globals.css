@@ -31,5 +31,11 @@ body::-webkit-scrollbar-thumb{
 
 body::-webkit-scrollbar{
   width: 7px;
-  background-color: #5930a0;
+  background-color: #d224ff;
+}
+
+
+.icon:hover{
+  color: #d224ff;
+  transition: color .5s;
 }

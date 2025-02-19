@@ -103,10 +103,21 @@ const NavBar = () => {
         <nav className="nav relative flex items-center justify-center bg-slate-800 pl-10 pr-10">
             <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/>
             <div className="flex justify-between" style={{width:'60%'}}>
-                <Link href="/Home" className="pt-4 pb-4 pl-5 pr-5 text-xl">Inicio</Link>
-                <Link href="/Blogs" className="pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
-                <Link href="/Servicios" className="pt-4 pb-4 pl-5 pr-5 text-xl">Servicios</Link>
-                <Link href="/Nosotros" className="pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
+                <Link href="/Home" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl"><p>Inicio</p></Link>
+                <Link href="/Blogs" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
+                <div className="cc relative pt-4 pb-4 pl-5 pr-5">
+                    <Link href="/Servicios" className="pb-4 text-xl">Servicios</Link>
+                    <div className="list-services absolute bg-slate-800 text-center">
+                    <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
+                    <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
+                    <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
+                    <Link href="/Servicios/publicidad" className="text-xl"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
+                    <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
+                    <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigaion de mercado</p></div></Link>
+                    <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
+                    </div>
+                </div>
+                <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
            {session?.length > 0 && 

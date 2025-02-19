@@ -18,6 +18,53 @@
     transition: background-color, transform .5s;
 }
 
+.nav-link:hover{
+    border-bottom: 1px solid white;
+    animation: showBorder .5s;
+    transform: translateY(-7px);
+    transition: all .5s;
+}
+
+.list-services{
+    left: 0;
+    top:60px;
+    width: 320px;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-20px); /* Se posiciona ligeramente arriba */
+    visibility: hidden;
+    transition: opacity .5s ease, transform 1s ease, visibility 1s ease;
+}
+
+.services-link{
+    height: 70px;
+}
+
+
+.services-link:hover{
+    cursor: pointer;
+    background-color: #403281;
+    transition: background-color .5s;
+}
+.cc:hover .list-services, .list-services:hover{
+    opacity: 1;
+  transform: translateY(0); /* Se mueve hacia su posición original */
+  visibility: visible;
+}
+
+
+@keyframes showBorder {
+    0%{
+        border-bottom: 1px solid white;
+        border-width: 0%;
+    }
+    100%{
+        border-width: 100%;
+        opacity: 1;
+    }
+}
+
 /*.forms{
     top: 50%;
     left: 50%;

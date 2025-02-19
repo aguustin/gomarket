@@ -3,7 +3,17 @@ import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import seopng from '@/app/assets/seo.png';
 import goAPng from '@/app/assets/goA.png'
+import mercadoPng from '@/app/assets/investigacionMercado.png'
 import fondoAPng from '@/app/assets/fondoA.png'
+import consultoria from '@/app/assets/CONSULTORIA MARKETING.png'
+import creacion from '@/app/assets/CREACION CONTENIDOS.png'
+import desarrollo from '@/app/assets/DESARROLLO WEB Y APP.png'
+import estrategias from '@/app/assets/ESTRATEGIAS DE PUBLICIDAD.png'
+import seo from '@/app/assets/SEO Y POSICIONAMIENTO.png'
+import branding from '@/app/assets/BRANDING E IDENTIDAD.png'
+import seoImageJpeg from '@/app/assets/seo-image.jpeg'
+import websiteJpg from '@/app/assets/website.jpg'
+import leadGeneration from '@/app/assets/lead-generation.png'
 import Link from 'next/link';
 import { useState } from 'react';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
@@ -151,20 +161,21 @@ const Home = () => {
             </AnimationC>
 
             <div className='estrategies-container flex flex-wrap mx-auto justify-between mt-12'>
-                <div className='estrategies p-4 mt-10'>
+                <div className='estrategies p-3 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={desarrollo.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Desarrollo Web y Aplicaciones</h2>
                             <p className='text-lg mt-5'>
-                                El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
+                            Desarrollo Web y Aplicaciones
+                            Creamos sitios web y aplicaciones optimizadas para potenciar tu presencia digital, asegurando un diseño atractivo, funcionalidad intuitiva y una experiencia de usuario excepcional.
                             </p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/programacion">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/desarrollo">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -172,17 +183,17 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={consultoria.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Consultoría en Marketing Digital</h2>
                             <p className='text-lg mt-5'>
-                                El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
+                            Te guiamos en la planificación y ejecución de estrategias digitales efectivas para hacer crecer tu negocio y maximizar tus resultados en el entorno digital.
                             </p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/MercadoTendencias">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/marketing">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -190,17 +201,17 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={branding.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Branding e Identidad Visual</h2>
                             <p className='text-lg mt-5'>
-                                El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
+                            Construimos marcas memorables con diseños únicos, logotipos impactantes y una identidad visual coherente que refleje la esencia de tu negocio.
                             </p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/MarketingDigital">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/branding">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -208,17 +219,17 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={estrategias.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Estrategias de Publicidad Digital</h2>
                             <p className='text-lg mt-5'>
-                                El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
+                            Diseñamos y optimizamos campañas en plataformas como Meta Ads, Google Ads y TikTok Ads, asegurando mayor alcance, tráfico y conversión para tu negocio.
                             </p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/Branding">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/publicidad">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -226,17 +237,17 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={creacion.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Creación de Contenido para Redes Sociales</h2>
                             <p className='text-lg mt-5'>
-                                El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.
+                            Generamos contenido atractivo y estratégico en distintos formatos (reels, imágenes, animaciones, textos persuasivos) para potenciar el engagement y posicionamiento de tu marca.
                             </p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/PublicidadDigital">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/redes">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -244,15 +255,31 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seopng.src} alt=""></img>
+                            <img className='mx-auto' src={mercadoPng.src} alt="" width={160} height={160}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>Posicionamiento órganico</h2>
-                            <p className='text-lg mt-5'>El SEO es fundamental para tu marca, ya que impulsa tu visibilidad en línea y facilita que más personas te encuentren. Esto no solo aumenta tu credibilidad, sino que también te posiciona como un líder en tu industria. Además, te permite conectar de manera directa con tu público objetivo, generando más ventas sin depender tanto de la publicidad paga.</p>
+                            <h2 className='text-2xl text-violet-500 text-center'>Investigación de Mercado y Análisis de Tendencias</h2>
+                            <p className='text-lg mt-5'>Analizamos el mercado, tu competencia y las tendencias del sector para brindarte información clave que te ayude a tomar decisiones estratégicas y diferenciarte.</p>
                             <div className='text-center mt-12'>
-                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/RedesSociales">Conoce más</Link>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/mercado">Conoce más</Link>
+                            </div>
+                        </div>
+                    </AnimationC>
+                </div>
+                <div className='estrategies p-4 mt-10'>
+                    <AnimationB>
+                        <div>
+                            <img className='mx-auto' src={seo.src} alt="" width={160} height={160}></img>
+                        </div>
+                    </AnimationB>
+                    <AnimationC>
+                        <div className='mt-6'>
+                            <h2 className='text-3xl text-violet-500'>SEO y Posicionamiento Web</h2>
+                            <p className='text-lg mt-5'>Optimizamos tu sitio web para que aparezca en los primeros resultados de búsqueda en Google. Implementamos estrategias de SEO técnico, de contenido y de enlaces para aumentar tu visibilidad y atraer más clientes.</p>
+                            <div className='text-center mt-12'>
+                                <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/seo">Conoce más</Link>
                             </div>
                         </div>
                     </AnimationC>
@@ -274,33 +301,36 @@ const Home = () => {
             </div>
             <div className='hacer-crecer-negocio mt-28 pt-20 pb-20'>
                 <div className='text-center'>
-                    <h1 className='text-4xl'>¿Cómo nuestra agencia de Publicidad Digital hacer crecer tu negocio?</h1>
+                    <h1 className='text-4xl'>¿Cómo Go Market puede hacer crecer tu negocio?</h1>
                 </div>
                 <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
-                        <p>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                        <p>En Go Market, potenciamos tu marca con estrategias digitales que generan visibilidad, clientes y ventas. Desde branding y redes sociales hasta publicidad y desarrollo web, diseñamos soluciones personalizadas para que tu negocio destaque y crezca en el mundo digital.</p><br></br>
+                        <b>📌 Estrategia + Creatividad + Resultados = Tu éxito</b>
                     </AnimationA>
                     <AnimationC className='negocio-img mx-6'>
-                        <img src={fondoAPng.src} alt=""></img>
+                        <img src={leadGeneration.src} alt=""></img>
                     </AnimationC>
                 </div>
                 <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
                     <AnimationC className='negocio-img mx-6'>
-                        <img src={fondoAPng.src} alt=""></img>
+                        <img src={seoImageJpeg.src} alt=""></img>
                     </AnimationC>
                     <AnimationA className='negocio-img mx-6 mt-6'>
-                        <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
-                        <p className='ml-6'>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                        <h3 className='text-3xl text-center'>¿Tu sitio web no aparece en Google? 🔍</h3><br></br>
+                        <p className='ml-6'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
+                        <b className='ml-6'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
                     </AnimationA>
                 </div>
                 <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
-                        <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
-                        <p>Una agencia de marketing digital se diferencia de una agencia de marketing tradicional en los canales que utiliza. Al habitar exclusivamente en el entorno digital podemos contar con datos exactos de desempeño de las acciones digitales que realizamos. Los indicadores clave de rendimiento KPI's nos permite ajustar nuestras acciones para asegurar un retorno de inversión elevado. Nos enfocamos en aumento de conversiones (ventas o leads) y en somos potenciadores de tu marca en el entorno digital.</p>
+                        <h3 className='text-3xl text-center'>¿Tu sitio web no genera ingresos? 💻</h3><br></br>
+                        <p>Si tu sitio web no está convirtiendo visitantes en clientes, es hora de hacer un cambio. En Go Market, transformamos tu página en una herramienta de ventas efectiva con diseño atractivo, optimización SEO y estrategias de conversión. ¡Haz que tu sitio trabaje para ti!</p><br></br>
+                        <b>📌 Convierte tu tráfico en ingresos reales.</b>
                     </AnimationA>
                     <AnimationC className='negocio-img mx-6'>
-                        <img src={fondoAPng.src} alt=""></img>
+                        <img src={websiteJpg.src} alt=""></img>
                     </AnimationC>
                 </div>
             </div>

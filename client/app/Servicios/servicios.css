@@ -27,9 +27,11 @@
 }
 
 .somos-agencia{
-    background-color: black;
-    background-image: url("../assets/fondoA.png");
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(.5);
 }
+
 
 .publicidad-online{
     height: 600px;
@@ -48,4 +50,13 @@
     background-color: white;
     color:#6937BE;
     transition: all .5s;
+}
+
+.serv-conocer-mas{
+    background-color: #403281;
+}
+
+.serv-conocer-mas:hover{
+    background-color: #ae28df;
+    transition: background-color .5s;
 }

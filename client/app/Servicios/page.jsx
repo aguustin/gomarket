@@ -40,9 +40,9 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Desarrollo Web y Aplicaciones</p><br></br>
+                            <p>Creamos sitios web y aplicaciones optimizadas para potenciar tu presencia digital, asegurando un diseño atractivo, funcionalidad intuitiva y una experiencia de usuario excepcional.</p><br></br>
+                            <Link href="/Servicios/desarrollo" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                     <div className='servicios mt-12 mb-12'>
@@ -50,9 +50,9 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Consultoría en Marketing Digital</p><br></br>
+                            <p>Te guiamos en la planificación y ejecución de estrategias digitales efectivas para hacer crecer tu negocio y maximizar tus resultados en el entorno digital.</p><br></br>
+                            <Link href="/Servicios/marketing" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                     <div className='servicios mt-12 mb-12'>
@@ -60,9 +60,9 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Branding e Identidad Visual</p><br></br>
+                            <p>Construimos marcas memorables con diseños únicos, logotipos impactantes y una identidad visual coherente que refleje la esencia de tu negocio.</p><br></br>
+                            <Link href="/Servicios/branding" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                     <div className='servicios mt-16 mb-20'>
@@ -70,9 +70,9 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Estrategias de Publicidad Digital</p><br></br>
+                            <p>Diseñamos y optimizamos campañas en plataformas como Meta Ads, Google Ads y TikTok Ads, asegurando mayor alcance, tráfico y conversión para tu negocio.</p><br></br>
+                            <Link href="/Servicios/publicidad" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                     <div className='servicios mt-16 mb-20'>
@@ -80,9 +80,9 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Creación de Contenido para Redes Sociales</p><br></br>
+                            <p>Generamos contenido atractivo y estratégico en distintos formatos (reels, imágenes, animaciones, textos persuasivos) para potenciar el engagement y posicionamiento de tu marca.</p><br></br>
+                            <Link href="/Servicios/redes" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                     <div className='servicios mt-16 mb-20'>
@@ -90,9 +90,19 @@ const Servicios = () => {
                         <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                         </AnimationB>
                         <AnimationC>
-                            <p className='text-center text-2xl'>Análisis</p><br></br>
-                            <p>Descubrimos los puntos débiles por los cuales estás perdiendo oportunidades. Este es nuestro punto de partida para emprender una estrategia digital optimizada a la conversión</p><br></br>
-                            <Link href="/Servicios/analisis">Conocer mas</Link>
+                            <p className='text-center text-2xl'>Investigación de Mercado y Análisis de Tendencias</p><br></br>
+                            <p>Analizamos el mercado, tu competencia y las tendencias del sector para brindarte información clave que te ayude a tomar decisiones estratégicas y diferenciarte.</p><br></br>
+                            <Link href="/Servicios/mercado" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
+                        </AnimationC>
+                    </div>
+                    <div className='servicios mt-16 mb-20'>
+                        <AnimationB>
+                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        </AnimationB>
+                        <AnimationC>
+                            <p className='text-center text-2xl'>SEO y Posicionamiento Web</p><br></br>
+                            <p>Optimizamos tu sitio web para que aparezca en los primeros resultados de búsqueda en Google. Implementamos estrategias de SEO técnico, de contenido y de enlaces para aumentar tu visibilidad y atraer más clientes.</p><br></br>
+                            <Link href="/Servicios/seo" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>
                 </div>
