@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "6f964b7f-ec65-4920-be1b-1646bfb0c8ba"
+      }
+    },
+    "android": {
+      "package": "com.agustin1994.gomarket"
+    }
+  }
+}

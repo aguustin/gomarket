@@ -1,5 +1,5 @@
 "use client"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import '@/app/components/NavBar/navbar.css'
 import UserContext from "@/app/context/sessionContext"
 import Link from "next/link"
@@ -15,6 +15,11 @@ const NavBar = () => {
     const {session, setSession, setCreateBlogForm} = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
+    const [burguerButton, setBurguerButton] = useState(false)
+
+    useEffect(() => {
+
+    }, [])
 
     const openForms = () => {
       setOpenSessionForm(true)

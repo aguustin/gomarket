@@ -1,3 +1,20 @@
 .as{
     background-color: #15253F;
 }
+
+.agus-maxi{
+    width: 100vw;
+}
+
+@media screen and (max-width: 1450px) {
+    .agus-maxi{
+        display: block;
+        text-align: center;
+    }
+    
+    .agus-maxi-child-div{
+        margin: auto !important;
+        width: 90vw !important;
+        text-align: center;
+    }
+}

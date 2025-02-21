@@ -12,7 +12,7 @@ const Servicios = () => {
             <div className="ss flex items-center justify-around  mt-9" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px' }}>
                 <AnimationC>
                     <div className='serv-first-secundary'>
-                        <img src={deligencePng.src} alt=""></img>
+                        <img className='first-img' src={deligencePng.src} alt=""></img>
                     </div>
                 </AnimationC>
                 <AnimationD>
@@ -20,11 +20,11 @@ const Servicios = () => {
                         <h3 className='text-3xl text-center mb-3'>Tus resultados son nuestra razón</h3>
                         <p>Somos Lemon: Agencia de Marketing Digital enfocada en tus resultados. Hemos desarrollado nuestra fórmula de Estrategias de Marketing Digital pensada para atraer, retener y fidelizar a tus clientes potenciales! Esto nos identifica y nos diferencia!</p><br></br>
                         <p>Considera esto: tener un website que no genere conversiones es como tener una tienda en el piso 15º de un edificio sin carteles ni ascensor. Si tienes un local comercial, ¿no deberías tenerlo a pie de calle con un cartel grande y visible?</p><br></br>
-                        <img src={happyfacePng.src} alt="" className='mx-auto'></img>
+                        <img style={{width: '70px'}} src={happyfacePng.src} alt="" className='mx-auto'></img>
                     </div>
                 </AnimationD>
             </div>
-            <div className="text-center pt-20 pb-20" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
+            <div className="est text-center pt-20 pb-20 pl-40 pr-40" >
                 <h1 className='text-5xl'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
                 <p className='text-xl'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo odit earum, eaque assumenda deserunt corporis possimus sequi alias placeat reprehenderit! Architecto, tempore dolorem? Earum unde officia omnis quasi saepe?</p><br></br>
                 <button className='text-xl bg-red-800 p-4 rounded-3xl'>Cotizar estrategia de marketing</button>
@@ -134,7 +134,7 @@ const Servicios = () => {
                     </AnimationB>
                 </div>
             </div>
-            <div className='p-16'>
+            <div className='ssB p-16'>
                 <div className='mx-auto text-center' style={{ width: '60vw' }}>
                     <AnimationB>
                     <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no aparece en Google?</h3>

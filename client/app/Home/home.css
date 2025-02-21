@@ -122,3 +122,48 @@
     height: 450px;
     object-fit: cover;
 }
+
+@media screen and (max-width:1125px) {
+  .hacer-crecer-negocio-div-child{
+    display: block !important;
+    margin-top: 60px;
+  }
+
+  .hacer-crecer-negocio-div-child img {
+    margin-top: 30px !important;
+  }
+
+  #invert{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+
+  .publicidad-online-text{
+    width: 90vw;
+  }
+}
+
+
+@media screen and (max-width:1000px) {
+  .estrategies-container{
+     width: 96vw !important;
+  }
+}
+
+@media screen and (max-width:845px) {
+  .estrategies-container{
+     width: 96vw !important;
+  }
+
+  .estrategies{
+    width: 100%;
+  }
+
+  .estrategies > div p{
+    text-align: center;
+  }
+
+  .ds{
+    width: 100%;
+  }
+}

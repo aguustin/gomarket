@@ -38,9 +38,9 @@ const TipoServicio = async ({params}) => {
 
     return(
         <>
-          <div className="ss flex items-center justify-around" style={{padding:'80px'}}>
+          <div className="ss flex items-center justify-around " style={{padding:'80px'}}>
                 <div className='serv-first-secundary'>
-                    <img className="ml-20" src={
+                    <img className="ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10" src={
                         par === "desarrollo" ? desarrolloBPng.src :
                         par === "marketing" ? marketingBPng.src :
                         par === "branding" ? brandingPng.src :
@@ -58,7 +58,7 @@ const TipoServicio = async ({params}) => {
                 </div>
             </div>
             {par === "desarrollo" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'200px', paddingRight: '200px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6">
                     <h1 className='text-5xl'>Creamos tu aplicacion web para que crezcas</h1><br></br>
                     <p className='text-xl'>Desarrollamos soluciones web a medida, optimizadas para ofrecerte una experiencia de usuario única y escalable, que te permita llevar tu negocio al siguiente nivel y alcanzar nuevos horizontes de crecimiento.</p><br></br>
                 </div>
@@ -185,7 +185,7 @@ const TipoServicio = async ({params}) => {
                         <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Creamos una imagen positiva segun tus intereses</p>
                     </div>
-                    <div className='servicios-container flex flex-wrap justify-between mx-auto'>
+                    <div className='servicios-container flex flex-wrap justify-between mx-auto '>
                         <div className='servicios mt-6 mb-12'>
                             <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
                             <p className='text-center text-2xl'>1️⃣ Investigación y definición de la marca</p><br></br>
@@ -356,9 +356,26 @@ const TipoServicio = async ({params}) => {
             </div>
             <div className="ssb flex items-center justify-center p-20">
                 {par === "desarrollo" &&
-                <div className='m-10 text-lg/9'>
-                    <p>El desarrollo web es esencial en la era digital actual, ya que un sitio web bien diseñado y funcional puede ser la diferencia entre el éxito y el fracaso de un negocio.</p><br></br>
-                    <p>Invertir en un desarrollo web de calidad es crucial para mantener la atención de los usuarios y garantizar una experiencia satisfactoria.</p>
+                <div>
+                    <div className='m-10 text-lg/9'>
+                        <p>El desarrollo web es esencial en la era digital actual, ya que un sitio web bien diseñado y funcional puede ser la diferencia entre el éxito y el fracaso de un negocio.</p><br></br>
+                        <p>Invertir en un desarrollo web de calidad es crucial para mantener la atención de los usuarios y garantizar una experiencia satisfactoria.</p>
+                    </div>
+                    
+                    <div className='m-10 text-lg'>
+                        <div className="flex items-center">
+                            <img src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se definen los objetivos del sitio y se crea un diseño intuitivo y atractivo que refleje la identidad de la marca.</p>
+                        </div>
+                        <div className="flex items-center ml-16">
+                            <img src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se construye la estructura del sitio web utilizando tecnologías adecuadas, asegurando funcionalidad y experiencia de usuario.</p>
+                        </div>
+                        <div className="flex items-center">
+                            <img src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se realizan pruebas exhaustivas para garantizar el rendimiento, la seguridad y la compatibilidad, antes de lanzar el sitio al público.</p>
+                        </div>
+                    </div>
                 </div>
                 }
                  {par === "marketing" &&
@@ -394,7 +411,7 @@ const TipoServicio = async ({params}) => {
                     <p>El SEO es esencial para mejorar la visibilidad en línea de una empresa y atraer tráfico cualificado a su sitio web. Este servicio contribuye al aumento del tráfico orgánico, lo que se traduce en una mayor oportunidad de conversión y crecimiento del negocio.</p>
                 </div>
                 }
-                {par === "desarrollo" && 
+                {/*par === "desarrollo" && 
                 <div className='m-10 text-lg'>
                     <div className="flex items-center">
                         <img src={socialMediaPng.src} alt=""></img>
@@ -408,7 +425,7 @@ const TipoServicio = async ({params}) => {
                         <img src={socialMediaPng.src} alt=""></img>
                         <p className='ml-3'>Se realizan pruebas exhaustivas para garantizar el rendimiento, la seguridad y la compatibilidad, antes de lanzar el sitio al público.</p>
                     </div>
-                </div>
+                </div>*/
                 }
                  {par === "marketing" && 
                 <div className='m-10 text-lg'>

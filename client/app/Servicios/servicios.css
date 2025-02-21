@@ -60,3 +60,94 @@
     background-color: #ae28df;
     transition: background-color .5s;
 }
+
+@media screen and (max-width:1460px){
+    .ss{
+        padding: 80px 0px !important;
+      
+    }
+    .servicios{
+        width: 350px !important;
+    }
+    .ss > div{
+        padding: 0px 10px !important;
+    }
+
+    .ssB{
+        padding: 50px 10px !important;
+    }
+}
+
+
+@media screen and (max-width:1170px){
+    .ss{
+        display: block !important;
+    }
+
+
+    .serv-first-secundary{
+        margin: auto !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    .first-img{
+        margin: auto !important;
+        margin-bottom: 30px !important;
+        width: 200px !important;
+    }
+
+    .est{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    h1{
+        font-size: 35px !important;
+    }
+
+    .servicios{
+        width: 40vw !important;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:1110px){
+
+    .servicios{
+        width: 90vw !important;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width:935px){
+
+    .servicios{
+        width: 90vw !important;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .first-img, .negocio-img{
+        margin-bottom: 0px !important;
+    }
+
+    .ss{
+        padding: 0px 0px !important;
+    }
+
+    .ss > div, .ssB > div {
+        width: 90vw !important;
+        padding: 50px 0px !important;
+        margin: auto !important;
+    }
+
+    .publicidad-online-text{
+        width: 90vw;
+    }
+
+}

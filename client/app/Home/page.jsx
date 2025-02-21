@@ -33,6 +33,7 @@ const Home = () => {
         console.log(isVisible)
     }
 
+
     return (
         <>
             {isVisible && (
@@ -146,11 +147,11 @@ const Home = () => {
                 <img src={prueba.src}></img>
             </div>
             <AnimationTi>
-                <div className='text-center pt-20 pb-20'>
+                <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
                     <img className='mx-auto mb-12' src={goAPng.src} width={170} height={170} alt="" />
                     <h2 className='text-3xl text-violet-500 font-medium'>TRANSFORMA TU PRESENCIA DIGITAL CON NOSOTROS</h2>
                     <br></br>
-                    <p className='text-2xl'>Creamos estrategias únicas y a medida para potenciar tu inversión y llevar tu negocio al siguiente nivel en el mundo digital.</p>
+                    <p className='text-2xl lg:ml-4 lg:mr-4'>Creamos estrategias únicas y a medida para potenciar tu inversión y llevar tu negocio al siguiente nivel en el mundo digital.</p>
                     <button className='bg-violet-900 pt-4 pb-4 pl-7 pr-7 rounded-lg mt-7'><p className='text-lg'>Saber mas</p></button>
                 </div>
             </AnimationTi>
@@ -276,7 +277,7 @@ const Home = () => {
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-3xl text-violet-500'>SEO y Posicionamiento Web</h2>
+                            <h2 className='text-3xl text-violet-500 text-center'>SEO y Posicionamiento Web</h2>
                             <p className='text-lg mt-5'>Optimizamos tu sitio web para que aparezca en los primeros resultados de búsqueda en Google. Implementamos estrategias de SEO técnico, de contenido y de enlaces para aumentar tu visibilidad y atraer más clientes.</p>
                             <div className='text-center mt-12'>
                                 <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/seo">Conoce más</Link>
@@ -303,7 +304,7 @@ const Home = () => {
                 <div className='text-center'>
                     <h1 className='text-4xl'>¿Cómo Go Market puede hacer crecer tu negocio?</h1>
                 </div>
-                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
                         <p>En Go Market, potenciamos tu marca con estrategias digitales que generan visibilidad, clientes y ventas. Desde branding y redes sociales hasta publicidad y desarrollo web, diseñamos soluciones personalizadas para que tu negocio destaque y crezca en el mundo digital.</p><br></br>
@@ -313,17 +314,17 @@ const Home = () => {
                         <img src={leadGeneration.src} alt=""></img>
                     </AnimationC>
                 </div>
-                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6' id="invert">
                     <AnimationC className='negocio-img mx-6'>
                         <img src={seoImageJpeg.src} alt=""></img>
                     </AnimationC>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no aparece en Google? 🔍</h3><br></br>
-                        <p className='ml-6'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
-                        <b className='ml-6'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
+                        <p className='ml-6 sm:ml-0'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
+                        <b className='ml-6 sm:ml-0'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
                     </AnimationA>
                 </div>
-                <div className='flex justify-center pr-28 pl-28 mb-16 mt-28'>
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no genera ingresos? 💻</h3><br></br>
                         <p>Si tu sitio web no está convirtiendo visitantes en clientes, es hora de hacer un cambio. En Go Market, transformamos tu página en una herramienta de ventas efectiva con diseño atractivo, optimización SEO y estrategias de conversión. ¡Haz que tu sitio trabaje para ti!</p><br></br>
@@ -337,7 +338,7 @@ const Home = () => {
             <div className='relative'>
                 <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
                 <div className='publicidad-online-text absolute text-center'>
-                    <h2 className='text-5xl'>Agencia de Marketing digital que te lleva al siguiente nivel</h2>
+                    <h2 className='text-4xl'>Agencia de Marketing digital que te lleva al siguiente nivel</h2>
                     <p className='text-3xl mt-10'>¿Trabajamos juntos?</p>
                     <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>
