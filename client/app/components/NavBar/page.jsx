@@ -19,7 +19,7 @@ const NavBar = () => {
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(0);
     const [responsiveNav, setResponsiveNav] = useState(false)
 
   useEffect(() => {
