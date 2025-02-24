@@ -6,6 +6,7 @@ import './servicios.css'
 import Link from 'next/link'
 import fondoAPng from '@/app/assets/fondoA.png'
 import { AnimationB, AnimationC, AnimationCB, AnimationD } from '../animations/AnimationA/page'
+
 const Servicios = () => {
     return (
         <>

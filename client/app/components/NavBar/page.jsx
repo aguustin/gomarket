@@ -148,6 +148,8 @@ const NavBar = () => {
                         <img src={arrowPng.src} alt=""></img>
                     </button>
                 </div>
+                    <Link href="/Home" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl"><p>Inicio</p></Link>
+                    <Link href="/Blogs" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
                     <Link href="/Servicios" className="services-link text-xl flex items-center justify-center">Servicios</Link>
                     <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
                     <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
@@ -156,6 +158,7 @@ const NavBar = () => {
                     <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
                     <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigaion de mercado</p></div></Link>
                     <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
+                    <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
                 </>
             </div>
                 }
