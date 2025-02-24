@@ -15,3 +15,7 @@ const eslintConfig = compat.extends("next/core-web-vitals");
 export default {
   extends: eslintConfig,
 };
+
+/*const eslintConfig = [...compat.extends("next/core-web-vitals")];
+
+export default eslintConfig;*/
