@@ -39,3 +39,10 @@ body::-webkit-scrollbar{
   color: #d224ff;
   transition: color .5s;
 }
+
+@media screen and (max-width:655px) {
+  .foo-img{
+    width: 130px;
+  }
+  
+}

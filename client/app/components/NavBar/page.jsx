@@ -9,6 +9,9 @@ import googlePng from '@/app/assets/google.png'
 import applePng from '@/app/assets/apple.png'
 import closePng from '@/app/assets/close.png'
 import { redirect } from 'next/navigation'
+import morePng from '@/app/assets/more.png'
+import arrowPng from '@/app/assets/arrow.png'
+import goCPng from '@/app/assets/goC.png'
 
 const NavBar = () => {
     
@@ -16,10 +19,15 @@ const NavBar = () => {
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
+    const [width, setWidth] = useState(window.innerWidth);
+    const [responsiveNav, setResponsiveNav] = useState(false)
 
-    useEffect(() => {
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    }, [])
 
     const openForms = () => {
       setOpenSessionForm(true)
@@ -36,6 +44,8 @@ const NavBar = () => {
         localStorage.clear()
         redirect('/Home')
     }
+
+    
 
     const SessionForm = () => {
         return(
@@ -106,13 +116,15 @@ const NavBar = () => {
         <>
         {/*openSessionForm && <SessionForm/>*/}
         <nav className="nav relative flex items-center justify-center bg-slate-800 pl-10 pr-10">
-            <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/>
-            <div className="flex justify-between" style={{width:'60%'}}>
+        {width >= 850 ? <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/> : <img className="absolute left-0" src={goCPng.src} width={180} height={180} alt=""/>}
+            {width >= 850 
+            ?
+            <div className="absolute right-9 flex justify-between">
                 <Link href="/Home" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl"><p>Inicio</p></Link>
                 <Link href="/Blogs" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
                 <div className="cc relative pt-4 pb-4 pl-5 pr-5">
                     <Link href="/Servicios" className="pb-4 text-xl">Servicios</Link>
-                    <div className="list-services absolute bg-slate-800 text-center">
+                    <div className="list-services absolute bg-slate-800 text-center right-10">
                     <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
                     <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
                     <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
@@ -125,6 +137,30 @@ const NavBar = () => {
                 <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
+            :
+            <>
+            <button className="ccb absolute right-8" onClick={() => setResponsiveNav(true)}><img src={morePng.src} alt=""></img></button>
+                { responsiveNav &&
+            <div className="absolute right-0 bg-slate-800 z-90 p-6 top-0">
+                    <>
+                <div>
+                    <button onClick={() => setResponsiveNav(false)}>
+                        <img src={arrowPng.src} alt=""></img>
+                    </button>
+                </div>
+                    <Link href="/Servicios" className="services-link text-xl flex items-center justify-center">Servicios</Link>
+                    <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
+                    <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
+                    <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
+                    <Link href="/Servicios/publicidad" className="text-xl"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
+                    <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
+                    <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigaion de mercado</p></div></Link>
+                    <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
+                </>
+            </div>
+                }
+            </>
+            }
            {session?.length > 0 && 
             <div className="absolute right-5">
                 <ul className="flex">

@@ -11,7 +11,7 @@ const Nosotros = () => {
         </div>
         <AnimationA>
         <div className='agus-maxi-child-div mx-auto '>
-                <div className='flex mx-auto justify-center' style={{width:'600px'}}>
+                <div className='tit flex mx-auto justify-center' style={{width:'600px'}}>
                 <p>En Go Market, creemos que el marketing es más que estrategias y números; es pasión, creatividad y el sueño de construir algo grande. Nuestra historia comenzó con dos personas con habilidades diferentes, pero con un mismo objetivo: <b>crear una agencia de marketing digital que ayude a negocios y emprendedores a crecer en el mundo digital.</b></p>
                 </div>
         </div>
@@ -19,7 +19,7 @@ const Nosotros = () => {
         <div className='text-center'>
             <h3 className='text-3xl mt-20'>💡 Los Fundadores de Go Market</h3>
         </div>
-        <div className='agus-maxi flex flex-wrap justify-around items-center mt-12'>
+        <div className='agus-maxi flex justify-around items-center mt-12 max-['>
             <AnimationC>
             <div className='agus-maxi-child-div' style={{width:'600px'}}>
                 <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>

@@ -18,3 +18,13 @@
         text-align: center;
     }
 }
+
+@media screen and (max-width: 1450px) {
+    
+    .tit{
+        margin: auto !important;
+        width: 90vw !important;
+        text-align: center;
+    }
+}
+

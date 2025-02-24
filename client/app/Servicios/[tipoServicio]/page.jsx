@@ -40,7 +40,7 @@ const TipoServicio = async ({params}) => {
         <>
           <div className="ss flex items-center justify-around " style={{padding:'80px'}}>
                 <div className='serv-first-secundary'>
-                    <img className="ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10" src={
+                    <img className="ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10 max-[840px]:mb-0" src={
                         par === "desarrollo" ? desarrolloBPng.src :
                         par === "marketing" ? marketingBPng.src :
                         par === "branding" ? brandingPng.src :
@@ -351,28 +351,27 @@ const TipoServicio = async ({params}) => {
             </div>
             <div className='p-16'>
                 <div className='mx-auto text-center' style={{width:'60vw'}}>
-                    <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no aparece en Google?</h3>
+                    <h3 className='text-4xl text-center mb-7 max-[840px]:m-0'>¿Tu sitio web no aparece en Google?</h3>
                 </div>
             </div>
-            <div className="ssb flex items-center justify-center p-20">
+            <div className="sss flex items-center justify-center p-20 max-[840px]:p-6 max-[840px]:mb-10">
                 {par === "desarrollo" &&
                 <div>
-                    <div className='m-10 text-lg/9'>
+                    <div className='m-10 text-lg/9 max-[840px]:m-0 max-[840px]:text-center'>
                         <p>El desarrollo web es esencial en la era digital actual, ya que un sitio web bien diseñado y funcional puede ser la diferencia entre el éxito y el fracaso de un negocio.</p><br></br>
                         <p>Invertir en un desarrollo web de calidad es crucial para mantener la atención de los usuarios y garantizar una experiencia satisfactoria.</p>
                     </div>
-                    
-                    <div className='m-10 text-lg'>
-                        <div className="flex items-center">
-                            <img src={socialMediaPng.src} alt=""></img>
+                    <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
                             <p className='ml-3'>Se definen los objetivos del sitio y se crea un diseño intuitivo y atractivo que refleje la identidad de la marca.</p>
                         </div>
-                        <div className="flex items-center ml-16">
-                            <img src={socialMediaPng.src} alt=""></img>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
                             <p className='ml-3'>Se construye la estructura del sitio web utilizando tecnologías adecuadas, asegurando funcionalidad y experiencia de usuario.</p>
                         </div>
-                        <div className="flex items-center">
-                            <img src={socialMediaPng.src} alt=""></img>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
                             <p className='ml-3'>Se realizan pruebas exhaustivas para garantizar el rendimiento, la seguridad y la compatibilidad, antes de lanzar el sitio al público.</p>
                         </div>
                     </div>
