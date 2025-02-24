@@ -10,7 +10,7 @@ export const signInController = async (req, res) => {
 
     
     if(findUser.length > 0){
-        res.status(401).json({exists: 1})
+        res.status(200).json({exists: 1})
     }else{
 
         
@@ -37,7 +37,7 @@ export const loginController = async (req, res) => {
         const desencryptPass = await bcrypt.compare(password, findUser[0].password)
         desencryptPass ? res.send(findUser) : res.status(401).json({user: 0})
     }else{
-        res.status(401).json({notExist: 0})
+        res.status(200).json({notExist: 0})
     }
 
 }

@@ -15,6 +15,9 @@
   -moz-box-shadow: 2px 4px 7px 1px rgba(0,0,0,0.75);
 }
 
+.leer-blog img{
+  width: 70vw;
+}
 .leer-blog h1{
   font-size: 34px;
 }
@@ -24,5 +27,5 @@
 }
 
 .leer-desc{
-  width: 1000px;
+  width: 70vw;
 }
