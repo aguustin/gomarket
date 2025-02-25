@@ -305,7 +305,7 @@ const Home = () => {
                 <div className='text-center'>
                     <h1 className='text-4xl'>¿Cómo Go Market puede hacer crecer tu negocio?</h1>
                 </div>
-                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6'>
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
                         <p>En Go Market, potenciamos tu marca con estrategias digitales que generan visibilidad, clientes y ventas. Desde branding y redes sociales hasta publicidad y desarrollo web, diseñamos soluciones personalizadas para que tu negocio destaque y crezca en el mundo digital.</p><br></br>
@@ -315,7 +315,7 @@ const Home = () => {
                         <img src={leadGeneration.src} alt=""></img>
                     </AnimationC>
                 </div>
-                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6' id="invert">
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2' id="invert">
                     <AnimationC className='negocio-img mx-6'>
                         <img src={seoImageJpeg.src} alt=""></img>
                     </AnimationC>
@@ -325,7 +325,7 @@ const Home = () => {
                         <b className='ml-6 sm:ml-0'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
                     </AnimationA>
                 </div>
-                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6'>
+                <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no genera ingresos? 💻</h3><br></br>
                         <p>Si tu sitio web no está convirtiendo visitantes en clientes, es hora de hacer un cambio. En Go Market, transformamos tu página en una herramienta de ventas efectiva con diseño atractivo, optimización SEO y estrategias de conversión. ¡Haz que tu sitio trabaje para ti!</p><br></br>
