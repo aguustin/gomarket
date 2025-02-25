@@ -374,37 +374,124 @@ const TipoServicio = async ({params}) => {
                 </div>
                 }
                  {par === "marketing" &&
-                <div className='m-10 text-lg/9'>
-                    <p>Un servicio de marketing es esencial para las empresas que buscan mejorar su presencia en el mercado y alcanzar sus objetivos comerciales. Según un estudio de HubSpot, las empresas que externalizan sus estrategias de marketing digital reportan un aumento del 35% en su eficiencia operativa.</p>
-                </div>
+                 <div>
+                    <div className='m-10 text-lg/9'>
+                        <p>Un servicio de marketing es esencial para las empresas que buscan mejorar su presencia en el mercado y alcanzar sus objetivos comerciales. Según un estudio de HubSpot, las empresas que externalizan sus estrategias de marketing digital reportan un aumento del 35% en su eficiencia operativa.</p>
+                    </div>
+                    <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se estudian el público objetivo y la competencia para definir estrategias efectivas que conecten con los consumidores.</p>
+                        </div>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se diseñan campañas creativas y contenido relevante que atraigan la atención del público y generen engagement.</p>
+                        </div>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se miden los resultados de las campañas, ajustando las tácticas según el rendimiento para maximizar el impacto y alcanzar los objetivos.</p>
+                        </div>
+                    </div>
+                 </div>
                 }
                  {par === "branding" &&
+                 <div>
                 <div className='m-10 text-lg/9'>
                     <p>Contratar un servicio de branding es fundamental para establecer una identidad sólida y coherente que conecte emocionalmente con los consumidores.</p><br></br>
                     <p>un branding efectivo contribuye a la diferenciación en el mercado, permitiendo que una empresa se destaque entre sus competidores y sea reconocida por su público objetivo.</p>
                 </div>
+                <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se establecen los valores, misión y visión de la marca para crear una identidad sólida y auténtica que resuene con el público.</p>
+                        </div>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se desarrolla un logotipo, paleta de colores y elementos visuales coherentes que refuercen la personalidad de la marca en todos los puntos de contacto</p>
+                        </div>
+                    </div>
+                </div>
+                 
                 }
                  {par === "publicidad" &&
+                 <div>
                 <div className='m-10 text-lg/9'>
                     <p>La publicidad es esencial para las empresas que buscan aumentar su visibilidad y conectar eficazmente con su público objetivo. Según Elio Estudio, "una estrategia de comunicación bien definida es clave tanto para las grandes empresas, como para pymes y autónomos"</p>
                 </div>
-                }
-                 {par === "redes" &&
-                <div className='m-10 text-lg/9'>
-                    <p>El manejo de redes sociales es esencial para las empresas que buscan fortalecer su presencia en línea y conectar eficazmente con su audiencia.</p><br></br>
-                    <p>Estas prácticas permiten a las empresas mantenerse al día con las tendencias, adaptarse a nuevos formatos y conocer todas las plataformas</p>
+                    <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se establecen los objetivos de la campaña y se segmenta el público para crear mensajes que resuenen con las necesidades específicas de cada grupo.</p>
+                        </div>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se diseña el contenido publicitario y se lanza la campaña en los canales adecuados, monitoreando su rendimiento para optimizar resultados en tiempo real.</p>
+                        </div>  
+                    </div>
                 </div>
                 }
+                 {par === "redes" &&
+                 <div>
+                    <div className='m-10 text-lg/9'>
+                        <p>El manejo de redes sociales es esencial para las empresas que buscan fortalecer su presencia en línea y conectar eficazmente con su audiencia.</p><br></br>
+                        <p>Estas prácticas permiten a las empresas mantenerse al día con las tendencias, adaptarse a nuevos formatos y conocer todas las plataformas</p>
+                    </div>
+                    <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se define una estrategia de publicaciones y se planifican contenidos que atraigan, eduquen y conecten con la audiencia en cada plataforma.</p>
+                        </div>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se gestiona la interacción con los seguidores, respondiendo comentarios y mensajes, mientras se analizan métricas para ajustar la estrategia y mejorar el alcance.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                }
                  {par === "mercado" &&
-                <div className='m-10 text-lg/9'>
-                    <p>Contratar un servicio de análisis de mercado es esencial para que las empresas comprendan las dinámicas de su sector y tomen decisiones informadas.</p><br></br>
-                    <p> Además, este tipo de estudios prepara a la empresa para conocer lo que se encontrará en el mercado, evitando lanzarse sin conocimiento previo, lo que incrementa las posibilidades de fracaso por falta de estructura y preparación.</p>
+                 <div>
+                    <div className='m-10 text-lg/9'>
+                        <p>Contratar un servicio de análisis de mercado es esencial para que las empresas comprendan las dinámicas de su sector y tomen decisiones informadas.</p><br></br>
+                        <p> Además, este tipo de estudios prepara a la empresa para conocer lo que se encontrará en el mercado, evitando lanzarse sin conocimiento previo, lo que incrementa las posibilidades de fracaso por falta de estructura y preparación.</p>
+                    </div>
+                    <div className='m-10 text-lg max-[840px]:m-0'>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se recopilan datos del mercado, identificando tendencias clave, necesidades del consumidor y comportamientos de la competencia.</p>
+                        </div>
+                        <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se divide el mercado en segmentos específicos, entendiendo las características, intereses y problemas de cada grupo para enfocarse mejor en ellos.</p>
+                        </div>
+                        <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                            <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                            <p className='ml-3'>Se evalúan las fortalezas y debilidades de los competidores, identificando oportunidades para posicionar mejor la marca y destacar en el mercado.</p>
+                        </div>
+                    </div>
                 </div>
                 }
                  {par === "seo" &&
+                 <div>
                 <div className='m-10 text-lg/9'>
                     <p>El SEO es esencial para mejorar la visibilidad en línea de una empresa y atraer tráfico cualificado a su sitio web. Este servicio contribuye al aumento del tráfico orgánico, lo que se traduce en una mayor oportunidad de conversión y crecimiento del negocio.</p>
                 </div>
+                      <div className='m-10 text-lg max-[840px]:m-0'>
+                            <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                                <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-20' src={socialMediaPng.src} alt=""></img>
+                                <p className='ml-3'>Se identifican las palabras clave más relevantes para el negocio, analizando volumen de búsqueda, competencia y relevancia para atraer tráfico cualificado.</p>
+                            </div>
+                            <div className="flex items-center ml-16 max-[840px]:block max-[840px]:text-center max-[840px]:ml-0">
+                                <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                                <p className='ml-3'>Se ajustan los elementos internos del sitio web, como contenido, metadatos y estructura de URL, para mejorar la indexación en los motores de búsqueda.</p>
+                            </div>
+                            <div className="flex items-center max-[840px]:block max-[840px]:text-center">
+                                <img className='max-[840px]:mx-auto max-[840px]:mb-6 max-[840px]:mt-6' src={socialMediaPng.src} alt=""></img>
+                                <p className='ml-3'>Se implementan estrategias de link building para obtener enlaces de calidad, lo que aumenta la autoridad del sitio web y mejora su posicionamiento en los resultados de búsqueda.</p>
+                            </div>
+                        </div>
+                  </div>
+                   
                 }
                 {/*par === "desarrollo" && 
                 <div className='m-10 text-lg'>
@@ -421,90 +508,6 @@ const TipoServicio = async ({params}) => {
                         <p className='ml-3'>Se realizan pruebas exhaustivas para garantizar el rendimiento, la seguridad y la compatibilidad, antes de lanzar el sitio al público.</p>
                     </div>
                 </div>*/
-                }
-                 {par === "marketing" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se estudian el público objetivo y la competencia para definir estrategias efectivas que conecten con los consumidores.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se diseñan campañas creativas y contenido relevante que atraigan la atención del público y generen engagement.</p>
-                    </div>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se miden los resultados de las campañas, ajustando las tácticas según el rendimiento para maximizar el impacto y alcanzar los objetivos.</p>
-                    </div>
-                </div>
-                }
-                {par === "branding" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se establecen los valores, misión y visión de la marca para crear una identidad sólida y auténtica que resuene con el público.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se desarrolla un logotipo, paleta de colores y elementos visuales coherentes que refuercen la personalidad de la marca en todos los puntos de contacto.</p>
-                    </div>
-                </div>
-                }
-                {par === "publicidad" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se establecen los objetivos de la campaña y se segmenta el público para crear mensajes que resuenen con las necesidades específicas de cada grupo.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se diseña el contenido publicitario y se lanza la campaña en los canales adecuados, monitoreando su rendimiento para optimizar resultados en tiempo real.</p>
-                    </div>
-                </div>
-                }
-                {par === "redes" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se define una estrategia de publicaciones y se planifican contenidos que atraigan, eduquen y conecten con la audiencia en cada plataforma.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se gestiona la interacción con los seguidores, respondiendo comentarios y mensajes, mientras se analizan métricas para ajustar la estrategia y mejorar el alcance.</p>
-                    </div>
-                </div>
-                }
-                {par === "mercado" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se recopilan datos del mercado, identificando tendencias clave, necesidades del consumidor y comportamientos de la competencia.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se divide el mercado en segmentos específicos, entendiendo las características, intereses y problemas de cada grupo para enfocarse mejor en ellos.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se evalúan las fortalezas y debilidades de los competidores, identificando oportunidades para posicionar mejor la marca y destacar en el mercado.</p>
-                    </div>
-                </div>
-                }
-                {par === "seo" && 
-                <div className='m-10 text-lg'>
-                    <div className="flex items-center">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se identifican las palabras clave más relevantes para el negocio, analizando volumen de búsqueda, competencia y relevancia para atraer tráfico cualificado.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se ajustan los elementos internos del sitio web, como contenido, metadatos y estructura de URL, para mejorar la indexación en los motores de búsqueda.</p>
-                    </div>
-                    <div className="flex items-center ml-16">
-                        <img src={socialMediaPng.src} alt=""></img>
-                        <p className='ml-3'>Se implementan estrategias de link building para obtener enlaces de calidad, lo que aumenta la autoridad del sitio web y mejora su posicionamiento en los resultados de búsqueda.</p>
-                    </div>
-                </div>
                 }
             </div>
             <div className='ss p-16 text-black-500'>
