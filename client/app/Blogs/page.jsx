@@ -16,9 +16,9 @@ const Blogs = () => {
                     <input type="text" placeholder='Buscar blog' className='bg-slate-900 p-2'></input>
                 </form>
             </div>
-            <div className='flex flex-wrap pt-20 pb-20 justify-between' style={{paddingLeft: '10vw', paddingRight: '10vw'}} >
+            <div className='ver-blogs flex flex-wrap pt-10 pb-10 pl-40 pr-40 justify-between'>
                 {blogs.map((b) => 
-                    <div key={b._id} className='relative' style={{width:'720px',}} >
+                    <div key={b._id} className='relative mx-auto' style={{width:'720px'}} >
                             <button className='absolute right-10 top-5'><img src={deletePng.src} alt=""></img></button>
                             <img src={b.image} alt="" className='blog-img' style={{width: '100%', height:'450px'}}></img>
                             <div className='mt-2 mb-2'>

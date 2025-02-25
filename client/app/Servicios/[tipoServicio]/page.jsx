@@ -1,16 +1,13 @@
-
 import socialMediaPng from '@/app/assets/socialMedia.png'
 import deligencePng from '@/app/assets/diligence.png'
 import happyfacePng from '@/app/assets/happyface.png'
 import fondoAPng from '@/app/assets/fondoA.png'
 //desarrollo imgs
 import desarrolloPng from '@/app/assets/desarrollo.png'
-
 import desarrolloBPng from '@/app/assets/web developmentB.png'
 
 //marketing
 import marketingPng from '@/app/assets/content-strategy.png'
-
 import marketingBPng from '@/app/assets/marketingB.png'
 
 //branding
@@ -29,11 +26,10 @@ import marketAnalisysPng from '@/app/assets/market-analysis.png'
 //seo
 import seoPng from '@/app/assets/seo.png'
 
-import Link from 'next/link'
 import '../../Servicios/servicios.css'
 
-const TipoServicio = async ({params}) => {
 
+const TipoServicio = async ({params}) => {
     const par = await params.tipoServicio
 
     return(

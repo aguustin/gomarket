@@ -42,7 +42,7 @@ body::-webkit-scrollbar{
 
 @media screen and (max-width:655px) {
   .foo-img{
-    width: 130px;
+    width: 150px !important;
   }
   
 }

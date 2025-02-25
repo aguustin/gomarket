@@ -44,20 +44,20 @@ const Home = () => {
                         <form className='p-4'>
                             <h2 className='text-center text-xl'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
                             <div className='mt-4 mb-6'>
-                                <div className='form-group flex items-center justify-between '>
-                                    <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name" placeholder='Nombre' required />
-                                    <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Apellido' required />
+                                <div className='flex items-center justify-between max-[760px]:block'>
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="text" id="name" name="name" placeholder='Nombre' required />
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="email" id="email" name="email" placeholder='Apellido' required />
                                 </div>
-                                <div className='form-group flex items-center justify-between '>
-                                    <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name" placeholder='Email' required />
-                                    <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Movil o whatsapp' required />
+                                <div className=' flex items-center justify-between max-[760px]:block'>
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="text" id="name" name="name" placeholder='Email' required />
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="email" id="email" name="email" placeholder='Movil o whatsapp' required />
                                 </div>
-                                <div className='form-group flex items-center justify-between '>
-                                    <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name" placeholder='Cargo (no obligatorio)' />
-                                    <input className='bg-slate-900 m-4 w-full' type="email" id="email" name="email" placeholder='Empresa (no obligatorio)' />
+                                <div className=' flex items-center justify-between max-[760px]:block'>
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="text" id="name" name="name" placeholder='Cargo (no obligatorio)' />
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="email" id="email" name="email" placeholder='Empresa (no obligatorio)' />
                                 </div>
-                                <div className='form-group flex items-center justify-between '>
-                                    <input className='bg-slate-900 m-4 w-full' type="text" id="name" name="name" placeholder='País' required />
+                                <div className=' flex items-center justify-between max-[760px]:block'>
+                                    <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="text" id="name" name="name" placeholder='País' required />
                                 </div>
                             </div>
                             <div>
@@ -73,7 +73,7 @@ const Home = () => {
                             </div>
                             <div className='block mt-3'>
                                 <p>Servicio(s) de interés</p>
-                                <div className='flex justify-between mt-1'>
+                                <div className='flex justify-between mt-1 max-[630px]:block'>
                                     <div className='block'>
                                         <div className='mt-2'>
                                             <input type='checkbox'></input>
@@ -134,14 +134,6 @@ const Home = () => {
                     </div>
                 </>
             )}
-
-
-
-
-
-
-
-
 
 
             <div className='go-image-container mx-auto'>

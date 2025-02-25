@@ -18,6 +18,7 @@
 .leer-blog img{
   width: 70vw;
 }
+
 .leer-blog h1{
   font-size: 45px;
 }
@@ -28,4 +29,14 @@
 
 .leer-desc{
   width: 70vw;
+}
+
+@media screen and (max-width:850px) {
+  .leer-blog img, .leer-desc{
+    width: 98vw;
+  }
+  .ver-blogs{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
