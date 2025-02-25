@@ -17,6 +17,7 @@ import leadGeneration from '@/app/assets/lead-generation.png'
 import Link from 'next/link';
 import { useState } from 'react';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
+import Image from 'next/image'
 
 const Home = () => {
 
@@ -144,7 +145,7 @@ const Home = () => {
 
 
             <div className='go-image-container mx-auto'>
-                <img src={prueba.src}></img>
+                <img src={prueba.src} alt=""></img>
             </div>
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>

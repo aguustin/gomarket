@@ -22,12 +22,12 @@ const Blogs = () => {
                             <button className='absolute right-10 top-5'><img src={deletePng.src} alt=""></img></button>
                             <img src={b.image} alt="" className='blog-img' style={{width: '100%', height:'450px'}}></img>
                             <div className='mt-2 mb-2'>
-                                <h3 className='text-3xl'>{b.title}</h3>
+                                <h3 className='text-3xl underline underline-offset-3'>{b.title}</h3>
                                 <p>{b.blogDate}</p>
                             </div>
                             <div>
                                 <p className='text-xl text-gray-600'>
-                                    {b.description}
+                                    {b.description.substring(0,300)}...
                                 </p>
                             </div>
                             <div className='relative' style={{height:'150px'}}>

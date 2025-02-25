@@ -36,7 +36,7 @@ const LeerBlog = ({params}) => {
                         </p>
                     </div>
                     <div className='relative mt-10'>
-                        <p className='absolute right-60'>{rd.blogDate}</p>
+                        <p className='absolute right-60 text-slate-400'>{rd.blogDate}</p>
                     </div>
                 </div>
             )}
