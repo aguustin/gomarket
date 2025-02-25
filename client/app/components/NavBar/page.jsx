@@ -22,7 +22,7 @@ const NavBar = () => {
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(850);
     const [responsiveNav, setResponsiveNav] = useState(false)
     const [openTab, setOpenTab] = useState(false)
 
@@ -31,7 +31,6 @@ const NavBar = () => {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-
 
     const openForms = () => {
       setOpenSessionForm(true)
@@ -48,8 +47,6 @@ const NavBar = () => {
         localStorage.clear()
         redirect('/Home')
     }
-
-    
 
     const SessionForm = () => {
         return(
