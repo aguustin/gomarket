@@ -1,23 +1,22 @@
 "use client"
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
-import seopng from '@/app/assets/seo.png';
 import goAPng from '@/app/assets/goA.png'
-import mercadoPng from '@/app/assets/investigacionMercado.png'
 import fondoAPng from '@/app/assets/fondoA.png'
-import consultoria from '@/app/assets/CONSULTORIA MARKETING.png'
-import creacion from '@/app/assets/CREACION CONTENIDOS.png'
-import desarrollo from '@/app/assets/DESARROLLO WEB Y APP.png'
-import estrategias from '@/app/assets/ESTRATEGIAS DE PUBLICIDAD.png'
-import seo from '@/app/assets/SEO Y POSICIONAMIENTO.png'
-import branding from '@/app/assets/BRANDING E IDENTIDAD.png'
 import seoImageJpeg from '@/app/assets/seo-image.jpeg'
 import websiteJpg from '@/app/assets/website.jpg'
 import leadGeneration from '@/app/assets/lead-generation.png'
+import brandingEidentidadPng from '@/app/assets/servicios/BRANDING E IDENTIDAD.png'
+import consultoriaPng from '@/app/assets/servicios/CONSULTORIA MARKETING.png'
+import contenidosPng from '@/app/assets/servicios/CREACION CONTENIDOS.png'
+import desarrolloPng from '@/app/assets/servicios/DESARROLLO WEB Y APP.png'
+import publicidadPng from '@/app/assets/servicios/ESTRATEGIAS DE PUBLICIDAD.png'
+import mercadoPng from '@/app/assets/servicios/INVESTIGACION DE MERCADO.png'
+import seoPng from '@/app/assets/servicios/SEO Y POSICIONAMIENTO.png'
 import Link from 'next/link';
 import { useState } from 'react';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
-import Image from 'next/image'
+
 
 const Home = () => {
 
@@ -135,10 +134,12 @@ const Home = () => {
                 </>
             )}
 
-
-            <div className='go-image-container mx-auto'>
+            <video autoPlay loop>
+                <source src="@/app/assets/opHome.mp4" type="video/mp4"></source>
+            </video>
+            {/*<div className='go-image-container mx-auto'>
                 <img src={prueba.src} alt=""></img>
-            </div>
+            </div>*/}
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
                     <img className='mx-auto mb-12' src={goAPng.src} width={170} height={170} alt="" />
@@ -153,12 +154,11 @@ const Home = () => {
                     <h3 className='text-3xl'>¡Descubre lo que tenemos preparado para ti!</h3>
                 </div>
             </AnimationC>
-
             <div className='estrategies-container flex flex-wrap mx-auto justify-between mt-12'>
                 <div className='estrategies p-3 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={desarrollo.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={desarrolloPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -177,7 +177,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={consultoria.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={consultoriaPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -195,7 +195,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={branding.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={brandingEidentidadPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -213,7 +213,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={estrategias.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={publicidadPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -231,7 +231,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={creacion.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={contenidosPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -249,7 +249,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={mercadoPng.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={mercadoPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -265,7 +265,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seo.src} alt="" width={160} height={160}></img>
+                            <img className='mx-auto' src={seoPng.src} alt="" width={300}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -282,7 +282,7 @@ const Home = () => {
             <div className='relative '>
                 <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
                 <div className='publicidad-online-text absolute text-center'>
-                    <p className='text-4xl'>¿Quieres atraer más clientes a tu website? Lemon, Agencia de publicidad online</p>
+                    <p className='text-4xl'>¿Quieres atraer más clientes a tu website? Go market, Agencia de publicidad online</p>
                     <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>
             </div>
@@ -313,8 +313,8 @@ const Home = () => {
                     </AnimationC>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no aparece en Google? 🔍</h3><br></br>
-                        <p className='ml-6 sm:ml-0'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
-                        <b className='ml-6 sm:ml-0'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
+                        <p className='ml-6 sm:ml-3'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
+                        <b className='ml-6 sm:ml-3'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
                     </AnimationA>
                 </div>
                 <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2'>
