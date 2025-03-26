@@ -27,9 +27,11 @@ const NavBar = () => {
     const [openTab, setOpenTab] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        const handleResize = () => {setWidth(window.innerWidth);
+            window.addEventListener("resize", handleResize);
+            return () => window.removeEventListener("resize", handleResize);
+         }
+        handleResize()
     }, []);
 
     const openForms = () => {

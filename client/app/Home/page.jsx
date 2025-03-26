@@ -17,7 +17,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
 
-
 const Home = () => {
 
     const [isVisible, setVisible] = useState(false)
@@ -134,12 +133,9 @@ const Home = () => {
                 </>
             )}
 
-            <video autoPlay loop>
-                <source src="@/app/assets/opHome.mp4" type="video/mp4"></source>
-            </video>
-            {/*<div className='go-image-container mx-auto'>
-                <img src={prueba.src} alt=""></img>
-            </div>*/}
+            
+                <video className='go-image-container' src="https://res.cloudinary.com/drmcrdf4r/video/upload/v1/gomarket/home/opHome_sdwixs.mp4?_s=vp-2.1.0" autoPlay={true} loop={true} muted controlsList="nodownload"></video>
+            
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
                     <img className='mx-auto mb-12' src={goAPng.src} width={170} height={170} alt="" />
