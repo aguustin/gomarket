@@ -21,7 +21,7 @@ const Nosotros = () => {
         </div>
         <div className='agus-maxi flex justify-around items-center mt-12 pl-10 pr-10'>
             <AnimationC>
-            <div className='agus-maxi-child-div' style={{width:'600px'}}>
+            <div className='agus-maxi-child-div mx-auto text-center' style={{width:'600px'}}>
                 <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>
                 <p className='mt-6'>Desde siempre, Maxi tuvo una visión clara: ayudar a marcas y emprendedores a potenciar su presencia digital con estrategias bien pensadas y orientadas a resultados. Con experiencia en marketing digital, branding y contenido, se convirtió en el motor detrás de la estrategia de Go Market</p><br></br>
                 <p>Para Maxi, el marketing no es solo vender, es conectar. Cada cliente es único, y por eso, en Go Market, cada estrategia es personalizada y diseñada para generar impacto real. Su pasión por el emprendimiento lo llevó a fundar la agencia y a desarrollar Go Ticket, una plataforma innovadora de venta de entradas, junto a su socio Agustín</p><br></br>
@@ -46,10 +46,10 @@ const Nosotros = () => {
         <div className='mx-auto mt-12'>
                 <h3 className='text-3xl text-center max-[1450px]:mb-6 max-[1450px]:mt-28'>💪 Un Sueño Convertido en Realidad</h3>
                 <div className='agus-maxi-child-div mx-auto justify-center mt-6' style={{width:'600px'}}>
-                <p>Maxi y Agustín no solo fundaron una agencia, crearon un equipo comprometido con el éxito de cada cliente. En Go Market, entendemos el esfuerzo que implica emprender, porque nosotros también empezamos desde cero.</p><br></br>
-                <p>Hoy, seguimos creciendo y ayudando a negocios a lograr lo mismo. No somos solo una agencia, somos aliados estratégicos que trabajamos con compromiso, creatividad y visión para que cada marca alcance su máximo potencial.</p><br></br>
-                <b>📌 Tu éxito es nuestro éxito.</b><br></br>
-                <b>➡ Conocé más sobre cómo podemos ayudarte 🚀</b>
+                    <p>Maxi y Agustín no solo fundaron una agencia, crearon un equipo comprometido con el éxito de cada cliente. En Go Market, entendemos el esfuerzo que implica emprender, porque nosotros también empezamos desde cero.</p><br></br>
+                    <p>Hoy, seguimos creciendo y ayudando a negocios a lograr lo mismo. No somos solo una agencia, somos aliados estratégicos que trabajamos con compromiso, creatividad y visión para que cada marca alcance su máximo potencial.</p><br></br>
+                    <b>📌 Tu éxito es nuestro éxito.</b><br></br>
+                    <b>➡ Conocé más sobre cómo podemos ayudarte 🚀</b>
                 </div>
         </div>
         </AnimationA>
