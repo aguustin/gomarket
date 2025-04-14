@@ -35,6 +35,7 @@ const NavBar = () => {
           window.addEventListener("resize", handleResize);
         
           return () => window.removeEventListener("resize", handleResize);*/
+        
           const mediaQuery = window.matchMedia("(min-width: 850px)");
           const handleResize = () => {
             setWidth(mediaQuery.matches ? 850 : 849);
@@ -131,6 +132,8 @@ const NavBar = () => {
         <>
         {/*openSessionForm && <SessionForm/>*/}
         <nav className="nav relative flex items-center justify-center bg-slate-800 pl-10 pr-10">
+        { !width ? <div className="loader"></div> : 
+        <>
         {width >= 850 ? <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/> : <img className="absolute left-0" src={goCPng.src} width={180} height={180} alt=""/>}
             {width >= 850 
             ?
@@ -200,6 +203,10 @@ const NavBar = () => {
                 <img src={userPng.src}></img>
             </button>
             */}
+            </>
+        }  
+          
+
         </nav>
         </>
     )
