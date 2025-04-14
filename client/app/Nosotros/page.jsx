@@ -19,7 +19,7 @@ const Nosotros = () => {
         <div className='text-center'>
             <h3 className='text-3xl mt-20'>💡 Los Fundadores de Go Market</h3>
         </div>
-        <div className='agus-maxi flex justify-around items-center mt-12 pl-10 pr-10'>
+        <div className='flex justify-around items-center mt-12 pl-10 pr-10'>
             <AnimationC>
             <div className='agus-maxi-child-div' style={{width:'600px'}}>
                 <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>
