@@ -5,6 +5,15 @@ import socialMediaPng from '@/app/assets/socialMedia.png'
 import './servicios.css'
 import Link from 'next/link'
 import fondoAPng from '@/app/assets/fondoA.png'
+import brandingEidentidadPng from '@/app/assets/servicios/BRANDING E IDENTIDAD.png'
+import consultoriaPng from '@/app/assets/servicios/CONSULTORIA MARKETING.png'
+import contenidosPng from '@/app/assets/servicios/CREACION CONTENIDOS.png'
+import desarrolloPng from '@/app/assets/servicios/DESARROLLO WEB Y APP.png'
+import publicidadPng from '@/app/assets/servicios/ESTRATEGIAS DE PUBLICIDAD.png'
+import mercadoPng from '@/app/assets/servicios/INVESTIGACION DE MERCADO.png'
+import seoPng from '@/app/assets/servicios/SEO Y POSICIONAMIENTO.png'
+import goBPng from '@/app/assets/goB.png'
+import handshakeTinyPng from '@/app/assets/servicios/tiny/handshakeTiny.png'
 import { AnimationB, AnimationC, AnimationCB, AnimationD } from '../animations/AnimationA/page'
 
 const Servicios = () => {
@@ -13,7 +22,7 @@ const Servicios = () => {
             <div className="ss flex items-center justify-around  mt-9" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px' }}>
                 <AnimationC>
                     <div className='serv-first-secundary'>
-                        <img className='first-img' src={deligencePng.src} alt=""></img>
+                        <img className='first-img ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10 max-[840px]:mb-0' src={deligencePng.src} alt="" style={{width: '300px', height:'300px'}}></img>
                     </div>
                 </AnimationC>
                 <AnimationD>
@@ -21,7 +30,7 @@ const Servicios = () => {
                         <h3 className='text-3xl text-center mb-3'>Tus resultados son nuestra razón</h3>
                         <p>Somos Lemon: Agencia de Marketing Digital enfocada en tus resultados. Hemos desarrollado nuestra fórmula de Estrategias de Marketing Digital pensada para atraer, retener y fidelizar a tus clientes potenciales! Esto nos identifica y nos diferencia!</p><br></br>
                         <p>Considera esto: tener un website que no genere conversiones es como tener una tienda en el piso 15º de un edificio sin carteles ni ascensor. Si tienes un local comercial, ¿no deberías tenerlo a pie de calle con un cartel grande y visible?</p><br></br>
-                        <img style={{width: '70px'}} src={happyfacePng.src} alt="" className='mx-auto'></img>
+                        <img style={{width:'70px'}} src={handshakeTinyPng.src} alt="" className='mx-auto'></img>
                     </div>
                 </AnimationD>
             </div>
@@ -38,7 +47,7 @@ const Servicios = () => {
                 <div className='servicios-container flex flex-wrap justify-between mx-auto'>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={desarrolloPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Desarrollo Web y Aplicaciones</p><br></br>
@@ -48,7 +57,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={consultoriaPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Consultoría en Marketing Digital</p><br></br>
@@ -58,7 +67,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={brandingEidentidadPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Branding e Identidad Visual</p><br></br>
@@ -68,7 +77,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={publicidadPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Estrategias de Publicidad Digital</p><br></br>
@@ -78,7 +87,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={contenidosPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Creación de Contenido para Redes Sociales</p><br></br>
@@ -88,7 +97,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={mercadoPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Investigación de Mercado y Análisis de Tendencias</p><br></br>
@@ -98,7 +107,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={socialMediaPng.src} alt="" className='mx-auto'></img><br></br>
+                        <img src={seoPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>SEO y Posicionamiento Web</p><br></br>
@@ -120,10 +129,10 @@ const Servicios = () => {
             </div>
 
 
-            <div className='ss p-16 text-black-500'>
+            <div className='ss pl-16 pr-16 pb-16 pt-6 text-black-500'>
                 <div className='mx-auto text-center' style={{ width: '60vw' }}>
                     <AnimationCB>
-                        <img className='mx-auto mb-12' src={socialMediaPng.src} alt=""></img>
+                        <img className='mx-auto mb-6' src={goBPng.src} alt="" style={{height:'220px'}}></img>
                     </AnimationCB>
                     <AnimationB>
                         <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no genera ingresos?</h3>

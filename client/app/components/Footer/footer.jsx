@@ -1,8 +1,5 @@
+import './footer.css'
 import Link from 'next/link'
-import facebookPng from '@/app/assets/facebook.png'
-import wppPng from '@/app/assets/whatsapp.png'
-import instagramPng from '@/app/assets/instagram.png'
-import gmailPng from '@/app/assets/gmail.png'
 import { Instagram, Facebook, AtSign, Phone } from 'lucide-react';
 
 const Footer = () => {

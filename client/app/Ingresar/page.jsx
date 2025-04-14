@@ -1,4 +1,5 @@
 "use client"
+import './ingresar.css'
 import { useContext, useState } from "react"
 import '@/app/components/NavBar/navbar.css'
 import UserContext from "@/app/context/sessionContext"

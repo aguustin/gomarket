@@ -2,6 +2,7 @@
 import '@/app/Home/home.css'
 import prueba from '@/app/assets/prueba.jpg';
 import goAPng from '@/app/assets/goA.png'
+import goDPng from '@/app/assets/goD.png'
 import fondoAPng from '@/app/assets/fondoA.png'
 import seoImageJpeg from '@/app/assets/seo-image.jpeg'
 import websiteJpg from '@/app/assets/website.jpg'
@@ -138,7 +139,7 @@ const Home = () => {
             
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
-                    <img className='mx-auto mb-12' src={goAPng.src} width={170} height={170} alt="" />
+                    <img className='mx-auto mb-12' src={goDPng.src} width={170} height={170} alt="" />
                     <h2 className='text-3xl text-violet-500 font-medium'>TRANSFORMA TU PRESENCIA DIGITAL CON NOSOTROS</h2>
                     <br></br>
                     <p className='text-2xl lg:ml-4 lg:mr-4'>Creamos estrategias únicas y a medida para potenciar tu inversión y llevar tu negocio al siguiente nivel en el mundo digital.</p>
@@ -154,7 +155,7 @@ const Home = () => {
                 <div className='estrategies p-3 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={desarrolloPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={desarrolloPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -173,7 +174,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={consultoriaPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={consultoriaPng.src} alt="" style={{width:'250px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -191,7 +192,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={brandingEidentidadPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={brandingEidentidadPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -209,7 +210,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={publicidadPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={publicidadPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -227,7 +228,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={contenidosPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={contenidosPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -245,7 +246,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={mercadoPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={mercadoPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -261,7 +262,7 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={seoPng.src} alt="" width={300}></img>
+                            <img className='mx-auto' src={seoPng.src} alt="" style={{width:'245px', height:'220px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
@@ -282,7 +283,7 @@ const Home = () => {
                     <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>
             </div>
-            <div className='text-center mt-28 mx-auto' style={{ width: '80vw' }}>
+            <div className='text-center mt-24 mx-auto' style={{ width: '80vw' }}>
                 <h2 className='text-3xl text-violet-500'>DONDE LA ESTRATEGIA SE CONVIERTE EN RESULTADOS</h2>
                 <br></br>
                 <p className='text-xl'>Nos especializamos en generar resultados tangibles y sostenibles a corto, mediano y largo plazo. En Go Market, fusionamos creatividad e innovación con un enfoque basado en datos, optimizando al máximo tus campañas de marketing. Adaptamos las últimas tendencias globales, desarrollando una metodología única que potencia tu marca y asegura el retorno de tu inversión.</p>

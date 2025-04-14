@@ -27,12 +27,13 @@ const NavBar = () => {
     const [openTab, setOpenTab] = useState(false)
 
     useEffect(() => {
-        const handleResize = () => {setWidth(window.innerWidth);
+        const handleResize = () => {
+            setWidth(window.innerWidth);
             window.addEventListener("resize", handleResize);
             return () => window.removeEventListener("resize", handleResize);
          }
         handleResize()
-    }, []);
+    }, [width]);
 
     const openForms = () => {
       setOpenSessionForm(true)
@@ -128,13 +129,13 @@ const NavBar = () => {
                 <div className="cc relative pt-4 pb-4 pl-5 pr-5">
                     <Link href="/Servicios" className="pb-4 text-xl">Servicios</Link>
                     <div className="list-services absolute bg-slate-800 text-center right-10">
-                    <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
-                    <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
-                    <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
-                    <Link href="/Servicios/publicidad" className="text-xl"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
-                    <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
-                    <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigaion de mercado</p></div></Link>
-                    <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
+                        <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
+                        <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
+                        <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
+                        <Link href="/Servicios/publicidad" className="text-xl"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
+                        <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
+                        <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigación de mercado</p></div></Link>
+                        <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
                     </div>
                 </div>
                 <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>

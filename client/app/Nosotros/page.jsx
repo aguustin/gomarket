@@ -1,6 +1,6 @@
 "use client"
 import '@/app/Nosotros/nosotros.css';
-import socialMediaPng from '@/app/assets/socialMedia.png';
+import goEPng from '@/app/assets/goE.png'
 import { AnimationA, AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page';
 
 const Nosotros = () => {
@@ -19,7 +19,7 @@ const Nosotros = () => {
         <div className='text-center'>
             <h3 className='text-3xl mt-20'>💡 Los Fundadores de Go Market</h3>
         </div>
-        <div className='agus-maxi flex justify-around items-center mt-12 max-['>
+        <div className='agus-maxi flex justify-around items-center mt-12 pl-10 pr-10'>
             <AnimationC>
             <div className='agus-maxi-child-div' style={{width:'600px'}}>
                 <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>
@@ -29,8 +29,8 @@ const Nosotros = () => {
             </div>
             </AnimationC>
             <AnimationB>
-            <div className='nosotros-img mx-auto mt-12 mb-12' style={{width: '100%'}}>
-                <img className='mx-auto' src={socialMediaPng.src} alt=""></img>
+            <div className='mx-auto'>
+                <img className='mx-auto' src={goEPng.src} alt="" style={{height:'200px', width: '200px'}} ></img>
             </div>
             </AnimationB>
             <AnimationD>
@@ -42,7 +42,6 @@ const Nosotros = () => {
             </div>
             </AnimationD>
         </div>
-     
         <AnimationA>
         <div className='mx-auto mt-12'>
                 <h3 className='text-3xl text-center max-[1450px]:mb-6 max-[1450px]:mt-28'>💪 Un Sueño Convertido en Realidad</h3>

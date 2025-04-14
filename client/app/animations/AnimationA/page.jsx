@@ -56,6 +56,7 @@ export const AnimationB = ({ children }) => {
                 initial={{ opacity: 0, y: -70 }}  // Inicialmente oculto y desplazado
                 animate={{ opacity: inView2 ? 1 : 0, y: inView2 ? 0 : 70 }}  // Animación de opacidad y desplazamiento
                 transition={{ duration: 0.8 }}    // Duración de la animación
+                className='negocio-img'
             >
                 {children}
             </motion.section>
