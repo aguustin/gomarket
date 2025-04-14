@@ -44,6 +44,7 @@ p, label{
 
 @media screen and (max-width: 800px) {
     .agus-maxi{
+        margin: auto !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
