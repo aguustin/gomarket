@@ -48,5 +48,6 @@ p, label{
         padding-left: 0px !important;
         padding-right: 0px !important;
         justify-content: center !important;
+        width: 90vw !important;
     }
 }
