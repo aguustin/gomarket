@@ -1,5 +1,5 @@
 "use client"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useLayoutEffect, useState } from "react"
 import '@/app/components/NavBar/navbar.css'
 import UserContext from "@/app/context/sessionContext"
 import Link from "next/link"
@@ -26,14 +26,25 @@ const NavBar = () => {
     const [responsiveNav, setResponsiveNav] = useState(false)
     const [openTab, setOpenTab] = useState(false)
 
-    useEffect(() => {
-        const handleResize = () => {
+    useLayoutEffect(() => {
+       /* const handleResize = () => {
             setWidth(window.innerWidth);
-            window.addEventListener("resize", handleResize);
-            return () => window.removeEventListener("resize", handleResize);
-         }
-        handleResize()
-    }, [width]);
+          };
+        
+          handleResize(); // Llamamos esto al principio para obtener el valor inicial
+          window.addEventListener("resize", handleResize);
+        
+          return () => window.removeEventListener("resize", handleResize);*/
+          const mediaQuery = window.matchMedia("(min-width: 850px)");
+          const handleResize = () => {
+            setWidth(mediaQuery.matches ? 850 : 849);
+          };
+        
+          handleResize(); // valor inicial
+          mediaQuery.addEventListener("change", handleResize);
+        
+          return () => mediaQuery.removeEventListener("change", handleResize);
+    }, []);
 
     const openForms = () => {
       setOpenSessionForm(true)

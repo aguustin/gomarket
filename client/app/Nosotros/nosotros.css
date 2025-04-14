@@ -35,7 +35,6 @@ p, label{
 }
 
 @media screen and (max-width: 1450px) {
-    
     .tit{
         margin: auto !important;
         width: 90vw !important;
@@ -43,3 +42,9 @@ p, label{
     }
 }
 
+@media screen and (max-width: 800px) {
+    .agus-maxi{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
