@@ -56,9 +56,9 @@ p, label{
     .agus-maxi{
         width: 100vw !important;
     }
-    /*.agus-maxi-child-div{
+    .agus-maxi-child-div{
         margin-left: 0 !important;
         padding-left: 0 !important;
-
-    }*/
+        width: 100% !important;
+    }
 }
