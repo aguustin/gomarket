@@ -54,6 +54,7 @@ p, label{
 
 @media screen and (max-width: 600px) {
     .agus-maxi{
+        display: block !important;
         width: 100vw !important;
     }
     .agus-maxi-child-div{
