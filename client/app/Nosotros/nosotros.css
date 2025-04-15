@@ -35,8 +35,9 @@ p, label{
 
     .agus-maxi-child-div-b{
         margin: auto !important;
-        width: 90vw !important;
+        width: 85vw !important;
         text-align: center;
+        margin-right: 50px !important;
     }
   
 }
