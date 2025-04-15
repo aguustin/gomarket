@@ -32,6 +32,12 @@ p, label{
         width: 90vw !important;
         text-align: center;
     }
+
+    .agus-maxi-child-div-b{
+        margin: auto !important;
+        width: 90vw !important;
+        text-align: center;
+    }
   
 }
 
@@ -53,11 +59,3 @@ p, label{
     }
 }
 
-
-@media screen and (max-width: 550px) {
-    .agus-maxi-child-div-b{
-        margin: auto !important;
-        width: 415px !important;
-        text-align: center;
-    }
-}
