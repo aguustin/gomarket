@@ -28,8 +28,6 @@ p, label{
     }
     
     .agus-maxi-child-div{
-        margin: auto !important;
-        width: 90vw !important;
         text-align: center;
     }
 }
