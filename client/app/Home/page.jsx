@@ -1,7 +1,5 @@
 "use client"
 import '@/app/Home/home.css'
-import prueba from '@/app/assets/prueba.jpg';
-import goAPng from '@/app/assets/goA.png'
 import goDPng from '@/app/assets/goD.png'
 import fondoAPng from '@/app/assets/fondoA.png'
 import seoImageJpeg from '@/app/assets/seo-image.jpeg'
@@ -22,7 +20,7 @@ import UserContext from '../context/sessionContext';
 
 const Home = () => {
 
-    const { isVisible, setVisible,  setAnimate, openFormFunc } = useContext(UserContext)
+    const { isVisible, openFormFunc } = useContext(UserContext)
 
     return (
         <>

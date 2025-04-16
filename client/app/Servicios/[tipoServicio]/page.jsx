@@ -97,7 +97,10 @@ import UserContext from '@/app/context/sessionContext'
 
 const TipoServicio = async ({params}) => {
     const par = await params.tipoServicio
-    
+    const a = () => {
+
+    }
+
     return(
         <>
           
