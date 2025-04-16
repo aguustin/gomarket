@@ -1,7 +1,5 @@
-
+"use client"
 import deligencePng from '@/app/assets/diligence.png'
-import happyfacePng from '@/app/assets/happyface.png'
-import socialMediaPng from '@/app/assets/socialMedia.png'
 import './servicios.css'
 import Link from 'next/link'
 import fondoAPng from '@/app/assets/fondoA.png'
@@ -15,10 +13,26 @@ import seoPng from '@/app/assets/servicios/SEO Y POSICIONAMIENTO.png'
 import goBPng from '@/app/assets/goB.png'
 import handshakeTinyPng from '@/app/assets/servicios/tiny/handshakeTiny.png'
 import { AnimationB, AnimationC, AnimationCB, AnimationD } from '../animations/AnimationA/page'
+import { useContext } from 'react'
+import FormCp from '../components/FormCp/page'
+import UserContext from '../context/sessionContext'
 
 const Servicios = () => {
+    const { isVisible, setVisible, setAnimate } = useContext(UserContext)
+
+    const openFormFunc = () => {
+        setVisible(!isVisible)
+        setAnimate(false)
+
+        setTimeout(() => {
+            setAnimate(true)
+        }, 50)
+        console.log(isVisible)
+    }
+
     return (
         <>
+            {isVisible && <FormCp/>}
             <div className="ss flex items-center justify-around  mt-9" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px' }}>
                 <AnimationC>
                     <div className='serv-first-secundary'>
@@ -27,17 +41,18 @@ const Servicios = () => {
                 </AnimationC>
                 <AnimationD>
                     <div className='serv-first-secundary'>
-                        <h3 className='text-3xl text-center mb-3'>Tus resultados son nuestra razón</h3>
-                        <p>Somos Lemon: Agencia de Marketing Digital enfocada en tus resultados. Hemos desarrollado nuestra fórmula de Estrategias de Marketing Digital pensada para atraer, retener y fidelizar a tus clientes potenciales! Esto nos identifica y nos diferencia!</p><br></br>
-                        <p>Considera esto: tener un website que no genere conversiones es como tener una tienda en el piso 15º de un edificio sin carteles ni ascensor. Si tienes un local comercial, ¿no deberías tenerlo a pie de calle con un cartel grande y visible?</p><br></br>
+                        <h3 className='text-3xl text-center mb-3'>Soluciones que impulsan tu marca</h3>
+                        <p>En GoMarket reunimos lo mejor del mundo digital para hacer crecer tu negocio. Desde el desarrollo de un sitio web estratégico, hasta la creación de campañas de marketing digital, publicidad y manejo de redes, cada servicio está pensado para ayudarte a destacar, conectar y vender más.</p><br></br>
+                        <p>Creemos que el éxito no es cuestión de suerte, sino de estrategia. Por eso, combinamos creatividad, análisis y tecnología para brindarte soluciones integrales que generan resultados reales.</p><br></br>
+                        <p>Porque tener presencia online no es suficiente. Hoy, necesitás tener impacto. Y nosotros estamos acá para lograrlo con vos.</p><br></br>
                         <img style={{width:'70px'}} src={handshakeTinyPng.src} alt="" className='mx-auto'></img>
                     </div>
                 </AnimationD>
             </div>
             <div className="est text-center pt-20 pb-20 pl-40 pr-40" >
-                <h1 className='text-5xl'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
-                <p className='text-xl'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus explicabo odit earum, eaque assumenda deserunt corporis possimus sequi alias placeat reprehenderit! Architecto, tempore dolorem? Earum unde officia omnis quasi saepe?</p><br></br>
-                <button className='text-xl bg-red-800 p-4 rounded-3xl'>Cotizar estrategia de marketing</button>
+                <h1 className='text-5xl'>Soluciones digitales que generan resultados reales</h1><br></br>
+                <p className='text-xl'>En GoMarket diseñamos estrategias integrales que combinan lo mejor de nuestros servicios: desarrollo web, branding, redes sociales, publicidad y más. Nos basamos en datos, creatividad y una planificación sólida que transforma ideas en crecimiento.</p><br></br>
+                <button className='text-xl bg-red-800 p-4 rounded-3xl' onClick={() => openFormFunc()}>Cotizar estrategia de marketing</button>
             </div>
             <div className='as'>
                 <div className='p-12'>
@@ -47,7 +62,7 @@ const Servicios = () => {
                 <div className='servicios-container flex flex-wrap justify-between mx-auto'>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={desarrolloPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={desarrolloPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Desarrollo Web y Aplicaciones</p><br></br>
@@ -57,7 +72,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={consultoriaPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={consultoriaPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Consultoría en Marketing Digital</p><br></br>
@@ -67,7 +82,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-12 mb-12'>
                         <AnimationB>
-                        <img src={brandingEidentidadPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={brandingEidentidadPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Branding e Identidad Visual</p><br></br>
@@ -77,7 +92,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={publicidadPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={publicidadPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Estrategias de Publicidad Digital</p><br></br>
@@ -87,7 +102,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={contenidosPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={contenidosPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Creación de Contenido para Redes Sociales</p><br></br>
@@ -97,7 +112,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={mercadoPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={mercadoPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Investigación de Mercado y Análisis de Tendencias</p><br></br>
@@ -107,7 +122,7 @@ const Servicios = () => {
                     </div>
                     <div className='servicios mt-16 mb-20'>
                         <AnimationB>
-                        <img src={seoPng.src} alt="" className='mx-auto' style={{height:'190px'}}></img><br></br>
+                        <img src={seoPng.src} alt="" className='mx-auto' style={{height:'235px'}}></img><br></br>
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>SEO y Posicionamiento Web</p><br></br>
@@ -124,7 +139,7 @@ const Servicios = () => {
                     <h1 className='text-4xl'>Somos la Agencia de Marketing Digital</h1><br></br>
                     <label className="text-xl">Que pone a tu empresa en el Mapa</label>
                     <p className='text-2xl mt-2'>¿Quieres ser revelante en el entorno digital?</p>
-                    <button className='bg-red-800 rounded-lg text-2xl p-4 pl-9 pr-9 mt-8'>Contáctanos</button>
+                    <button className='bg-red-800 rounded-lg text-2xl p-4 pl-9 pr-9 mt-8' onClick={() => openFormFunc()}>Contáctanos</button>
                 </div>
             </div>
 
@@ -140,7 +155,7 @@ const Servicios = () => {
                         <p>Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
                         <p>Lo primero que debes pensar es si tu estrategia de marketing digital es efectiva (si es que tienes una). Una buena estrategia de e-marketing debe llevar a tus clientes potenciales a visitar tu web, y estando allí, a generar acciones valiosas para tu negocio: comprar productos/servicios, ponerse en contacto, pedir una cotización, descargar un material...Depende de tus objetivos.</p><br></br>
                         <p className='text-black-700'>¿Estas aplicando estrategias de Marketing Digital Efectivas?</p>
-                        <button className='mx-auto text-2xl bg-slate-800 pt-4 pb-4 pl-8 pr-8 rounded-3xl mt-8'>Cotizar Ahora</button>
+                        <button className='mx-auto text-2xl bg-slate-800 pt-4 pb-4 pl-8 pr-8 rounded-3xl mt-8' onClick={() => openFormFunc()}>Cotizar Ahora</button>
                     </AnimationB>
                 </div>
             </div>
@@ -154,7 +169,7 @@ const Servicios = () => {
                     <p className='text-black-700'>¿Estas aplicando estrategias de Marketing Digital Efectivas?</p>
                     </AnimationB>
                     <AnimationC>
-                        <button className='mx-auto text-2xl bg-slate-800 pt-4 pb-4 pl-8 pr-8 rounded-3xl mt-8'>Cotizar Ahora</button>
+                        <button className='mx-auto text-2xl bg-slate-800 pt-4 pb-4 pl-8 pr-8 rounded-3xl mt-8' onClick={() => openFormFunc()}>Cotizar Ahora</button>
                     </AnimationC>
                 </div>
             </div>

@@ -2,6 +2,7 @@ import socialMediaPng from '@/app/assets/socialMedia.png'
 import deligencePng from '@/app/assets/diligence.png'
 import happyfacePng from '@/app/assets/happyface.png'
 import fondoAPng from '@/app/assets/fondoA.png'
+import { AnimationD } from '@/app/animations/AnimationA/page'
 //desarrollo imgs
 import desarrolloPng from '@/app/assets/desarrollo.png'
 import desarrolloBPng from '@/app/assets/web developmentB.png'
@@ -91,12 +92,15 @@ import optimizacionSEOPng from '@/app/assets/servicios/png/Seo y posicionamiento
 import APng from '@/app/assets/servicios/steps/1.png'
 import BPng from '@/app/assets/servicios/steps/2.png'
 import CPng from '@/app/assets/servicios/steps/3.png'
+import { useContext } from 'react'
+import UserContext from '@/app/context/sessionContext'
 
 const TipoServicio = async ({params}) => {
     const par = await params.tipoServicio
-
+    
     return(
         <>
+          
           <div className="ss flex items-center justify-around " style={{padding:'80px'}}>
                 <div className='serv-first-secundary'>
                     <img className="ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10 max-[840px]:mb-0" src={
@@ -110,16 +114,43 @@ const TipoServicio = async ({params}) => {
                     } alt="" width={350} height={350}></img>
                 </div>
                 <div className='serv-first-secundary mr-20'>
-                    <h3 className='text-3xl text-center mb-3'>Tus resultados son nuestra razón</h3>
-                    <p>Somos Lemon: Agencia de Marketing Digital enfocada en tus resultados. Hemos desarrollado nuestra fórmula de Estrategias de Marketing Digital pensada para atraer, retener y fidelizar a tus clientes potenciales! Esto nos identifica y nos diferencia!</p><br></br>
-                    <p>Considera esto: tener un website que no genere conversiones es como tener una tienda en el piso 15º de un edificio sin carteles ni ascensor. Si tienes un local comercial, ¿no deberías tenerlo a pie de calle con un cartel grande y visible?</p><br></br>
-                    {par === "desarrollo" && <img src={codeTinyPng.src} alt="" className='mx-auto' ></img>}
-                    {par === "marketing" && <img src={marketingTinyPng.src} alt="" className='mx-auto'></img>}
-                    {par === "branding" && <img src={brandingTinyPng.src} alt="" className='mx-auto'></img>}
-                    {par === "publicidad" && <img src={publicityTinyPng.src} alt="" className='mx-auto '></img>}
-                    {par === "redes" && <img src={mediaTinyPng.src} alt="" className='mx-auto'></img>}
-                    {par === "mercado" && <img src={analyticsTinyPng.src} alt="" className='mx-auto'></img>}
-                    {par === "seo" && <img src={seoTinyPng.src} alt="" className='mx-auto'></img>}
+                    <AnimationD>
+                    {par === "desarrollo" && <> <h3 className='text-3xl text-center mb-3'>Tu sitio web, tu carta de presentación al mundo</h3>
+                        <p>Un sitio web bien diseñado no solo representa tu marca, es la base de tu presencia digital. En nuestra agencia desarrollamos sitios web funcionales, intuitivos y visualmente impactantes, optimizados para generar conversiones. Ya sea una tienda online, un portafolio o una página corporativa, creamos plataformas pensadas para conectar con tus clientes y guiar su recorrido desde el primer clic.</p><br></br>
+                        <p>Imaginalo así: un sitio lento, mal estructurado o poco claro puede hacerte perder oportunidades valiosas. Pero un buen sitio web trabaja para vos, incluso cuando dormís.</p><br></br>
+                        <img src={codeTinyPng.src} alt="" className='mx-auto' ></img>
+                    </> }
+                    {par === "marketing" && <> <h3 className='text-3xl text-center mb-3'>La estrategia lo es todo</h3>
+                        <p>El marketing digital va más allá de estar en redes o enviar correos. Es diseñar un sistema completo que acompañe a tu marca desde el descubrimiento hasta la fidelización. Implementamos campañas integrales con foco en resultados reales, medibles y escalables.</p><br></br>
+                        <p>Imaginá tener toda la atención del público ideal… y saber exactamente qué hacer con ella. Eso es lo que logramos con una estrategia digital bien pensada.</p><br></br>
+                        <img src={marketingTinyPng.src} alt="" className='mx-auto'></img>
+                    </> } 
+                    {par === "branding" && <> <h3 className='text-3xl text-center mb-3'>No es solo un logo, es tu identidad</h3>
+                        <p>El branding es el alma de tu marca. Diseñamos identidades visuales y conceptuales que reflejan tu propósito, tu tono y tu estilo, generando una conexión auténtica con tu audiencia. Tu marca no solo debe verse bien, debe sentirse genuina y coherente en cada punto de contacto.</p><br></br>
+                        <p>Una marca sin identidad clara se pierde en el ruido. Con un branding sólido, tu negocio deja de ser uno más para convertirse en inolvidable.</p><br></br>
+                        <img src={brandingTinyPng.src} alt="" className='mx-auto'></img>
+                    </> } 
+                    {par === "publicidad" && <> <h3 className='text-3xl text-center mb-3'>Llegá a quien importa, en el momento justo</h3>
+                        <p>Con la publicidad digital podés segmentar con precisión, optimizar en tiempo real y medir cada resultado. Diseñamos campañas personalizadas en Google, Meta, YouTube y más, para que cada peso invertido genere retorno real.</p><br></br>
+                        <p>Piénsalo así: gastar sin rumbo es fácil. Invertir con inteligencia y estrategia es lo que marca la diferencia entre “intentar” y “lograr”..</p><br></br>
+                        <img src={publicityTinyPng.src} alt="" className='mx-auto '></img>
+                    </> } 
+                    {par === "redes" && <> <h3 className='text-3xl text-center mb-3'>No es solo publicar, es crear comunidad</h3>
+                        <p>Gestionamos tus redes para construir relaciones auténticas con tu audiencia. Creamos contenido estratégico, alineado con tu marca y tus objetivos, para generar interacción real y posicionamiento orgánico.</p><br></br>
+                        <p>Tus redes son la voz de tu marca. ¿Están diciendo lo correcto? Nosotros nos aseguramos de que sí.</p><br></br>
+                        <img src={mediaTinyPng.src} alt="" className='mx-auto'></img>
+                    </> } 
+                    {par === "mercado" && <> <h3 className='text-3xl text-center mb-3'>Tomá decisiones basadas en datos, no en suposiciones</h3>
+                        <p>A través de estudios cualitativos y cuantitativos, descubrimos qué piensa, siente y necesita tu audiencia. Conocer tu mercado es el primer paso para crear estrategias efectivas y reducir riesgos.</p><br></br>
+                        <p>Actuar sin información es como navegar sin brújula. La investigación te da el mapa para tomar decisiones más seguras y efectivas.</p><br></br>
+                        <img src={analyticsTinyPng.src} alt="" className='mx-auto'></img>
+                    </> } 
+                    {par === "seo" && <> <h3 className='text-3xl text-center mb-3'>Si no estás en Google, no existís</h3>
+                        <p>El SEO permite que tu sitio web aparezca en los primeros resultados de búsqueda cuando tus potenciales clientes te buscan. Optimizamos tu contenido, estructura web y enlaces para mejorar tu visibilidad orgánica y atraer tráfico de calidad.</p><br></br>
+                        <p>No se trata solo de aparecer, sino de aparecer en el momento exacto en que alguien necesita lo que ofrecés.</p><br></br>
+                        <img src={seoTinyPng.src} alt="" className='mx-auto'></img>
+                    </> }
+                    </AnimationD>  
                 </div>
             </div>
             {par === "desarrollo" && 
@@ -584,7 +615,7 @@ const TipoServicio = async ({params}) => {
                     <img className='mx-auto mb-12' src={socialMediaPng.src} alt=""></img>
                     <h3 className='text-4xl text-center mb-7'>Mi website está integrado a Analytics</h3>
                     <h3 className='mb-8 text-2xl'>¿Por qué necesito de un especialista?</h3>
-                    <p>¿Tienes un website DIVINO, pero aún así tu página web no te está generando ingresos?. Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
+                    <p>¿Tienes una BUENA website, pero aún así tu página web no te está generando ingresos?. Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
                     <p>Lo primero que debes pensar es si tu estrategia de marketing digital es efectiva (si es que tienes una). Una buena estrategia de e-marketing debe llevar a tus clientes potenciales a visitar tu web, y estando allí, a generar acciones valiosas para tu negocio: comprar productos/servicios, ponerse en contacto, pedir una cotización, descargar un material...Depende de tus objetivos.</p><br></br>
                 </div>
             </div>

@@ -12,6 +12,8 @@ export const UserContextProvider = ({children}) => {
     const [session, setSession] = useState([])
     const [createBlogForm, setCreateBlogForm] = useState(false)
     const [blogs, setBlogs] = useState([])
+    const [isVisible, setVisible] = useState(false)
+    const [animate, setAnimate] = useState(false)
 
     useEffect(() => {
         const useGet = async () => {
@@ -36,11 +38,20 @@ export const UserContextProvider = ({children}) => {
             setSession(JSON.parse(localStorage.getItem('session')))
             redirect('/Blogs')
        }
-        
+    }
+
+    const openFormFunc = () => {
+        setVisible(!isVisible)
+        setAnimate(false)
+
+        setTimeout(() => {
+            setAnimate(true)
+        }, 50)
+        console.log(isVisible)
     }
 
     return(
-        <UserContext.Provider value={{session, setSession, blogs, setBlogs, createBlogForm, setCreateBlogForm, loginContext}}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{session, setSession, blogs, setBlogs, createBlogForm, setCreateBlogForm, loginContext, isVisible, setVisible, animate, setAnimate, openFormFunc}}>{children}</UserContext.Provider>
     )
 }
 
