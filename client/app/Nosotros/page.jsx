@@ -21,7 +21,7 @@ const Nosotros = () => {
         </div>
         <div className='agus-maxi flex justify-around items-center mt-12 pl-10 pr-10'>
             <AnimationA>
-            <div className='agus-maxi-child-div mx-auto text-center' style={{width:'600px'}}>
+            <div className='agus-maxi-child-div mx-auto text-center' style={{width:'450px'}}>
                 <h3 className='text-3xl text-center'>🎯 Maximiliano Giménez – CEO & Estratega de Marketing</h3>
                 <p className='mt-6'>Desde siempre, Maxi tuvo una visión clara: ayudar a marcas y emprendedores a potenciar su presencia digital con estrategias bien pensadas y orientadas a resultados. Con experiencia en marketing digital, branding y contenido, se convirtió en el motor detrás de la estrategia de Go Market</p><br></br>
                 <p>Para Maxi, el marketing no es solo vender, es conectar. Cada cliente es único, y por eso, en Go Market, cada estrategia es personalizada y diseñada para generar impacto real. Su pasión por el emprendimiento lo llevó a fundar la agencia y a desarrollar Go Ticket, una plataforma innovadora de venta de entradas, junto a su socio Agustín</p><br></br>
