@@ -31,11 +31,8 @@ p, label{
         margin: auto !important;
         width: 90vw !important;
         text-align: center;
-        color: black;
     }
-}
 
-@media screen and (max-width: 1450px) {
     .tit{
         margin: auto !important;
         width: 90vw !important;
@@ -43,16 +40,18 @@ p, label{
     }
 }
 
-@media screen and (max-width: 800px) {
-    .agus-maxi{
-        margin: auto !important;
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-        justify-content: center !important;
-        width: 90vw !important;
+@media screen and (max-width: 900px){
+    .h{
+        text-align: center;
+        margin-bottom: 5vh;
     }
 
+    .agus-maxi{  
+        width: 96vw;
+        margin: auto;
+     }
     .agus-maxi-child-div{
-        margin-right: 50px !important;
+        width: 100% !important;
     }
+
 }

@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link href="https://www.instagram.com/go_market.digital?igsh=cmZtbHp6eXdzMjBt"><Instagram className='icon'/></Link>
                 <Link href="Gomarketdigital24@gmail.com"><AtSign className='icon'/></Link>
             </div>
-            {width <= 620 ? '' : <p className="text-lg max-[1175px]:text-sm">Copyright GoMarket©  – Todo los derechos reservados</p>}
+            {width <= 690 ? '' : <p className="text-lg max-[1175px]:text-sm">Copyright GoMarket©  – Todo los derechos reservados</p>}
         </footer>
         </>
     )

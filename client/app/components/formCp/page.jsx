@@ -1,14 +1,15 @@
 import UserContext from "@/app/context/sessionContext";
 import { useContext } from "react"
 import '@/app/Home/home.css'
-
+import closePng from '@/app/assets/close.png'
 const FormCp = () => {
-    const { isVisible, setVisible, animate, openFormFunc } = useContext(UserContext)
+    const {animate, openFormFunc } = useContext(UserContext)
     
     return(
 <>
                 <div className={`back-form ${animate ? 'show' : ''} bg-slate-800`} onClick={() => openFormFunc()}></div>
                     <div className={`form-container ${animate ? 'show' : ''} bg-slate-800`}>
+                        <button onClick={() => openFormFunc()}><img src={closePng.src} alt=""></img></button>
                         <form className='p-4'>
                             <h2 className='text-center text-xl'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
                             <div className='mt-4 mb-6'>
