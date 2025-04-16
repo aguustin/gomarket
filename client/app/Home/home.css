@@ -185,6 +185,7 @@ p, label, button, a{
 
 @media screen and (max-width:760px) {
   .form-container{
-    width: 98vw !important;
+    width: 94vw !important;
+    padding: 0px !important;
   }
 }
