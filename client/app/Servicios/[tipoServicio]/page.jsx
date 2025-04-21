@@ -215,7 +215,7 @@ const TipoServicio = async ({params}) => {
                         <div className='servicios mt-6 mb-12'>
                             <img src={backedPng.src} alt="" className='mx-auto' style={{width:'320px'}}></img><br></br>
                             <p className='text-center text-2xl'>3️⃣ Desarrollo del backend</p><br></br>
-                            <p className='dark:text-white'>El backend se encarga de la lógica, bases de datos y servidores de la aplicación. Durante esta fase, se crean las funcionalidades que gestionan la información, como bases de datos, autenticación de usuarios, y la integración de APIs necesarias para el funcionamiento adecuado.</p><br></br>
+                            <p>El backend se encarga de la lógica, bases de datos y servidores de la aplicación. Durante esta fase, se crean las funcionalidades que gestionan la información, como bases de datos, autenticación de usuarios, y la integración de APIs necesarias para el funcionamiento adecuado.</p><br></br>
                         </div>
                         <div className='servicios mt-6 mb-12'>
                             <img src={frontendPng.src} alt="" className='mx-auto' style={{width:'320px'}}></img><br></br>
