@@ -4,7 +4,7 @@ import goEPng from '@/app/assets/goE.png'
 import { AnimationA, AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page';
 import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
-import FormCp from '../components/FormCp/page';
+import FormCp from '../components/formCp/page';
 
 const Nosotros = () => {
     const { isVisible } = useContext(UserContext)

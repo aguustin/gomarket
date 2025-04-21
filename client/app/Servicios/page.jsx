@@ -14,7 +14,7 @@ import goBPng from '@/app/assets/goB.png'
 import handshakeTinyPng from '@/app/assets/servicios/tiny/handshakeTiny.png'
 import { AnimationB, AnimationC, AnimationCB, AnimationD } from '../animations/AnimationA/page'
 import { useContext } from 'react'
-import FormCp from '../components/FormCp/page'
+import FormCp from '../components/formCp/page'
 import UserContext from '../context/sessionContext'
 
 const Servicios = () => {

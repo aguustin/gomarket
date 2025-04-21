@@ -4,7 +4,7 @@ import deletePng from '@/app/assets/delete.png';
 import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
 import Link from 'next/link';
-import FormCp from '../components/FormCp/page';
+import FormCp from '../components/formCp/page';
 
 const Blogs = () => {
 

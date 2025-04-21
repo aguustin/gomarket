@@ -15,7 +15,7 @@ import seoPng from '@/app/assets/servicios/SEO Y POSICIONAMIENTO.png'
 import Link from 'next/link';
 import { useContext, useState } from 'react';
 import { AnimationA, AnimationB, AnimationC, AnimationTi } from '../animations/AnimationA/page';
-import FormCp from '../components/FormCp/page';
+import FormCp from '../components/formCp/page';
 import UserContext from '../context/sessionContext';
 
 const Home = () => {
