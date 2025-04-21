@@ -86,7 +86,7 @@ const Servicios = () => {
                         </AnimationB>
                         <AnimationC>
                             <p className='text-center text-2xl'>Branding e Identidad Visual</p><br></br>
-                            <p>Construimos marcas memorables con diseños únicos, logotipos impactantes y una identidad visual coherente que refleje la esencia de tu negocio.</p><br></br>
+                            <p className='dark:text-white'>Construimos marcas memorables con diseños únicos, logotipos impactantes y una identidad visual coherente que refleje la esencia de tu negocio.</p><br></br>
                             <Link href="/Servicios/branding" className='serv-conocer-mas pt-3 pb-3 pl-4 pr-4 rounded-lg'>Conocer mas</Link>
                         </AnimationC>
                     </div>

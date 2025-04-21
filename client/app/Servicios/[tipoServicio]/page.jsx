@@ -97,9 +97,6 @@ import UserContext from '@/app/context/sessionContext'
 
 const TipoServicio = async ({params}) => {
     const par = await params.tipoServicio
-    const a = () => {
-
-    }
 
     return(
         <>
@@ -118,12 +115,12 @@ const TipoServicio = async ({params}) => {
                 </div>
                 <div className='serv-first-secundary mr-20'>
                     <AnimationD>
-                    {par === "desarrollo" && <> <h3 className='text-3xl text-center mb-3'>Tu sitio web, tu carta de presentación al mundo</h3>
+                    {par === "desarrollo" && <> <h3 className='text-3xl text-center mb-3 '>Tu sitio web, tu carta de presentación al mundo</h3>
                         <p>Un sitio web bien diseñado no solo representa tu marca, es la base de tu presencia digital. En nuestra agencia desarrollamos sitios web funcionales, intuitivos y visualmente impactantes, optimizados para generar conversiones. Ya sea una tienda online, un portafolio o una página corporativa, creamos plataformas pensadas para conectar con tus clientes y guiar su recorrido desde el primer clic.</p><br></br>
                         <p>Imaginalo así: un sitio lento, mal estructurado o poco claro puede hacerte perder oportunidades valiosas. Pero un buen sitio web trabaja para vos, incluso cuando dormís.</p><br></br>
                         <img src={codeTinyPng.src} alt="" className='mx-auto' ></img>
                     </> }
-                    {par === "marketing" && <> <h3 className='text-3xl text-center mb-3 text-violet-300'>La estrategia lo es todo</h3>
+                    {par === "marketing" && <> <h3 className='text-3xl text-center mb-3'>La estrategia lo es todo</h3>
                         <p>El marketing digital va más allá de estar en redes o enviar correos. Es diseñar un sistema completo que acompañe a tu marca desde el descubrimiento hasta la fidelización. Implementamos campañas integrales con foco en resultados reales, medibles y escalables.</p><br></br>
                         <p>Imaginá tener toda la atención del público ideal… y saber exactamente qué hacer con ella. Eso es lo que logramos con una estrategia digital bien pensada.</p><br></br>
                         <img src={marketingTinyPng.src} alt="" className='mx-auto'></img>
@@ -158,43 +155,43 @@ const TipoServicio = async ({params}) => {
             </div>
             {par === "desarrollo" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6">
-                    <h1 className='text-5xl'>Creamos tu aplicacion web para que crezcas</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>Creamos tu aplicacion web para que crezcas</h1><br></br>
                     <p className='text-xl'>Desarrollamos soluciones web a medida, optimizadas para ofrecerte una experiencia de usuario única y escalable, que te permita llevar tu negocio al siguiente nivel y alcanzar nuevos horizontes de crecimiento.</p><br></br>
                 </div>
             }
             {par === "marketing" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl text-violet-300'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
+                    <h1 className='serv-h1 text-violet-300'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
                     <p className='text-xl'>Implementar campañas personalizadas y aprovechar las herramientas digitales más avanzadas permite a las empresas maximizar su alcance, conectar de manera efectiva con su audiencia y generar un impacto significativo en sus resultados.</p><br></br>
                 </div>
             }
              {par === "branding" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>Impulsa tu marca con un branding memorable</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>Impulsa tu marca con un branding memorable</h1><br></br>
                     <p className='text-xl'>Con estrategias de branding innovadoras, creamos una identidad sólida y única que conecta emocionalmente con tu audiencia y posiciona tu marca para un éxito duradero.</p><br></br>
                 </div>
             }
              {par === "publicidad" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>Publicidad que transforma tu negocio</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>Publicidad que transforma tu negocio</h1><br></br>
                     <p className='text-xl'>A través de campañas publicitarias creativas y enfocadas, ayudamos a aumentar tu visibilidad, captar nuevos clientes y fortalecer la relación con tu audiencia para generar resultados reales.</p><br></br>
                 </div>
             }
               {par === "redes" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>Manejo de redes que conecta con el mundo haciendo crecer tu marca</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>Manejo de redes que conecta con el mundo haciendo crecer tu marca</h1><br></br>
                     <p className='text-xl'>Gestionamos tus redes sociales de manera estratégica, creando contenido relevante y fomentando la interacción para aumentar tu presencia online y fidelizar a tu comunidad.</p><br></br>
                 </div>
             }
              {par === "mercado" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>Análizamos tu mercado para tomar decisiones estratégicas</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>Análizamos tu mercado para tomar decisiones estratégicas</h1><br></br>
                     <p className='text-xl'>Realizamos estudios profundos del mercado para brindarte datos clave que te permitan entender a tu audiencia, identificar oportunidades y tomar decisiones informadas que impulsen tu crecimiento.</p><br></br>
                 </div>
             }
             {par === "seo" && 
                 <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>SEO que posiciona tu negocio en los primeros lugares</h1><br></br>
+                    <h1 className='serv-h1 text-5xl text-violet-300'>SEO que posiciona tu negocio en los primeros lugares</h1><br></br>
                     <p className='text-xl'>Optimizamos tu presencia en línea con estrategias SEO efectivas, mejorando tu visibilidad en los motores de búsqueda y atrayendo tráfico cualificado que convierte en resultados tangibles.</p><br></br>
                 </div>
             }
@@ -218,7 +215,7 @@ const TipoServicio = async ({params}) => {
                         <div className='servicios mt-6 mb-12'>
                             <img src={backedPng.src} alt="" className='mx-auto' style={{width:'320px'}}></img><br></br>
                             <p className='text-center text-2xl'>3️⃣ Desarrollo del backend</p><br></br>
-                            <p>El backend se encarga de la lógica, bases de datos y servidores de la aplicación. Durante esta fase, se crean las funcionalidades que gestionan la información, como bases de datos, autenticación de usuarios, y la integración de APIs necesarias para el funcionamiento adecuado.</p><br></br>
+                            <p className='dark:text-white'>El backend se encarga de la lógica, bases de datos y servidores de la aplicación. Durante esta fase, se crean las funcionalidades que gestionan la información, como bases de datos, autenticación de usuarios, y la integración de APIs necesarias para el funcionamiento adecuado.</p><br></br>
                         </div>
                         <div className='servicios mt-6 mb-12'>
                             <img src={frontendPng.src} alt="" className='mx-auto' style={{width:'320px'}}></img><br></br>

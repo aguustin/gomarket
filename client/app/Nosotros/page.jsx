@@ -41,7 +41,7 @@ const Nosotros = () => {
             </div>
             </AnimationB>
             <AnimationA>
-            <div className='agus-maxi-child-div' style={{width:'600px'}}>
+            <div className='agus-maxi-child-div text-center' style={{width:'600px'}}>
                 <h3 className='text-2xl text-center text-violet-300'>💻 Agustín Molé – Co-Fundador & Programador</h3>
                 <p className='mt-6'>La tecnología y la innovación siempre fueron parte de la vida de Agustín. Como programador, su objetivo es crear soluciones digitales que hagan la vida más fácil a emprendedores y marcas.</p><br></br>
                 <p className='mt-2'>Junto con Maximiliano, decidió dar el salto y fundar Go Market, combinando su talento en desarrollo web y aplicaciones con la visión estratégica del marketing. También es la mente detrás de la programación en Go Ticket, la plataforma que crearon juntos para revolucionar la venta de entradas online.</p><br></br>

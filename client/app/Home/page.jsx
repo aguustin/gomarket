@@ -25,14 +25,14 @@ const Home = () => {
     return (
         <>
             {isVisible && <FormCp/>}
-            <video className='go-image-container relative' src="https://res.cloudinary.com/drmcrdf4r/video/upload/v1/gomarket/home/opHome_sdwixs.mp4?_s=vp-2.1.0" autoPlay={true} loop={true} muted controlsList="nodownload" style={{marginTop:'90px'}}></video>
+            <video className='go-image-container relative' src="https://res.cloudinary.com/drmcrdf4r/video/upload/v1745261044/gomarket/home/opHomeB_q76vre.mp4" autoPlay={true} loop={true} muted controlsList="nodownload" style={{marginTop:'90px'}}></video>
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
                     <img className='mx-auto mb-12' src={goDPng.src} width={170} height={170} alt="" />
                     <h2 className='text-3xl text-violet-500 font-medium'>TRANSFORMA TU PRESENCIA DIGITAL CON NOSOTROS</h2>
                     <br></br>
                     <p className='text-2xl lg:ml-4 lg:mr-4'>Creamos estrategias únicas y a medida para potenciar tu inversión y llevar tu negocio al siguiente nivel en el mundo digital.</p>
-                    <button className='bg-violet-900 pt-4 pb-4 pl-7 pr-7 rounded-lg mt-7'><p className='text-lg'>Saber mas</p></button>
+                    <button className='bg-violet-900 pt-4 pb-4 pl-7 pr-7 rounded-lg mt-7' onClick={() => openFormFunc()}><p className='text-lg'>Saber mas</p></button>
                 </div>
             </AnimationTi>
             <AnimationC>

@@ -164,3 +164,11 @@ p, label{
     }
 
 }
+
+@media screen and (max-width:650px) {
+    .serv-h1{
+      font-size: 26px !important;
+    }
+    
+  }
+  
