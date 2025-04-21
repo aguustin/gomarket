@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <>
             {isVisible && <FormCp/>}
-            <video className='go-image-container' src="https://res.cloudinary.com/drmcrdf4r/video/upload/v1/gomarket/home/opHome_sdwixs.mp4?_s=vp-2.1.0" autoPlay={true} loop={true} muted controlsList="nodownload"></video>
+            <video className='go-image-container relative' src="https://res.cloudinary.com/drmcrdf4r/video/upload/v1/gomarket/home/opHome_sdwixs.mp4?_s=vp-2.1.0" autoPlay={true} loop={true} muted controlsList="nodownload" style={{marginTop:'90px'}}></video>
             <AnimationTi>
                 <div className='text-center pt-20 pb-20 md:pt-6 md:pb-6'>
                     <img className='mx-auto mb-12' src={goDPng.src} width={170} height={170} alt="" />
@@ -44,16 +44,18 @@ const Home = () => {
                 <div className='estrategies p-3 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={desarrolloPng.src} alt="" style={{width:'220px', height:'220px'}}></img>
+                            <img className='mx-auto' src={desarrolloPng.src} alt="" style={{width:'220px', height:'230px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
                             <h2 className='text-2xl text-violet-500 text-center'>Desarrollo Web y Aplicaciones</h2>
-                            <p className='text-lg mt-5'>
-                            Desarrollo Web y Aplicaciones
-                            Creamos sitios web y aplicaciones optimizadas para potenciar tu presencia digital, asegurando un diseño atractivo, funcionalidad intuitiva y una experiencia de usuario excepcional.
-                            </p>
+                                <div className='serv-scroll'>
+                                    <p className='text-lg mt-5'>
+                                        Desarrollo Web y Aplicaciones
+                                        Creamos sitios web y aplicaciones optimizadas creando funcionalidad intuitiva y una experiencia de usuario excepcional.
+                                    </p>
+                                </div>
                             <div className='text-center mt-12'>
                                 <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/desarrollo">Conoce más</Link>
                             </div>
@@ -63,14 +65,14 @@ const Home = () => {
                 <div className='estrategies p-4 mt-10'>
                     <AnimationB>
                         <div>
-                            <img className='mx-auto' src={consultoriaPng.src} alt="" style={{width:'250px', height:'220px'}}></img>
+                            <img className='mx-auto' src={consultoriaPng.src} alt="" style={{width:'250px', height:'222px'}}></img>
                         </div>
                     </AnimationB>
                     <AnimationC>
                         <div className='mt-6'>
-                            <h2 className='text-2xl text-violet-500 text-center'>Consultoría en Marketing Digital</h2>
+                            <h2 className='text-2xl text-violet-500 text-center'>Marketing Digital</h2>
                             <p className='text-lg mt-5'>
-                            Te guiamos en la planificación y ejecución de estrategias digitales efectivas para hacer crecer tu negocio y maximizar tus resultados en el entorno digital.
+                            Te guiamos en la planificación y ejecución de estrategias digitales para hacer crecer tu negocio y maximizar tus resultados en el entorno digital.
                             </p>
                             <div className='text-center mt-12'>
                                 <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/marketing">Conoce más</Link>
@@ -124,7 +126,7 @@ const Home = () => {
                         <div className='mt-6'>
                             <h2 className='text-2xl text-violet-500 text-center'>Creación de Contenido para Redes Sociales</h2>
                             <p className='text-lg mt-5'>
-                            Generamos contenido atractivo y estratégico en distintos formatos (reels, imágenes, animaciones, textos persuasivos) para potenciar el engagement y posicionamiento de tu marca.
+                            Generamos contenido atractivo y estratégico en distintos formatos (reels, imágenes, animaciones, textos persuasivos) para potenciar el posicionamiento de tu marca.
                             </p>
                             <div className='text-center mt-12'>
                                 <Link className='conoce-mas mx-auto rounded-2xl bg-red-700 text-white pt-3 pb-3 pl-6 pr-6' href="/Servicios/redes">Conoce más</Link>
@@ -187,7 +189,7 @@ const Home = () => {
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>Generadores de Leads o Ventas</h3><br></br>
                         <p className='text-xl'>En Go Market, potenciamos tu marca con estrategias digitales que generan visibilidad, clientes y ventas. Desde branding y redes sociales hasta publicidad y desarrollo web, diseñamos soluciones personalizadas para que tu negocio destaque y crezca en el mundo digital.</p><br></br>
-                        <b className='text-lg'>📌 Estrategia + Creatividad + Resultados = Tu éxito</b>
+                        <b>📌 Estrategia + Creatividad + Resultados = Tu éxito</b>
                     </AnimationA>
                     <AnimationC className='negocio-img mx-6'>
                         <img src={leadGeneration.src} alt=""></img>
@@ -200,14 +202,14 @@ const Home = () => {
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no aparece en Google? 🔍</h3><br></br>
                         <p className='ml-6 sm:ml-3 text-xl'>Si tu página no está siendo encontrada por tus clientes potenciales, probablemente esté perdiendo oportunidades valiosas. En Go Market, optimizamos tu sitio con estrategias SEO efectivas para mejorar su visibilidad en Google y atraer más tráfico orgánico.</p><br></br>
-                        <b className='ml-6 sm:ml-3 text-lg'>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
+                        <b className='ml-6 sm:ml-3 '>📌 Haz que tu sitio sea visible y llegue a más personas.</b>
                     </AnimationA>
                 </div>
                 <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
                         <h3 className='text-3xl text-center'>¿Tu sitio web no genera ingresos? 💻</h3><br></br>
                         <p className='text-xl'>Si tu sitio web no está convirtiendo visitantes en clientes, es hora de hacer un cambio. En Go Market, transformamos tu página en una herramienta de ventas efectiva con diseño atractivo, optimización SEO y estrategias de conversión. ¡Haz que tu sitio trabaje para ti!</p><br></br>
-                        <b className='text-lg'>📌 Convierte tu tráfico en ingresos reales.</b>
+                        <b>📌 Convierte tu tráfico en ingresos reales.</b>
                     </AnimationA>
                     <AnimationC className='negocio-img mx-6'>
                         <img src={websiteJpg.src} alt=""></img>

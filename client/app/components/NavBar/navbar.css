@@ -24,6 +24,7 @@ p, label{
 
 .nav{
     height: 90px;
+    z-index: 6;
 }
 
 .loginb:hover{
@@ -49,7 +50,7 @@ p, label{
     transform: translateY(-20px); /* Se posiciona ligeramente arriba */
     visibility: hidden;
     transition: opacity .5s ease, transform .5s ease, visibility .5s ease;
-    z-index: 3;
+    z-index: 6;
 }
 
 .services-link{

@@ -2,11 +2,18 @@
 import '@/app/Nosotros/nosotros.css';
 import goEPng from '@/app/assets/goE.png'
 import { AnimationA, AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page';
+import { useContext } from 'react';
+import UserContext from '../context/sessionContext';
+import FormCp from '../components/FormCp/page';
 
 const Nosotros = () => {
+    const { isVisible } = useContext(UserContext)
+
+
     return(
         <>
-        <div className="text-center mt-12">
+        {isVisible && <FormCp/>}
+        <div className="text-center mt-12" style={{marginTop:'130px'}}>
             <h1 className='text-4xl text-violet-500'>El equipo detrás de Go Market 🚀</h1><br></br>
         </div>
         <AnimationA>

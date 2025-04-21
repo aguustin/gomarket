@@ -4,13 +4,15 @@ import deletePng from '@/app/assets/delete.png';
 import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
 import Link from 'next/link';
+import FormCp from '../components/FormCp/page';
 
 const Blogs = () => {
 
-    const {blogs} = useContext(UserContext)
+    const {blogs, isVisible} = useContext(UserContext)
     
     return(
         <>
+        {isVisible && <FormCp/>}
             <div className='relative flex items-center justify-right' style={{height:'80px'}}>
                 <form className='absolute right-10'>
                     <input type="text" placeholder='Buscar blog' className='bg-slate-900 p-2'></input>

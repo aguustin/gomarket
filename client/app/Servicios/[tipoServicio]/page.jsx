@@ -104,7 +104,7 @@ const TipoServicio = async ({params}) => {
     return(
         <>
           
-          <div className="ss flex items-center justify-around " style={{padding:'80px'}}>
+          <div className="ss flex items-center justify-around " style={{padding:'80px', marginTop:'90px'}}>
                 <div className='serv-first-secundary'>
                     <img className="ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10 max-[840px]:mb-0" src={
                         par === "desarrollo" ? desarrolloBPng.src :
@@ -163,37 +163,37 @@ const TipoServicio = async ({params}) => {
                 </div>
             }
             {par === "marketing" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl text-violet-300'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
                     <p className='text-xl'>Implementar campañas personalizadas y aprovechar las herramientas digitales más avanzadas permite a las empresas maximizar su alcance, conectar de manera efectiva con su audiencia y generar un impacto significativo en sus resultados.</p><br></br>
                 </div>
             }
              {par === "branding" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl'>Impulsa tu marca con un branding memorable</h1><br></br>
                     <p className='text-xl'>Con estrategias de branding innovadoras, creamos una identidad sólida y única que conecta emocionalmente con tu audiencia y posiciona tu marca para un éxito duradero.</p><br></br>
                 </div>
             }
              {par === "publicidad" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl'>Publicidad que transforma tu negocio</h1><br></br>
                     <p className='text-xl'>A través de campañas publicitarias creativas y enfocadas, ayudamos a aumentar tu visibilidad, captar nuevos clientes y fortalecer la relación con tu audiencia para generar resultados reales.</p><br></br>
                 </div>
             }
               {par === "redes" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl'>Manejo de redes que conecta con el mundo haciendo crecer tu marca</h1><br></br>
                     <p className='text-xl'>Gestionamos tus redes sociales de manera estratégica, creando contenido relevante y fomentando la interacción para aumentar tu presencia online y fidelizar a tu comunidad.</p><br></br>
                 </div>
             }
              {par === "mercado" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl'>Análizamos tu mercado para tomar decisiones estratégicas</h1><br></br>
                     <p className='text-xl'>Realizamos estudios profundos del mercado para brindarte datos clave que te permitan entender a tu audiencia, identificar oportunidades y tomar decisiones informadas que impulsen tu crecimiento.</p><br></br>
                 </div>
             }
             {par === "seo" && 
-                <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
+                <div className="text-center pt-20 pb-20 pl-40 pr-40 max-[1100px]:pl-6 max-[1100px]:pr-6" style={{paddingLeft:'20px', paddingRight: '20px'}}>
                     <h1 className='text-5xl'>SEO que posiciona tu negocio en los primeros lugares</h1><br></br>
                     <p className='text-xl'>Optimizamos tu presencia en línea con estrategias SEO efectivas, mejorando tu visibilidad en los motores de búsqueda y atrayendo tráfico cualificado que convierte en resultados tangibles.</p><br></br>
                 </div>

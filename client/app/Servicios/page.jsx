@@ -33,7 +33,7 @@ const Servicios = () => {
     return (
         <>
             {isVisible && <FormCp/>}
-            <div className="ss flex items-center justify-around  mt-9" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px' }}>
+            <div className="ss flex items-center justify-around" style={{ paddingTop: '80px', paddingBottom:'80px', paddingLeft: '140px', paddingRight:'140px', marginTop:'110px' }}>
                 <AnimationC>
                     <div className='serv-first-secundary'>
                         <img className='first-img ml-20 max-[1175px]:mx-auto max-[1175px]:mb-10 max-[840px]:mb-0' src={deligencePng.src} alt="" style={{width: '300px', height:'300px'}}></img>

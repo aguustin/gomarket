@@ -13,6 +13,7 @@ p, label, button, a, b{
   font-style: normal;
 }
 
+
 .form-container {
     position: fixed;
     top: 2%;
@@ -82,6 +83,7 @@ p, label, button, a, b{
 .go-image-container{
     width: 100vw;
     max-height: 100%;
+    z-index: 1;
 }
 
 .estrategies-container{

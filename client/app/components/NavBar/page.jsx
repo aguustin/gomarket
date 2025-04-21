@@ -135,10 +135,10 @@ const NavBar = () => {
     return(
         <>
         {/*openSessionForm && <SessionForm/>*/}
-        <nav className="nav relative flex items-center justify-center bg-slate-800 pl-10 pr-10">
+        <nav className="nav fixed flex items-center justify-center bg-slate-800 pl-10 pr-10 w-screen top-0">
         { !width ? <div className="loader"></div> : 
         <>
-        {width >= 850 ? <img className="absolute left-10" src={goBPng.src} width={120} height={120} alt=""/> : <img className="absolute left-0" src={goCPng.src} width={180} height={180} alt=""/>}
+        {width >= 850 ? <Link className="absolute left-10 h-full flex items-center" href="/Home"><img src={goBPng.src} width={120} height={120} alt=""/></Link> : <Link className="absolute left-0 h-full flex items-center" href="/Home"><img src={goCPng.src} width={180} height={180} alt=""/></Link>}
             {width >= 850 
             ?
             <div className="absolute right-9 flex justify-between">
@@ -184,9 +184,10 @@ const NavBar = () => {
                                 <Link href="/Servicios/publicidad" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Publicidad Digital</p></div></Link>
                                 <Link href="/Servicios/redes" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Manejo de Redes</p></div></Link>
                                 <Link href="/Servicios/mercado" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Investigaion de mercado</p></div></Link>
-                                <Link href="/Servicios/seo" className="text-xl text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Posicionamiento Web (SEO)</p></div></Link>
+                                <Link href="/Servicios/seo" className="text-xl text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800 "><p>Posicionamiento Web (SEO)</p></div></Link>
                             </div>}
-                            <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center"><p>Nosotros</p></div></Link></div>
+                            <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center border-b"><p>Nosotros</p></div></Link></div>
+                            <div className="pl-3 pr-3"><button className="text-xl text-center w-full" onClick={() => openFormFunc()}><div className="services-link flex items-center justify-center hover:bg-slate-800 "><p>Contactanos</p></div></button></div>
                         </>
                     </div>
                 }
