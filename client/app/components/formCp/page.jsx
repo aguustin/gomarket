@@ -1,7 +1,9 @@
+"use client"
 import UserContext from "@/app/context/sessionContext";
 import { useContext } from "react"
 import '@/app/Home/home.css'
 import closePng from '@/app/assets/close.png'
+
 const FormCp = () => {
     const {animate, openFormFunc } = useContext(UserContext)
     
