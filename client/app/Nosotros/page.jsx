@@ -17,7 +17,7 @@ const Nosotros = () => {
             <h1 className='text-4xl text-violet-500'>El equipo detrás de Go Market 🚀</h1><br></br>
         </div>
         <AnimationA>
-        <div className='agus-maxi-child-div mx-auto '>
+        <div className='agus-maxi-child-div mx-auto text-center'>
                 <div className='tit flex mx-auto justify-center' style={{width:'600px'}}>
                 <p>En Go Market, creemos que el marketing es más que estrategias y números; es pasión, creatividad y el sueño de construir algo grande. Nuestra historia comenzó con dos personas con habilidades diferentes, pero con un mismo objetivo: <b>crear una agencia de marketing digital que ayude a negocios y emprendedores a crecer en el mundo digital.</b></p>
                 </div>
@@ -52,7 +52,7 @@ const Nosotros = () => {
         <AnimationA>
         <div className='mx-auto mt-12'>
                 <h3 className='text-3xl text-center max-[1450px]:mb-6 max-[1450px]:mt-28'>💪 Un Sueño Convertido en Realidad</h3>
-                <div className='agus-maxi-child-div mx-auto justify-center mt-6' style={{width:'600px'}}>
+                <div className='agus-maxi-child-div mx-auto justify-center mt-6 text-center' style={{width:'600px'}}>
                     <p>Maxi y Agustín no solo fundaron una agencia, crearon un equipo comprometido con el éxito de cada cliente. En Go Market, entendemos el esfuerzo que implica emprender, porque nosotros también empezamos desde cero.</p><br></br>
                     <p>Hoy, seguimos creciendo y ayudando a negocios a lograr lo mismo. No somos solo una agencia, somos aliados estratégicos que trabajamos con compromiso, creatividad y visión para que cada marca alcance su máximo potencial.</p><br></br>
                     <b>📌 Tu éxito es nuestro éxito.</b><br></br>
