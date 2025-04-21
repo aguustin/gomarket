@@ -22,11 +22,11 @@ const Blogs = () => {
                             <button className='absolute right-10 top-5'><img src={deletePng.src} alt=""></img></button>
                             <img src={b.image} alt="" className='blog-img' style={{width: '100%', height:'450px'}}></img>
                             <div className='mt-2 mb-2'>
-                                <h3 className='text-3xl underline underline-offset-3'>{b.title}</h3>
-                                <p>{b.blogDate}</p>
+                                <h3 className='text-3xl underline underline-offset-3 text-violet-300'>{b.title}</h3>
+                                <p className='mt-1'>{new Date(b.blogDate).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                             </div>
                             <div>
-                                <p className='text-xl text-gray-600'>
+                                <p className='text-xl text-gray-300'>
                                     {b.description.substring(0,300)}...
                                 </p>
                             </div>

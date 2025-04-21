@@ -41,7 +41,7 @@ const Servicios = () => {
                 </AnimationC>
                 <AnimationD>
                     <div className='serv-first-secundary'>
-                        <h3 className='text-3xl text-center mb-3'>Soluciones que impulsan tu marca</h3>
+                        <h3 className='text-3xl text-center mb-3 text-violet-300'>Soluciones que impulsan tu marca</h3>
                         <p>En GoMarket reunimos lo mejor del mundo digital para hacer crecer tu negocio. Desde el desarrollo de un sitio web estratégico, hasta la creación de campañas de marketing digital, publicidad y manejo de redes, cada servicio está pensado para ayudarte a destacar, conectar y vender más.</p><br></br>
                         <p>Creemos que el éxito no es cuestión de suerte, sino de estrategia. Por eso, combinamos creatividad, análisis y tecnología para brindarte soluciones integrales que generan resultados reales.</p><br></br>
                         <p>Porque tener presencia online no es suficiente. Hoy, necesitás tener impacto. Y nosotros estamos acá para lograrlo con vos.</p><br></br>
@@ -50,13 +50,13 @@ const Servicios = () => {
                 </AnimationD>
             </div>
             <div className="est text-center pt-20 pb-20 pl-40 pr-40" >
-                <h1 className='text-5xl'>Soluciones digitales que generan resultados reales</h1><br></br>
+                <h1 className='text-5xl text-violet-300'>Soluciones digitales que generan resultados reales</h1><br></br>
                 <p className='text-xl'>En GoMarket diseñamos estrategias integrales que combinan lo mejor de nuestros servicios: desarrollo web, branding, redes sociales, publicidad y más. Nos basamos en datos, creatividad y una planificación sólida que transforma ideas en crecimiento.</p><br></br>
                 <button className='text-xl bg-red-800 p-4 rounded-3xl' onClick={() => openFormFunc()}>Cotizar estrategia de marketing</button>
             </div>
             <div className='as'>
                 <div className='p-12'>
-                    <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                    <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                     <p className='text-3xl text-center'>Nuestra fórmula Lemon de Estrategias de Marketing Digital</p>
                 </div>
                 <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -136,7 +136,7 @@ const Servicios = () => {
             <div className='relative'>
                 <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
                 <div className='publicidad-online-text absolute text-center'>
-                    <h1 className='text-4xl'>Somos la Agencia de Marketing Digital</h1><br></br>
+                    <h1 className='text-4xl text-violet-300'>Somos la Agencia de Marketing Digital</h1><br></br>
                     <label className="text-xl">Que pone a tu empresa en el Mapa</label>
                     <p className='text-2xl mt-2'>¿Quieres ser revelante en el entorno digital?</p>
                     <button className='bg-red-800 rounded-lg text-2xl p-4 pl-9 pr-9 mt-8' onClick={() => openFormFunc()}>Contáctanos</button>
@@ -150,7 +150,7 @@ const Servicios = () => {
                         <img className='mx-auto mb-6' src={goBPng.src} alt="" style={{height:'220px'}}></img>
                     </AnimationCB>
                     <AnimationB>
-                        <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no genera ingresos?</h3>
+                        <h3 className='text-4xl text-center mb-7 text-violet-300'>¿Tu sitio web no genera ingresos?</h3>
                         <p>¿Tienes un website DIVINO, pero aún así tu página web no te está generando ingresos?.</p>
                         <p>Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
                         <p>Lo primero que debes pensar es si tu estrategia de marketing digital es efectiva (si es que tienes una). Una buena estrategia de e-marketing debe llevar a tus clientes potenciales a visitar tu web, y estando allí, a generar acciones valiosas para tu negocio: comprar productos/servicios, ponerse en contacto, pedir una cotización, descargar un material...Depende de tus objetivos.</p><br></br>
@@ -162,7 +162,7 @@ const Servicios = () => {
             <div className='ssB p-16'>
                 <div className='mx-auto text-center' style={{ width: '60vw' }}>
                     <AnimationB>
-                    <h3 className='text-4xl text-center mb-7'>¿Tu sitio web no aparece en Google?</h3>
+                    <h3 className='text-4xl text-center mb-7 text-violet-300'>¿Tu sitio web no aparece en Google?</h3>
                     <p>¿Tienes un website DIVINO, pero aún así tu página web no te está generando ingresos?.</p>
                     <p>Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
                     <p>Lo primero que debes pensar es si tu estrategia de marketing digital es efectiva (si es que tienes una). Una buena estrategia de e-marketing debe llevar a tus clientes potenciales a visitar tu web, y estando allí, a generar acciones valiosas para tu negocio: comprar productos/servicios, ponerse en contacto, pedir una cotización, descargar un material...Depende de tus objetivos.</p><br></br>

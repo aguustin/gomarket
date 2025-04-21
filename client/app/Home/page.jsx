@@ -37,7 +37,7 @@ const Home = () => {
             </AnimationTi>
             <AnimationC>
                 <div className='ds text-center mt-20 border-b-2 pb-12 mx-auto'>
-                    <h3 className='text-3xl'>¡Descubre lo que tenemos preparado para ti!</h3>
+                    <h3 className='text-3xl text-violet-300'>¡Descubre lo que tenemos preparado para ti!</h3>
                 </div>
             </AnimationC>
             <div className='estrategies-container flex flex-wrap mx-auto justify-between mt-12'>
@@ -168,7 +168,7 @@ const Home = () => {
             <div className='relative '>
                 <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
                 <div className='publicidad-online-text absolute text-center'>
-                    <p className='text-4xl'>¿Quieres atraer más clientes a tu website? Go market, Agencia de publicidad online</p>
+                    <p className='text-4xl text-violet-300'>¿Quieres atraer más clientes a tu website? Go market, Agencia de publicidad online</p>
                     <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>
             </div>
@@ -181,7 +181,7 @@ const Home = () => {
             </div>
             <div className='hacer-crecer-negocio mt-28 pt-20 pb-20'>
                 <div className='text-center'>
-                    <h1 className='text-4xl'>¿Cómo Go Market puede hacer crecer tu negocio?</h1>
+                    <h1 className='text-4xl text-violet-300'>¿Cómo Go Market puede hacer crecer tu negocio?</h1>
                 </div>
                 <div className='hacer-crecer-negocio-div-child flex justify-center pr-28 pl-28 mb-16 mt-28 sm:pl-6 sm:pr-6 max-[1000px]:pl-2 max-[1000px]:pr-2'>
                     <AnimationA className='negocio-img mx-6 mt-6'>
@@ -217,7 +217,7 @@ const Home = () => {
             <div className='relative'>
                 <img className='publicidad-online w-full mt-24' src={fondoAPng.src} alt=""></img>
                 <div className='publicidad-online-text absolute text-center'>
-                    <h2 className='text-4xl'>Agencia de Marketing digital que te lleva al siguiente nivel</h2>
+                    <h2 className='text-4xl text-violet-300'>Agencia de Marketing digital que te lleva al siguiente nivel</h2>
                     <p className='text-3xl mt-10'>¿Trabajamos juntos?</p>
                     <button className='text-xl border rounded-3xl mt-14 pt-3 pb-3 pl-6 pr-6' onClick={() => openFormFunc()}>Contactanos</button>
                 </div>

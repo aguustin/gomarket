@@ -28,15 +28,15 @@ const LeerBlog = ({params}) => {
                         <img className='mx-auto' style={{height: '600px'}} src={rd.image} alt=""></img>
                     </div>
                     <div className='text-center mt-6'>
-                        <h1>{rd.title}</h1>
+                        <h1 className='text-violet-300'>{rd.title}</h1>
                     </div>
                     <div className='leer-desc mx-auto p-6 max-[850px]:w-full'>
-                        <p>
+                        <p className='text-gray-300'>
                             {rd.description}
                         </p>
                     </div>
                     <div className='relative mt-10'>
-                        <p className='absolute right-60 text-slate-400 max-[850px]:right-10'>{rd.blogDate}</p>
+                        <p className='absolute right-60 text-slate-400 max-[850px]:right-10'>{new Date(rd.blogDate).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                     </div>
                 </div>
             )}

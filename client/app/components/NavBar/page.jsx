@@ -18,11 +18,11 @@ import upArrowPng from '@/app/assets/upArrow.png'
 
 const NavBar = () => {
     
-    const {session, setSession, setCreateBlogForm} = useContext(UserContext)
+    const {session, setSession, setCreateBlogFormconst, openFormFunc  } = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
-    const [width, setWidth] = useState(850);
+    const [width, setWidth] = useState(null);
     const [responsiveNav, setResponsiveNav] = useState(false)
     const [openTab, setOpenTab] = useState(false)
 
@@ -47,6 +47,8 @@ const NavBar = () => {
           return () => mediaQuery.removeEventListener("change", handleResize);
     }, []);
 
+    if (width === null) return null;
+
     const openForms = () => {
       setOpenSessionForm(true)
       setSignInForm(false)
@@ -62,6 +64,8 @@ const NavBar = () => {
         localStorage.clear()
         redirect('/Home')
     }
+
+    
 
     const SessionForm = () => {
         return(
@@ -153,6 +157,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
+                <button onClick={() => openFormFunc()} className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Contactanos</button>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
             :

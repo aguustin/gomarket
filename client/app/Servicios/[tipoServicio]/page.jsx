@@ -123,7 +123,7 @@ const TipoServicio = async ({params}) => {
                         <p>Imaginalo así: un sitio lento, mal estructurado o poco claro puede hacerte perder oportunidades valiosas. Pero un buen sitio web trabaja para vos, incluso cuando dormís.</p><br></br>
                         <img src={codeTinyPng.src} alt="" className='mx-auto' ></img>
                     </> }
-                    {par === "marketing" && <> <h3 className='text-3xl text-center mb-3'>La estrategia lo es todo</h3>
+                    {par === "marketing" && <> <h3 className='text-3xl text-center mb-3 text-violet-300'>La estrategia lo es todo</h3>
                         <p>El marketing digital va más allá de estar en redes o enviar correos. Es diseñar un sistema completo que acompañe a tu marca desde el descubrimiento hasta la fidelización. Implementamos campañas integrales con foco en resultados reales, medibles y escalables.</p><br></br>
                         <p>Imaginá tener toda la atención del público ideal… y saber exactamente qué hacer con ella. Eso es lo que logramos con una estrategia digital bien pensada.</p><br></br>
                         <img src={marketingTinyPng.src} alt="" className='mx-auto'></img>
@@ -164,7 +164,7 @@ const TipoServicio = async ({params}) => {
             }
             {par === "marketing" && 
                 <div className="text-center pt-20 pb-20" style={{paddingLeft:'20px', paddingRight: '20px'}}>
-                    <h1 className='text-5xl'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
+                    <h1 className='text-5xl text-violet-300'>Estrategias de Marketing con resultados impresionantes</h1><br></br>
                     <p className='text-xl'>Implementar campañas personalizadas y aprovechar las herramientas digitales más avanzadas permite a las empresas maximizar su alcance, conectar de manera efectiva con su audiencia y generar un impacto significativo en sus resultados.</p><br></br>
                 </div>
             }
@@ -201,7 +201,7 @@ const TipoServicio = async ({params}) => {
             {par === "desarrollo" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Creamos tu sitio web, diseñamos tu éxito digital.</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -241,7 +241,7 @@ const TipoServicio = async ({params}) => {
             {par === "marketing" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Nuestra fórmula de Estrategias de Marketing Digital</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -281,7 +281,7 @@ const TipoServicio = async ({params}) => {
              {par === "branding" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Creamos una imagen positiva segun tus intereses</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto '>
@@ -311,7 +311,7 @@ const TipoServicio = async ({params}) => {
              {par === "publicidad" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Haz conocer tu emprendimiento con go market</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -346,7 +346,7 @@ const TipoServicio = async ({params}) => {
             {par === "redes" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Conectamos tu marca con el mundo, un post a la vez.</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -376,7 +376,7 @@ const TipoServicio = async ({params}) => {
                {par === "mercado" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Transformamos datos en decisiones, para que tu marca crezca en el mercado.</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -406,7 +406,7 @@ const TipoServicio = async ({params}) => {
                {par === "seo" && 
                 <div className='as'>
                     <div className='p-12'>
-                        <h1 className='text-5xl text-center'>¿Cómo lo Hacemos?</h1><br></br>
+                        <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
                         <p className='text-3xl text-center'>Posicionamos tu marca donde importa: en la cima de los resultados de búsqueda.</p>
                     </div>
                     <div className='servicios-container flex flex-wrap justify-between mx-auto'>
@@ -442,15 +442,16 @@ const TipoServicio = async ({params}) => {
             <div className='relative'>
                          <img className='publicidad-online w-full' src={fondoAPng.src} alt="" style={{height:'500px'}}></img>
                          <div className='publicidad-online-text absolute text-center'>
-                             <h1 className='text-4xl'>Somos la Agencia de Marketing Digital</h1><br></br>
-                             <label className="text-xl">Que pone a tu empresa en el Mapa</label>
-                             <p className='text-2xl mt-2'>¿Quieres ser revelante en el entorno digital?</p>
-                             <button className='bg-red-800 rounded-lg text-2xl p-4 pl-9 pr-9 mt-8'>Contáctanos</button>
+                             <h1 className='text-4xl text-violet-300'>Somos la Agencia de Marketing Digital</h1><br></br>
+                             <label className="text-3xl">Que pone a tu empresa en el Mapa</label>
+                             <p className='text-3xl mt-2'>¿Quieres ser revelante en el entorno digital?</p>
+                             <p className='text-3xl mt-2'>Con nosotros puedes ser parte del mundo digital y abrir nuevos horizontes</p>
+                             {/*<button className='bg-red-800 rounded-lg text-2xl p-4 pl-9 pr-9 mt-8'>Contáctanos</button> */ }
                          </div>
             </div>
             <div className='pr-16 pl-16 pt-16 pb-5'>
                 <div className='mx-auto text-center' style={{width:'60vw'}}>
-                    <h3 className='text-4xl text-center max-[840px]:m-0'>¿Tu sitio web no aparece en Google?</h3>
+                    <h3 className='text-4xl text-center max-[840px]:m-0 text-violet-300'>¿Tu sitio web no aparece en Google?</h3>
                 </div>
             </div>
             <div className="flex items-center justify-center pr-20 pl-20 max-[840px]:p-6 mb-10">
@@ -616,7 +617,7 @@ const TipoServicio = async ({params}) => {
             <div className='ss p-16 text-black-500'>
                 <div className='mx-auto text-center' style={{width:'60vw'}}>
                     <img className='mx-auto mb-12' src={socialMediaPng.src} alt=""></img>
-                    <h3 className='text-4xl text-center mb-7'>Mi website está integrado a Analytics</h3>
+                    <h3 className='text-4xl text-center mb-7 text-violet-300'>Mi website está integrado a Analytics</h3>
                     <h3 className='mb-8 text-2xl'>¿Por qué necesito de un especialista?</h3>
                     <p>¿Tienes una BUENA website, pero aún así tu página web no te está generando ingresos?. Hay muchas razones por las que un sitio web no genera "conversiones", lo que se traduce en ingresos.</p><br></br>
                     <p>Lo primero que debes pensar es si tu estrategia de marketing digital es efectiva (si es que tienes una). Una buena estrategia de e-marketing debe llevar a tus clientes potenciales a visitar tu web, y estando allí, a generar acciones valiosas para tu negocio: comprar productos/servicios, ponerse en contacto, pedir una cotización, descargar un material...Depende de tus objetivos.</p><br></br>
