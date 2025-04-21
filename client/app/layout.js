@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "normalize.css"
 import NavBar from "./components/NavBar/page";
 import { UserContextProvider } from "./context/sessionContext";
 import Footer from "./components/Footer/footer";
