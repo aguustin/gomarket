@@ -76,7 +76,7 @@ const Ingresar = () => {
             <button type="submit" className="loginb bg-blue-800 text-white pt-3 pb-3 w-full rounded-lg mb-6 mt-6">Entrar</button>
             <div className="flex items-center">
               <p className="text-slate-400">Ya tienes cuenta?</p>
-              <button className="text-sky-500" onClick={() => openForms()}>Registrate aqui *No habilitado</button>
+              <button className="text-sky-500" onClick={() => openForms()}>Registrate aqui</button>
             </div>
           </form>
             :
