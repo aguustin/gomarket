@@ -6,6 +6,7 @@ import Link from "next/link"
 import goAPng from '@/app/assets/goA.png'
 import goBPng from '@/app/assets/goB.png'
 import goCPng from '@/app/assets/goC.png'
+import goGPng from '@/app/assets/goG.png'
 import userPng from '@/app/assets/user.png'
 import googlePng from '@/app/assets/google.png'
 import applePng from '@/app/assets/apple.png'
@@ -138,7 +139,7 @@ const NavBar = () => {
         <nav className="nav fixed flex items-center justify-center bg-slate-800 pl-10 pr-10 w-screen top-0">
         { !width ? <div className="loader"></div> : 
         <>
-        {width >= 850 ? <Link className="absolute left-10 h-full flex items-center" href="/Home"><img src={goBPng.src} width={120} height={120} alt=""/></Link> : <Link className="absolute left-0 h-full flex items-center" href="/Home"><img src={goCPng.src} width={180} height={180} alt=""/></Link>}
+        {width >= 850 ? <Link className="absolute left-10 h-full flex items-center" href="/Home"><img src={goGPng.src} width={120} height={120} alt=""/></Link> : <Link className="absolute left-0 h-full flex items-center" href="/Home"><img src={goCPng.src} width={180} height={180} alt=""/></Link>}
             {width >= 850 
             ?
             <div className="absolute right-9 flex justify-between">
