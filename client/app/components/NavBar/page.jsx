@@ -19,7 +19,7 @@ import upArrowPng from '@/app/assets/upArrow.png'
 
 const NavBar = () => {
     
-    const {session, setSession, setCreateBlogFormconst, openFormFunc  } = useContext(UserContext)
+    const {session, setSession, setCreateBlogForm, openFormFunc  } = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
@@ -195,7 +195,7 @@ const NavBar = () => {
             </>
             }
            {session?.length > 0 && 
-            <div className="absolute right-5">
+            <div className="relative right-5">
                 <ul className="flex">
                     <li className="pr-10"><button onClick={() => setCreateBlogForm(true)}>Crear blog</button></li>
                     <li className="pr-10"><button onClick={() => logout()}>Salir</button></li>
