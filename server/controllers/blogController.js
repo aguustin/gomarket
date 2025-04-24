@@ -84,5 +84,5 @@ export const deleteBlogController = async (req, res) => {
 
     await blogModel.deleteOne({_id: req.param.blogId})
 
-    res.sendStatus(200)
+    res.status(200).json(2)
 }

@@ -25,7 +25,7 @@ const LeerBlog = ({params}) => {
             {readBlog?.map((rd) => 
                 <div key={rd._id} className="leer-blog p-20 max-[850px]:pt-20 max-[850px]:pb-20 max-[850px]:pl-2 max-[850px]:pr-2 max-[850px]:w-screen">
                     <div>
-                        <img className='mx-auto' style={{height: '600px'}} src={rd.image} alt=""></img>
+                        <img className='mx-auto mt-10' style={{height: '600px'}} src={rd.image} alt=""></img>
                     </div>
                     <div className='text-center mt-6'>
                         <h1 className='text-violet-300'>{rd.title}</h1>

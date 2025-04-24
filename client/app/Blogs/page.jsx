@@ -5,11 +5,20 @@ import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
 import Link from 'next/link';
 import FormCp from '../components/formCp/page';
+import { deleteBlogRequest } from '../api/blogApi';
 
 const Blogs = () => {
 
     const {blogs, isVisible} = useContext(UserContext)
     
+    const deleteBlog = async (blogId) => {
+        const res = await deleteBlogRequest(blogId)
+        if(res.data === 2){
+            window.location.reload()
+        }
+
+    }
+
     return(
         <>
         {isVisible && <FormCp/>}
@@ -21,7 +30,7 @@ const Blogs = () => {
             <div className='ver-blogs flex flex-wrap pt-10 pb-10 pl-40 pr-40 justify-between'>
                 {blogs.map((b) => 
                     <div key={b._id} className='relative mx-auto' style={{width:'720px'}} >
-                            <button className='absolute right-10 top-5'><img src={deletePng.src} alt=""></img></button>
+                            <button className='absolute right-10 top-5 pt-2 pb-2 pl-3 pr-3 bg-slate-800' onClick={() => deleteBlog(b._id)}>Borrar</button>
                             <img src={b.image} alt="" className='blog-img' style={{width: '100%', height:'450px'}}></img>
                             <div className='mt-2 mb-2'>
                                 <h3 className='text-3xl underline underline-offset-3 text-violet-300'>{b.title}</h3>
