@@ -57,7 +57,7 @@ const Servicios = () => {
             <div className='as'>
                 <div className='p-12'>
                     <h1 className='text-5xl text-center text-violet-300'>¿Cómo lo Hacemos?</h1><br></br>
-                    <p className='text-3xl text-center'>Nuestra fórmula Lemon de Estrategias de Marketing Digital</p>
+                    <p className='text-3xl text-center'>Nuestra fórmula Gomarket de Estrategias de Marketing Digital</p>
                 </div>
                 <div className='servicios-container flex flex-wrap justify-between mx-auto'>
                     <div className='servicios mt-12 mb-12'>
