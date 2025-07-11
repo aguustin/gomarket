@@ -47,6 +47,23 @@ body::-webkit-scrollbar{
   transition: color .5s;
 }
 
+.buy-ticket input{
+  width: 280px !important;
+}
+
+.buy-ticket input {
+  border: 1px solid #302e5f;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-left: 3px;
+  height: 40px;
+  min-width: 400px;
+  box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+  outline: none;
+}
+
 @media screen and (max-width:655px) {
   .foo-img{
     width: 150px !important;

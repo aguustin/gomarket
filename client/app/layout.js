@@ -7,6 +7,7 @@ import Footer from "./components/Footer/footer";
 import CreateBlog from "./components/createBlog/page";
 import { icons } from "lucide-react";
 import Head from "next/head";
+import Evento from "./Evento/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

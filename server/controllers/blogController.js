@@ -66,8 +66,8 @@ export const updateBlogController = async (req, res) => {
 }
 
 export const getAllBlogsController = async (req, res) => {
+    console.log('enntro')
     const getAllBlogs = await blogModel.find()
-    
     res.send(getAllBlogs)
 }
 
