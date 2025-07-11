@@ -56,6 +56,7 @@ export const buyEventTicketsController = async (req, res) => {
 };
 
 export const mercadoPagoWebhookController = async (req, res) => {
+  console.log('entro aca a webhook')
   try {
     const paymentId = req.body?.data?.id || req.query?.['data.id'];
     const type = req.body?.type || req.query?.type;
