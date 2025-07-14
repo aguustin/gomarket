@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from "react";
 import logoJPG from "@/app/assets/logo.jpg"
 
+export const dynamic = "force-dynamic"; 
 
 export default function ValidatePage() {
   const searchParams = useSearchParams();
