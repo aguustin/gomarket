@@ -15,6 +15,7 @@ export const UserContextProvider = ({children}) => {
     const [blogs, setBlogs] = useState([])
     const [isVisible, setVisible] = useState(false)
     const [animate, setAnimate] = useState(false)
+    const [changeNav, setChangeNav] = useState(false)
 
     useEffect(() => {
         const useGet = async () => {
@@ -52,7 +53,7 @@ export const UserContextProvider = ({children}) => {
     }
 
     return(
-        <UserContext.Provider value={{session, setSession, blogs, setBlogs, createBlogForm, setCreateBlogForm, loginContext, isVisible, setVisible, animate, setAnimate, openFormFunc}}>{children}</UserContext.Provider>
+        <UserContext.Provider value={{changeNav, setChangeNav, session, setSession, blogs, setBlogs, createBlogForm, setCreateBlogForm, loginContext, isVisible, setVisible, animate, setAnimate, openFormFunc}}>{children}</UserContext.Provider>
     )
 }
 

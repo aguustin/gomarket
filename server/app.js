@@ -15,7 +15,7 @@ connection()
 
 //middlewares
 const corsOptions = {
-  origin: "*",//"https://gomarket-1.onrender.com" descomentarlo,
+  origin: "https://gomarket-1.onrender.com",//"https://gomarket-1.onrender.com" descomentarlo,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
   optionsSuccessStatus: 204

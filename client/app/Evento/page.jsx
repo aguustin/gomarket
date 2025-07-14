@@ -1,11 +1,27 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useLayoutEffect, useState } from "react"
 import { buyTicketsRequest, getEventToBuyRequest } from "@/app/api/eventApi"
-import logoJPG from "@/app/assets/logo.jpg"
+import mendozaSuenaJPEG from "@/app/assets/mendoza_suena.jpeg"
+import UserContext from "../context/sessionContext"
 
 const Evento = () => {
     const [quantity, setQuantity] = useState(0)
     const [total, setTotal] = useState(0)
+    const {setChangeNav} = useContext(UserContext)
+    const [width, setWidth] = useState(null);
+
+    useLayoutEffect(() => {
+        setChangeNav(true)
+         const mediaQuery = window.matchMedia("(min-width: 850px)");
+         const handleResize = () => {
+           setWidth(mediaQuery.matches ? 520 : 519);
+         };
+               
+         handleResize(); // valor inicial
+         mediaQuery.addEventListener("change", handleResize);
+               
+         return () => mediaQuery.removeEventListener("change", handleResize);
+     }, [])
 
     const restQuantity = (e) => {
         e.preventDefault()
@@ -47,9 +63,9 @@ const Evento = () => {
                 <h2 className="text-3xl mb-3">Mendoza Suena Festejo 9 años</h2>
                 <p className="mb-1 text-xl">Direccion del evento: Room bar cultural - Ah San Martín 1823 Alameda</p>
                 <p className="text-xl mb-5">Viernes 8 de Agosto 21:30hs</p>
-                <img src={logoJPG.src}></img>
+                <img src={mendozaSuenaJPEG.src}></img>
             </div>
-            <form onSubmit={(e) => buyTickets(e)}>
+            <form className="buy-ticket-form" onSubmit={(e) => buyTickets(e)}>
                 <div className="mt-4">
                     <label>Nombre completo:</label><br></br>
                     <input className="mt-2" type="text" name="nombreCompleto" placeholder="Ej: John Doe"></input>
@@ -62,7 +78,9 @@ const Evento = () => {
                     <label>Celular:</label><br></br>
                     <input className="mt-2" type="number" name="celular" placeholder="..."></input>
                 </div>
-                    <div>
+                   {width >= 520 
+                   ?
+                   <div>
                         <div className="flex justify-center mt-6">
                             <label className="text-xl">Ticket: </label>
                             <div className="flex items-center">
@@ -73,6 +91,19 @@ const Evento = () => {
                             </div>
                         </div>
                     </div>
+                   :
+                   <div>
+                        <div className="flex justify-center mt-6">
+                            <label className="text-xl">Ticket: </label>
+                            <div className="flex items-center">
+                                <button className="cursor-pointer bg-violet-900 pt-1 pb-1 pl-6 pr-6 rounded-lg ml-3 mr-3" onClick={(e) => restQuantity(e)}>-</button>
+                                <p className="text-xl">{quantity}</p>
+                                <button className="cursor-pointer bg-violet-900 pt-1 pb-1 pl-6 pr-6 rounded-lg ml-3 mr-3" onClick={(e) => addQuantity(e)}>+</button>
+                            </div>
+                        </div>
+                             <p className="mt-5 text-xl">Precio c/u: $7.500</p>
+                    </div>
+                   } 
                 <p className="text-2xl mt-6">Total:${total}</p>
                 <button className="bg-violet-900 p-4 mt-6 w-[280px] rounded-lg text-2xl cursor-pointer" type="submit">Comprar</button>
             </form>

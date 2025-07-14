@@ -16,10 +16,11 @@ import morePng from '@/app/assets/more.png'
 import arrowPng from '@/app/assets/arrow.png'
 import downArrowPng from '@/app/assets/downArrow.png'
 import upArrowPng from '@/app/assets/upArrow.png'
+import goticketLogo from '@/app/assets/primer_disenio_goticket.png'
 
 const NavBar = () => {
     
-    const {session, setSession, setCreateBlogForm, openFormFunc  } = useContext(UserContext)
+    const {session, setSession, setCreateBlogForm, openFormFunc, changeNav} = useContext(UserContext)
     const [openSessionForm, setOpenSessionForm] = useState(false)
     const [signForm, setSignInForm] = useState(false)
     const [burguerButton, setBurguerButton] = useState(false)
@@ -163,35 +164,43 @@ const NavBar = () => {
             </div>
             :
             <>
-            <button className="ccb absolute right-8" onClick={() => setResponsiveNav(true)}><img src={morePng.src} alt=""></img></button>
-                {responsiveNav &&
-                    <div className="reponsive-nav absolute right-0 bg-slate-800 top-0">
-                            <>
-                        <div className="flex justify-between bg-slate-700" style={{height:'65px'}}>
-                            <button onClick={() => setResponsiveNav(false)}>
-                                <img src={arrowPng.src} alt="" className="relative left-4" width={24} height={24}></img>
-                            </button>
-                        </div>
-                            <div className="pl-3 pr-3"><Link href="/Home" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Inicio</p></div></Link></div>
-                            <div className="pl-3 pr-3"><Link href="/Blogs" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Blogs</p></div></Link></div>
-                            <div className="relative flex item-center justify-center pl-3 pr-3">
-                                <button className="w-full text-xl" onClick={() => setOpenTab(!openTab)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b"><p>Servicios</p></div></button>
-                                {openTab ? <img className="absolute right-3 top-7" src={upArrowPng.src} alt="" width={16} height={10}></img> : <img className="absolute right-3 top-7" src={downArrowPng.src} alt="" width={16} height={10}></img>}
+            {changeNav ?
+            <>
+                <img className="absolute mt-3 right-6" width={150} height={150} src={goticketLogo.src} alt=""></img>
+            </>
+            :
+                <>
+                    <button className="ccb absolute right-8" onClick={() => setResponsiveNav(true)}><img src={morePng.src} alt=""></img></button>
+                    {responsiveNav &&
+                        <div className="reponsive-nav absolute right-0 bg-slate-800 top-0">
+                                <>
+                            <div className="flex justify-between bg-slate-700" style={{height:'65px'}}>
+                                <button onClick={() => setResponsiveNav(false)}>
+                                    <img src={arrowPng.src} alt="" className="relative left-4" width={24} height={24}></img>
+                                </button>
                             </div>
-                            {openTab && <div>
-                                <Link href="/Servicios/desarrollo" onClick={() => setResponsiveNav(false)} className="text-xl"><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Desarrollo Web</p></div></Link>
-                                <Link href="/Servicios/marketing" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Marketing digital</p></div></Link>
-                                <Link href="/Servicios/branding" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Branding e Identidad Visual</p></div></Link>
-                                <Link href="/Servicios/publicidad" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Publicidad Digital</p></div></Link>
-                                <Link href="/Servicios/redes" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Manejo de Redes</p></div></Link>
-                                <Link href="/Servicios/mercado" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Investigaion de mercado</p></div></Link>
-                                <Link href="/Servicios/seo" className="text-xl text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800 "><p>Posicionamiento Web (SEO)</p></div></Link>
-                            </div>}
-                            <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center border-b"><p>Nosotros</p></div></Link></div>
-                            <div className="pl-3 pr-3"><button className="text-xl text-center w-full" onClick={() => openFormFunc()}><div className="services-link flex items-center justify-center hover:bg-slate-800 "><p>Contactanos</p></div></button></div>
-                        </>
-                    </div>
-                }
+                                <div className="pl-3 pr-3"><Link href="/Home" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Inicio</p></div></Link></div>
+                                <div className="pl-3 pr-3"><Link href="/Blogs" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Blogs</p></div></Link></div>
+                                <div className="relative flex item-center justify-center pl-3 pr-3">
+                                    <button className="w-full text-xl" onClick={() => setOpenTab(!openTab)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b"><p>Servicios</p></div></button>
+                                    {openTab ? <img className="absolute right-3 top-7" src={upArrowPng.src} alt="" width={16} height={10}></img> : <img className="absolute right-3 top-7" src={downArrowPng.src} alt="" width={16} height={10}></img>}
+                                </div>
+                                {openTab && <div>
+                                    <Link href="/Servicios/desarrollo" onClick={() => setResponsiveNav(false)} className="text-xl"><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Desarrollo Web</p></div></Link>
+                                    <Link href="/Servicios/marketing" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Marketing digital</p></div></Link>
+                                    <Link href="/Servicios/branding" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Branding e Identidad Visual</p></div></Link>
+                                    <Link href="/Servicios/publicidad" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Publicidad Digital</p></div></Link>
+                                    <Link href="/Servicios/redes" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Manejo de Redes</p></div></Link>
+                                    <Link href="/Servicios/mercado" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Investigaion de mercado</p></div></Link>
+                                    <Link href="/Servicios/seo" className="text-xl text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800 "><p>Posicionamiento Web (SEO)</p></div></Link>
+                                </div>}
+                                <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center border-b"><p>Nosotros</p></div></Link></div>
+                                <div className="pl-3 pr-3"><button className="text-xl text-center w-full" onClick={() => openFormFunc()}><div className="services-link flex items-center justify-center hover:bg-slate-800 "><p>Contactanos</p></div></button></div>
+                            </>
+                        </div>
+                    }
+                </>
+            }
             </>
             }
            {session?.length > 0 && 

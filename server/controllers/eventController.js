@@ -15,27 +15,28 @@ export const handleSuccessfulPayment = async ({quantity, mail}) => {
 
 
 export const buyEventTicketsController = async (req, res) => {
-  const { quantity, mail, estado, total} = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
+  const { quantity, mail,total} = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
+  console.log(total)
   try {
       const preference = {
             items: [
                 {
-                title: `Ticket para Mendoza Suena`,
+                title: `Mendoza Suena`,
                 quantity: 1,
                 unit_price: total,
                 currency_id: 'ARS',
                 },
             ],
             payer: {
-                email: 'maxigimenez79@gmail.com'/*mail*/,
+                email: mail,
             },
             back_urls: {
-                success: 'https://d775-200-32-101-183.ngrok-free.app/payment-success',
-                failure: 'https://d775-200-32-101-183.ngrok-free.app/payment-failure',
-                pending: 'https://d775-200-32-101-183.ngrok-free.app/payment-pending',
+                success: 'https://gomarket-1-backend.onrender.com/payment-success',
+                failure: 'https://gomarket-1-backend.onrender.com/payment-failure',
+                pending: 'https://gomarket-1-backend.onrender.com/payment-pending',
             },
             auto_return: 'approved',
-            notification_url: 'https://d775-200-32-101-183.ngrok-free.app/webhook/mercadopago',  //esto descomentarlo 
+            notification_url: 'https://gomarket-1-backend.onrender.com/webhook/mercadopago',  //esto descomentarlo 
             metadata: {
                     quantity,
                     mail,
@@ -58,8 +59,11 @@ export const buyEventTicketsController = async (req, res) => {
 export const mercadoPagoWebhookController = async (req, res) => {
   console.log('entro aca a webhook')
   try {
-    const paymentId = req.body?.data?.id || req.query?.['data.id'];
+    const paymentId = String(req.body?.data?.id || req.query?.['data.id']);
     const type = req.body?.type || req.query?.type;
+    const statusDetail = payment.body.status_detail;
+    console.log(statusDetail)
+    
 
     if (!paymentId || type !== 'payment') {
       console.error("❌ Webhook inválido - paymentId o type faltante");
@@ -67,11 +71,14 @@ export const mercadoPagoWebhookController = async (req, res) => {
     }
 
     const payment = await mercadopago.payment.findById(paymentId);
-    const status = payment.body?.status;
+    if (!payment || !payment.body) {
+      console.error("❌ No se pudo obtener el pago con ID:", paymentId);
+      return res.sendStatus(500);
+    }
 
     console.log(`📦 Pago ${paymentId} con estado: ${status}`);
 
-    if (status === 'approved') {
+    if (status === 'approved'/* && statusDetail === 'accredited'*/) {
       const { quantity, mail, total } = payment.body.metadata;
 
       if (!quantity || !mail || !total) {
@@ -92,12 +99,9 @@ export const mercadoPagoWebhookController = async (req, res) => {
 };
 
 export const qrGeneratorController = async (quantity, mail, total) => {
-
+  console.log(mail)
   try {
-    
-  const qrTasks = [];
-
-    
+    const qrTasks = [];
 
       for (let i = 0; i < quantity; i++) {
         const payload = {
@@ -107,7 +111,7 @@ export const qrGeneratorController = async (quantity, mail, total) => {
         };
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
-        const qrUrl = `http://localhost:3000/ticket/validate?token=${token}`;
+        const qrUrl = `https://gomarket-1.onrender.com/ticket/validate?token=${token}`;
 
         // ⏱️ Agregamos la tarea (no await todavía)
         qrTasks.push(
@@ -130,7 +134,6 @@ export const qrGeneratorController = async (quantity, mail, total) => {
 
 
 const sendQrEmail = async (email, qrBuffer, quantity) => {
-  console.log('email: ', email)
   const transporter = nodemailer.createTransport({
     service: 'gmail', 
     auth: {
