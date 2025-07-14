@@ -1,13 +1,11 @@
 "use client";
 //import Show from '@/app/components/Show';
-export const dynamic = 'force-dynamic'
-import { useSearchParams } from 'next/navigation';
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import logoJPG from "@/app/assets/logo.jpg"
 
-const ValidatePage = () => {
-  const searchParams = useSearchParams();
-  const token = searchParams.get('token');
+const ValidatePage = ({params}) => {
+
+const token = React.use(params).BlogId
 const [ticketInfo, setTicketInfo] = useState(null);
 const [error, setError] = useState(null);
 
