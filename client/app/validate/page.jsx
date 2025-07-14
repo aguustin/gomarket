@@ -12,7 +12,7 @@ const [error, setError] = useState(null);
 
     useEffect(() => {
       if (token) {
-        fetch(`https://gomarket-1-backend.onrender.com/ticket/validate?token=${token}`)
+        fetch(`https://gomarket-1-backend.onrender.com/validate?token=${token}`)
           .then(res => res.json())
           .then(data => {
             if (data.message) {
