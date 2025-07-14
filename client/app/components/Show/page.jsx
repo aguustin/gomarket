@@ -3,7 +3,6 @@ import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from "react";
 import logoJPG from "@/app/assets/logo.jpg"
 
-export const dynamic = "force-dynamic";
 const Show = () => {
    const searchParams = useSearchParams();
   const token = searchParams.get('token');
