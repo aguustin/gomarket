@@ -6,7 +6,7 @@ import logoJPG from "@/app/assets/logo.jpg"
 
 export const dynamic = "force-dynamic"; 
 
-export default function ValidatePage() {
+const ValidatePage = () => {
   const searchParams = useSearchParams();
   const token = searchParams.get('token');
 
@@ -41,3 +41,5 @@ export default function ValidatePage() {
     </div>
   );
 }
+
+export default ValidatePage
