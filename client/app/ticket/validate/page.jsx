@@ -1,6 +1,6 @@
 'use client';
+import Show from '@/app/Show/page';
 import { useSearchParams } from 'next/navigation';
-import Show from '@/components/Show'; // ajusta la ruta si lo tienes en otra carpeta
 
 export default function ValidatePage() {
   const searchParams = useSearchParams();
