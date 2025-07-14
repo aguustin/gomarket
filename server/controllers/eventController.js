@@ -127,6 +127,7 @@ export const qrGeneratorController = async (quantity, mail, total) => {
   // ⚡ Esperá todas las tareas en paralelo
     await Promise.all(qrTasks);
       console.log("QRs generados y enviados.");
+      return res.json({resp: 1})
     } catch (err) {
       console.error("Error generando QRs: ", err);
     }

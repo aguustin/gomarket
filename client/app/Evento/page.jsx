@@ -48,9 +48,11 @@ const Evento = () => {
                 if (!data?.init_point) {
                     console.error("init_point no recibido");
                     return;
+                }else{
+
                 }
 
-                window.location.href = data.init_point;
+                window.location.href = "https://gomarket.ar/Evento"
             } catch (error) {
                 console.error("Error en handlePayment:", error);
             }
