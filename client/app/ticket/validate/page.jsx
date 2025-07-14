@@ -1,5 +1,5 @@
 'use client';
-import Show from '@/app/Show/page';
+import Show from '../../Show/page';
 import { useSearchParams } from 'next/navigation';
 
 export default function ValidatePage() {
