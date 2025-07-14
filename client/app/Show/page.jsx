@@ -12,7 +12,7 @@ const Show = () => {
 
   useEffect(() => {
     if (token) {
-      fetch(`http://localhost:4000/ticket/validate?token=${token}`)
+      fetch(`https://gomarket-1-backend.onrender.com/ticket/validate?token=${token}`)
         .then(res => res.json())
         .then(data => {
           if (data.message) {
