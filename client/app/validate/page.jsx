@@ -1,5 +1,6 @@
 "use client";
 //import Show from '@/app/components/Show';
+export const dynamic = 'force-dynamic'
 import { useSearchParams } from 'next/navigation';
 import { useState, useEffect } from "react";
 import logoJPG from "@/app/assets/logo.jpg"
