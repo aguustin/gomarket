@@ -7,6 +7,7 @@ import { user_mail, pass } from "../config.js";
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid'
 import blogModel from "../models/blogModel.js";
+import eventModel from "../models/eventModel.js";
 
 dotenv.config()
 const JWT_SECRET = process.env.JWT_SECRET || 'kidjaskdhajsdbjadlfgkjmlkjbnsdlfgnsñlknamnczmjcf'
@@ -120,7 +121,7 @@ export const qrGeneratorController = async (quantity, mail, total) => {
         };
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
-        const ticket = new blogModel({
+        const ticket = new eventModel({
           token: token
         })
         await ticket.save()
