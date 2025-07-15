@@ -197,7 +197,7 @@ export const getInfoQrController = async (req, res) => {
     await tokenValidation.save()
     const decoded = jwt.verify(token, JWT_SECRET);
 
-    return res.json({message: "Ticket valido", data: decoded})
+    return res.json(1)
   
 }
 

@@ -6,7 +6,7 @@ import UserContext from "@/app/context/sessionContext";
 
 const ValidatePage = ({params}) => {
 
-  const token = params.token;
+  const token = React.use(params).token;
   const [ticketInfo, setTicketInfo] = useState(null);
   const [error, setError] = useState(null);
   const {setChangeNav} = useContext(UserContext)
