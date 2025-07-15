@@ -5,6 +5,7 @@ import QRCode from 'qrcode';
 import nodemailer from 'nodemailer'; 
 import { user_mail, pass } from "../config.js";
 import jwt from 'jsonwebtoken';
+import blogModel from "../models/blogModel.js";
 
 dotenv.config()
 const JWT_SECRET = process.env.JWT_SECRET || 'kidjaskdhajsdbjadlfgkjmlkjbnsdlfgnsñlknamnczmjcf'
@@ -37,7 +38,7 @@ export const buyEventTicketsController = async (req, res) => {
                 failure: 'https://gomarket-1-backend.onrender.com/payment-failure',
                 pending: 'https://gomarket-1-backend.onrender.com/payment-pending',
             },
-            external_reference: "1643827245",
+            external_reference: "164382724",
             auto_return: 'approved',
             notification_url: 'https://gomarket-1-backend.onrender.com/webhook/mercadopago',  //esto descomentarlo 
             metadata: {
@@ -55,7 +56,7 @@ export const buyEventTicketsController = async (req, res) => {
         }
     } catch (error) {
         console.error('Error al crear preferencia:', error);
-        res.status(500).json({ message: 'Error creando la preferencia' });
+        res.status(200).json({ message: 'Error creando la preferencia' });
     }
 };
 
@@ -76,7 +77,7 @@ export const mercadoPagoWebhookController = async (req, res) => {
     const payment = await mercadopago.payment.findById(paymentId);
     if (!payment || !payment.body) {
       console.error("❌ No se pudo obtener el pago con ID:", paymentId);
-      return res.sendStatus(500);
+      return res.sendStatus(200);
     }
 
     const status = payment.body.status;
@@ -89,7 +90,7 @@ export const mercadoPagoWebhookController = async (req, res) => {
 
       if (!quantity || !mail || !total) {
         console.error("❌ Metadata incompleta:", payment.body.metadata);
-        return res.sendStatus(500);
+        return res.sendStatus(200);
       }
 
       console.log(`✅ Pago aprobado para ${mail}. Total: ${total}, Cantidad: ${quantity}`);
@@ -117,6 +118,10 @@ export const qrGeneratorController = async (quantity, mail, total) => {
         };
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
+        const ticket = new blogModel({
+          token: token
+        })
+        await ticket.save()
         const qrUrl = `https://gomarket.ar/validate/${token}`;
 
         // ⏱️ Agregamos la tarea (no await todavía)
@@ -158,7 +163,7 @@ const sendQrEmail = async (email, qrBuffer, quantity) => {
           <p style="color:white; font-size:22px;">Ya tienes disponible tu entrada para: Mendoza Suena</p>
           <p style="color:white; font-size:22px;">Escaneá este QR en la entrada:</p>
           <div style="display:flex; justify-content=space-evenly;">
-            <img src="https://res.cloudinary.com/drmcrdf4r/image/upload/v1752537842/gomarket/mendoza_suena_pmrufi.jpg" alt="Mendoza Suena" style="width:200px;height:200px;"/>
+            <img src="https://res.cloudinary.com/drmcrdf4r/image/upload/v17237842/gomarket/mendoza_suena_pmrufi.jpg" alt="Mendoza Suena" style="width:200px;height:200px;"/>
             <img src="cid:qrcodeimg" alt="QR para Mendoza Suena" style="width:200px;height:200px;"/>
           </div>
         </div>
@@ -176,17 +181,22 @@ const sendQrEmail = async (email, qrBuffer, quantity) => {
 export const getInfoQrController = async (req, res) => {
     const { token } = req.query;
 
-  try {
-    const decoded = jwt.verify(token, JWT_SECRET);
+    const tokenValidation = await blogModel.findOne({token: token})
 
-    if (!decoded) {
+    if (!tokenValidation) {
       return res.status(400).json({ message: 'Ticket caducado o inactivo' });
     }
-    return res.json(1)
 
-  } catch (err) {
-    return res.status(401).json({ message: 'Token inválido o expirado' });
-  }
+    if(tokenValidation.user){
+      return res.status(400).json({ message: 'El Ticket ya fue usado' });
+    }
+
+    tokenValidation.used = true
+    await tokenValidation.save()
+    const decoded = jwt.verify(token, JWT_SECRET);
+
+    return res.json({message: "Ticket valido", data: decoded})
+  
 }
 
 export const paymentSuccessController = async (req, res) => {
