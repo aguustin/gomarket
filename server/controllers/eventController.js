@@ -18,8 +18,7 @@ export const handleSuccessfulPayment = async ({quantity, mail}) => {
 
 
 export const buyEventTicketsController = async (req, res) => {
-  const { nombreCompleto, quantity, mail,total} = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
-  console.log(total)
+  const { nombreCompleto, dni, quantity, mail, total } = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
   try {
       const preference = {
             items: [
@@ -44,6 +43,8 @@ export const buyEventTicketsController = async (req, res) => {
             auto_return: 'approved',
             notification_url: 'https://gomarket-1-backend.onrender.com/webhook/mercadopago',  //esto descomentarlo 
             metadata: {
+                    nombreCompleto,
+                    dni,
                     quantity,
                     mail,
                     total
@@ -88,7 +89,7 @@ export const mercadoPagoWebhookController = async (req, res) => {
     console.log(`📦 Pago ${paymentId} con estado: ${status} (${statusDetail})`);
 
     if (status === 'approved') {
-      const { quantity, mail, total } = payment.body.metadata;
+      const { nombreCompleto, dni, quantity, mail, total } = payment.body.metadata;
 
       if (!quantity || !mail || !total) {
         console.error("❌ Metadata incompleta:", payment.body.metadata);
@@ -97,7 +98,7 @@ export const mercadoPagoWebhookController = async (req, res) => {
 
       console.log(`✅ Pago aprobado para ${mail}. Total: ${total}, Cantidad: ${quantity}`);
 
-      await qrGeneratorController(quantity, mail, total);
+      await qrGeneratorController(nombreCompleto, dni, quantity, mail, total);
     }
 
     return res.sendStatus(200);
@@ -107,13 +108,15 @@ export const mercadoPagoWebhookController = async (req, res) => {
   }
 };
 
-export const qrGeneratorController = async (quantity, mail, total) => {
+export const qrGeneratorController = async (nombreCompleto, dni, quantity, mail, total) => {
   console.log(mail)
   try {
     const qrTasks = [];
 
       for (let i = 0; i < quantity; i++) {
         const payload = {
+          nombreCompleto, 
+          dni,
           quantity: quantity,
           mail: mail,
           iat: Math.floor(Date.now() / 1000),
@@ -198,7 +201,7 @@ export const getInfoQrController = async (req, res) => {
     await tokenValidation.save()
     const decoded = jwt.verify(token, JWT_SECRET);
 
-    return res.json(1)
+    return res.json(decoded)
   
 }
 

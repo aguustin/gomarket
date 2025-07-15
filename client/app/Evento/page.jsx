@@ -9,6 +9,7 @@ const Evento = () => {
     const [total, setTotal] = useState(0)
     const {setChangeNav} = useContext(UserContext)
     const [width, setWidth] = useState(null);
+    const [message, setMessage] = useState(false)
 
     useLayoutEffect(() => {
         setChangeNav(true)
@@ -42,9 +43,18 @@ const Evento = () => {
     const buyTickets = async (e) => {
             try {
                 e.preventDefault();
-                const nombreCompleto = e.target.elements.nombreCompleto.value
+                const nombreCompleto = e.target.elements.nombreCompleto.value;
+                const dni = e.target.elements.dni.value;
                 const mail = e.target.elements.mail.value;
-                const data = await buyTicketsRequest(nombreCompleto, quantity, mail, 1, total);
+                const repetirmail = e.target.elements.marepetirMail.value;
+
+                if(mail !== repetirmail){
+                    setMessage(true)
+                }
+                else{
+
+                }
+                const data = await buyTicketsRequest(nombreCompleto, dni, quantity, mail, 1, total);
 
                 if (!data?.init_point) {
                     console.error("init_point no recibido");
@@ -71,15 +81,19 @@ const Evento = () => {
             <form className="buy-ticket-form" onSubmit={(e) => buyTickets(e)}>
                 <div className="mt-4">
                     <label>Nombre completo:</label><br></br>
-                    <input className="mt-2" type="text" name="nombreCompleto" placeholder="Ej: John Doe"></input>
+                    <input className="mt-2" type="text" name="nombreCompleto" placeholder="Ej: John Doe" required></input>
                 </div>
                 <div className="mt-4">
-                    <label>Mail:</label><br></br>
-                    <input className="mt-2" type="email" name="mail" placeholder="example@gmail.com"></input>
+                    <label>DNI:</label><br></br>
+                    <input className="mt-2" type="number" name="dni" placeholder="..." required></input>
                 </div>
                 <div className="mt-4">
-                    <label>Celular:</label><br></br>
-                    <input className="mt-2" type="number" name="celular" placeholder="..."></input>
+                    <label>Email:</label><br></br>
+                    <input className="mt-2" type="email" name="mail" placeholder="example@gmail.com" required></input>
+                </div>
+                <div className="mt-4">
+                    <label>Repetir email:</label><br></br>
+                    <input className="mt-2" type="email" name="repetirMail" placeholder="example@gmail.com" required></input>
                 </div>
                    {width >= 520 
                    ?
@@ -108,6 +122,7 @@ const Evento = () => {
                     </div>
                    } 
                 <p className="text-2xl mt-6">Total:${total}</p>
+                {message && <p className="text-red-600">Los emails no coinciden</p>}
                 <button className="bg-violet-900 p-4 mt-6 w-[280px] rounded-lg text-2xl cursor-pointer" type="submit">Comprar</button>
             </form>
        

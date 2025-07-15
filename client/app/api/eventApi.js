@@ -1,9 +1,10 @@
 import axios from "axios";
 
-export const buyTicketsRequest = async (nombreCompleto, quantity, mail, estado, total) => { 
+export const buyTicketsRequest = async (nombreCompleto, dni, quantity, mail, estado, total) => { 
   try {
     const response = await axios.post('https://gomarket-1-backend.onrender.com/buy', {
       nombreCompleto,
+      dni,
       quantity,
       mail,
       estado,
