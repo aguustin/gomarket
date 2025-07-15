@@ -190,7 +190,7 @@ export const getInfoQrController = async (req, res) => {
       return res.status(400).json({ message: 'Ticket caducado o inactivo' });
     }
 
-    if(tokenValidation.user){
+    if(tokenValidation.used){
       return res.status(400).json({ message: 'El Ticket ya fue usado' });
     }
 
