@@ -52,16 +52,15 @@ const Evento = () => {
                     setMessage(true)
                 }
                 else{
-
-                }
-                const data = await buyTicketsRequest(nombreCompleto, dni, quantity, mail, 1, total);
-
-                if (!data?.init_point) {
-                    console.error("init_point no recibido");
-                    return;
-                }else{
-
-                    window.location.href = data.init_point;
+                    const data = await buyTicketsRequest(nombreCompleto, dni, quantity, mail, 1, total);
+    
+                    if (!data?.init_point) {
+                        console.error("init_point no recibido");
+                        return;
+                    }else{
+    
+                        window.location.href = data.init_point;
+                    }
                 }
 
             } catch (error) {
@@ -122,7 +121,7 @@ const Evento = () => {
                     </div>
                    } 
                 <p className="text-2xl mt-6">Total:${total}</p>
-                {message && <p className="text-red-600">Los emails no coinciden</p>}
+                {message && <p className="text-xl text-red-600 mt-4">Los emails no coinciden</p>}
                 <button className="bg-violet-900 p-4 mt-6 w-[280px] rounded-lg text-2xl cursor-pointer" type="submit">Comprar</button>
             </form>
        
