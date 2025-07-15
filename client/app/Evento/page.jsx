@@ -51,9 +51,9 @@ const Evento = () => {
                     return;
                 }else{
 
+                    window.location.href = data.init_point;
                 }
 
-                window.location.href = "https://gomarket.ar/Evento"
             } catch (error) {
                 console.error("Error en handlePayment:", error);
             }
