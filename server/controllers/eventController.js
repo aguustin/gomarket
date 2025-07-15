@@ -184,7 +184,7 @@ const sendQrEmail = async (email, qrBuffer, quantity) => {
 export const getInfoQrController = async (req, res) => {
     const { token } = req.query;
 
-    const tokenValidation = await blogModel.findOne({token: token})
+    const tokenValidation = await eventModel.findOne({token: token})
 
     if (!tokenValidation) {
       return res.status(400).json({ message: 'Ticket caducado o inactivo' });
