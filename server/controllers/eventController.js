@@ -5,6 +5,7 @@ import QRCode from 'qrcode';
 import nodemailer from 'nodemailer'; 
 import { user_mail, pass } from "../config.js";
 import jwt from 'jsonwebtoken';
+import { v4 as uuidv4 } from 'uuid'
 import blogModel from "../models/blogModel.js";
 
 dotenv.config()
@@ -115,6 +116,7 @@ export const qrGeneratorController = async (quantity, mail, total) => {
           quantity: quantity,
           mail: mail,
           iat: Math.floor(Date.now() / 1000),
+          jti: uuidv4()
         };
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
