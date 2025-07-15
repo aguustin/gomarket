@@ -5,9 +5,9 @@ import logoJPG from "@/app/assets/logo.jpg"
 
 const ValidatePage = ({params}) => {
 
-const token = React.use(params).BlogId
-const [ticketInfo, setTicketInfo] = useState(null);
-const [error, setError] = useState(null);
+   const token = params.token;
+  const [ticketInfo, setTicketInfo] = useState(null);
+  const [error, setError] = useState(null);
 
     useEffect(() => {
       if (token) {
@@ -23,8 +23,10 @@ const [error, setError] = useState(null);
           .catch(err => setError("Error al obtener el ticket"));
       }
     }, [token]);
+
   if (error) return <p className="text-red-500 text-center mt-10">{error}</p>;
   if (!ticketInfo) return <p className="text-white text-center mt-10">Cargando ticket...</p>;
+
   return (
     <div>
           <div className='mt-[110px] mb-[240px] flex justify-center'>
