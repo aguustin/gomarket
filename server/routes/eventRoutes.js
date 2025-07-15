@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { buyEventTicketsController, getInfoQrController, mercadoPagoWebhookController } from "../controllers/eventController.js";
+import { buyEventTicketsController, getInfoQrController, mercadoPagoWebhookController, paymentSuccessController } from "../controllers/eventController.js";
 
 const router = Router()
 
