@@ -1,14 +1,14 @@
 "use client";
 //import Show from '@/app/components/Show';
 import React, { useState, useEffect, useContext } from "react";
-import logoJPG from "@/app/assets/logo.jpg"
+import warningPng from '@/app/assets/warning.png';
 import UserContext from "@/app/context/sessionContext";
 
 const ValidatePage = ({params}) => {
 
   const token = React.use(params).token;
   const [ticketInfo, setTicketInfo] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   const {setChangeNav} = useContext(UserContext)
   
    useEffect(() => {
@@ -18,7 +18,7 @@ const ValidatePage = ({params}) => {
           .then(res => res.json())
           .then(data => {
             if (data.message) {
-              setError(data.message);
+              setError(true);
             } else {
               setTicketInfo(data);
             }
@@ -29,7 +29,13 @@ const ValidatePage = ({params}) => {
     }, [token]);
 
   console.log(ticketInfo)
-  if (error) return <p className="text-red-500 text-center mt-10">El ticket no existe o ya fue escaneado</p>;
+  if (error) 
+  return (
+      <div className="h-screen text-center mt-[110px] pt-10 pb-10 pr-3 pl-3">
+        <img className="mx-auto" src={warningPng.src}></img>
+        <p className="text-red-500 text-center mt-6 text-3xl">El ticket no existe o ya fue escaneado</p>
+      </div>
+  )
   if (!ticketInfo) return <p className="text-white text-center mt-10">Cargando ticket...</p>;
 
   return (
