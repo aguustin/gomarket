@@ -46,7 +46,7 @@ const Evento = () => {
                 const nombreCompleto = e.target.elements.nombreCompleto.value;
                 const dni = e.target.elements.dni.value;
                 const mail = e.target.elements.mail.value;
-                const repetirmail = e.target.elements.marepetirMail.value;
+                const repetirmail = e.target.elements.repetirMail.value;
 
                 if(mail !== repetirmail){
                     setMessage(true)
