@@ -14,7 +14,7 @@ const Evento = () => {
         setChangeNav(true)
          const mediaQuery = window.matchMedia("(min-width: 850px)");
          const handleResize = () => {
-           setWidth(mediaQuery.matches ? 520 : 519);
+           setChangeNav(mediaQuery.matches ? 520 : 519);
          };
                
          handleResize(); // valor inicial

@@ -41,6 +41,7 @@ const NavBar = () => {
           const mediaQuery = window.matchMedia("(min-width: 850px)");
           const handleResize = () => {
             setWidth(mediaQuery.matches ? 850 : 849);
+            changeNav
           };
         
           handleResize(); // valor inicial

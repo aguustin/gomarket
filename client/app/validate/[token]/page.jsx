@@ -1,15 +1,18 @@
 "use client";
 //import Show from '@/app/components/Show';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import logoJPG from "@/app/assets/logo.jpg"
+import UserContext from "@/app/context/sessionContext";
 
 const ValidatePage = ({params}) => {
 
-   const token = params.token;
+  const token = params.token;
   const [ticketInfo, setTicketInfo] = useState(null);
   const [error, setError] = useState(null);
-
+  const {setChangeNav} = useContext(UserContext)
+  
    useEffect(() => {
+    setChangeNav(true)
       if (token) {
         fetch(`https://gomarket-1-backend.onrender.com/validate?token=${token}`)
           .then(res => res.json())
@@ -21,6 +24,7 @@ const ValidatePage = ({params}) => {
             }
           })
           .catch(err => setError("Error al obtener el ticket"));
+          
       }
     }, [token]);
 
