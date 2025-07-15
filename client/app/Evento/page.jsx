@@ -42,8 +42,9 @@ const Evento = () => {
     const buyTickets = async (e) => {
             try {
                 e.preventDefault();
+                const nombreCompleto = e.target.elements.nombreCompleto.value
                 const mail = e.target.elements.mail.value;
-                const data = await buyTicketsRequest(quantity, mail, 1, total);
+                const data = await buyTicketsRequest(nombreCompleto, quantity, mail, 1, total);
 
                 if (!data?.init_point) {
                     console.error("init_point no recibido");

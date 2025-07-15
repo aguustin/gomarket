@@ -15,7 +15,7 @@ export const handleSuccessfulPayment = async ({quantity, mail}) => {
 
 
 export const buyEventTicketsController = async (req, res) => {
-  const { quantity, mail,total} = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
+  const { nombreCompleto, quantity, mail,total} = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
   console.log(total)
   try {
       const preference = {
@@ -28,6 +28,8 @@ export const buyEventTicketsController = async (req, res) => {
                 },
             ],
             payer: {
+                name:nombreCompleto,
+                surname: nombreCompleto,
                 email: mail,
             },
             back_urls: {
@@ -35,6 +37,7 @@ export const buyEventTicketsController = async (req, res) => {
                 failure: 'https://gomarket-1-backend.onrender.com/payment-failure',
                 pending: 'https://gomarket-1-backend.onrender.com/payment-pending',
             },
+            external_reference: "1643827245",
             auto_return: 'approved',
             notification_url: 'https://gomarket-1-backend.onrender.com/webhook/mercadopago',  //esto descomentarlo 
             metadata: {
@@ -56,14 +59,14 @@ export const buyEventTicketsController = async (req, res) => {
     }
 };
 
+
+
 export const mercadoPagoWebhookController = async (req, res) => {
-  console.log('entro aca a webhook')
+  console.log('📨 Webhook recibido');
+
   try {
     const paymentId = String(req.body?.data?.id || req.query?.['data.id']);
     const type = req.body?.type || req.query?.type;
-    const statusDetail = payment.body.status_detail;
-    console.log(statusDetail)
-    
 
     if (!paymentId || type !== 'payment') {
       console.error("❌ Webhook inválido - paymentId o type faltante");
@@ -76,9 +79,12 @@ export const mercadoPagoWebhookController = async (req, res) => {
       return res.sendStatus(500);
     }
 
-    console.log(`📦 Pago ${paymentId} con estado: ${status}`);
+    const status = payment.body.status;
+    const statusDetail = payment.body.status_detail;
 
-    if (status === 'approved'/* && statusDetail === 'accredited'*/) {
+    console.log(`📦 Pago ${paymentId} con estado: ${status} (${statusDetail})`);
+
+    if (status === 'approved') {
       const { quantity, mail, total } = payment.body.metadata;
 
       if (!quantity || !mail || !total) {
@@ -88,7 +94,7 @@ export const mercadoPagoWebhookController = async (req, res) => {
 
       console.log(`✅ Pago aprobado para ${mail}. Total: ${total}, Cantidad: ${quantity}`);
 
-      await qrGeneratorController(quantity, mail, total); // Aquí se suma o procesa
+      await qrGeneratorController(quantity, mail, total);
     }
 
     return res.sendStatus(200);
@@ -147,10 +153,15 @@ const sendQrEmail = async (email, qrBuffer, quantity) => {
     to: email,
     subject: `Tu entrada para Mendoza Suena`,
     html: `
-        <h3>Gracias por tu compra</h3>
-        <p>Ya tienes disponible tu entrada para: Mendoza Suena</p>
-        <p>Escaneá este QR en la entrada:</p>
-        <img src="cid:qrcodeimg" alt="QR para Mendoza Suena style="width:200px;height:200px;"/>
+        <div style="background-color:black; padding:30px">
+          <h3 style="font-size:26px; color:white;">Gracias por tu compra</h3>
+          <p style="color:white; font-size:22px;">Ya tienes disponible tu entrada para: Mendoza Suena</p>
+          <p style="color:white; font-size:22px;">Escaneá este QR en la entrada:</p>
+          <div style="display:flex; justify-content=space-evenly;">
+            <img src="https://res.cloudinary.com/drmcrdf4r/image/upload/v1752537842/gomarket/mendoza_suena_pmrufi.jpg" alt="Mendoza Suena" style="width:200px;height:200px;"/>
+            <img src="cid:qrcodeimg" alt="QR para Mendoza Suena" style="width:200px;height:200px;"/>
+          </div>
+        </div>
     `,
     attachments: [
         {
@@ -177,3 +188,21 @@ export const getInfoQrController = async (req, res) => {
     return res.status(401).json({ message: 'Token inválido o expirado' });
   }
 }
+
+export const paymentSuccessController = async (req, res) => {
+  const paymentId = req.query.payment_id;
+
+  try {
+    const payment = await mercadopago.payment.findById(paymentId);
+
+    if (payment.body.status === 'approved') {
+      // ✅ Confirmar pedido, mostrar gracias, etc.
+      res.send('Pago aprobado con éxito');
+    } else {
+      res.send('Pago no aprobado');
+    }
+  } catch (error) {
+    console.error('Error al verificar pago:', error);
+    res.status(500).send('Error interno');
+  }
+};

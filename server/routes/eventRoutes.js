@@ -9,6 +9,6 @@ router.get('/ticket/validate', getInfoQrController);
 
 router.post('/webhook/mercadopago', mercadoPagoWebhookController);
 
-//router.get('/payment-success', paymentSuccessController);
+router.get('/payment-success', paymentSuccessController);
 
 export default router
