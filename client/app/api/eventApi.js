@@ -17,3 +17,5 @@ export const buyTicketsRequest = async (nombreCompleto, quantity, mail, estado, 
   }
 
 }
+
+//export const getInfoQrRequest = axios.get('https://gomarket-1-backend.onrender.com/', )

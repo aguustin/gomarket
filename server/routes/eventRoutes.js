@@ -5,7 +5,7 @@ const router = Router()
 
 router.post('/buy', buyEventTicketsController)
 
-router.get('/ticket/validate', getInfoQrController);
+router.get('/validate', getInfoQrController);
 
 router.post('/webhook/mercadopago', mercadoPagoWebhookController);
 

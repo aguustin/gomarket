@@ -117,7 +117,7 @@ export const qrGeneratorController = async (quantity, mail, total) => {
         };
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
-        const qrUrl = `https://gomarket-1.onrender.com/validate?token=${token}`;
+        const qrUrl = `https://gomarket.ar/validate?token=${token}`;
 
         // ⏱️ Agregamos la tarea (no await todavía)
         qrTasks.push(
