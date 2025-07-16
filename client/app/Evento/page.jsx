@@ -29,15 +29,15 @@ const Evento = () => {
         if(quantity <= 0){
             setQuantity(0)
         }else{
-            setQuantity(quantity - 1)
-            setTotal(total - 1)
+            setQuantity(quantity - 7500)
+            setTotal(total - 7500)
         }
     };
 
     const addQuantity = (e) => {
         e.preventDefault()
-        setQuantity(quantity + 1)
-        setTotal(total + 1)
+        setQuantity(quantity + 7500)
+        setTotal(total + 7500)
     }
     
     const buyTickets = async (e) => {
