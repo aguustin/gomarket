@@ -25,7 +25,7 @@ export const buyEventTicketsController = async (req, res) => {
                 {
                 title: `Mendoza Suena`,
                 quantity: 1,
-                unit_price: total,
+                unit_price: 1,//total,
                 currency_id: 'ARS',
                 },
             ],
