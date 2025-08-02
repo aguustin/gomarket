@@ -7,6 +7,7 @@ import UserContext from "../context/sessionContext"
 const Evento = () => {
     const [quantity, setQuantity] = useState(0)
     const [total, setTotal] = useState(0)
+    const [totalConRecargo, setTotalConRecargo] = useState(0)
     const {setChangeNav} = useContext(UserContext)
     const [width, setWidth] = useState(null);
     const [message, setMessage] = useState(false)
@@ -35,9 +36,11 @@ const Evento = () => {
     };
 
     const addQuantity = (e) => {
-        e.preventDefault()
-        setQuantity(quantity + 7500)
-        setTotal(total + 7500)
+          e.preventDefault()
+    const nuevoTotal = total + 7500
+    setQuantity(quantity + 1)
+    setTotal(nuevoTotal)
+    setTotalConRecargo(nuevoTotal * 1.10) // Aplica el 10% de recargo
     }
     
     const buyTickets = async (e) => {
