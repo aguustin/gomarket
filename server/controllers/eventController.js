@@ -125,7 +125,8 @@ export const qrGeneratorController = async (nombreCompleto, dni, quantity, mail,
 
         const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '10d' });
         const ticket = new eventModel({
-          token: token
+          token: token,
+          mail: mail
         })
         await ticket.save()
         const qrUrl = `https://gomarket.ar/validate/${token}`;
