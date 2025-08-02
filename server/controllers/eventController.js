@@ -18,14 +18,14 @@ export const handleSuccessfulPayment = async ({quantity, mail}) => {
 
 
 export const buyEventTicketsController = async (req, res) => {
-  const { nombreCompleto, dni, quantity, mail, total } = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
+  const { nombreCompleto, dni, quantity, mail, totalConRecargo } = req.body;  //guardar el mail del rrpp tambien encriptandolo con un jwt
   try {
       const preference = {
             items: [
                 {
                 title: `Mendoza Suena`,
                 quantity: 1,
-                unit_price: total,
+                unit_price: totalConRecargo,
                 currency_id: 'ARS',
                 },
             ],
@@ -47,7 +47,7 @@ export const buyEventTicketsController = async (req, res) => {
                     dni,
                     quantity,
                     mail,
-                    total
+                    totalConRecargo
             },
         };
         const response = await mercadopago.preferences.create(preference);
