@@ -41,7 +41,7 @@ const Evento = () => {
     const addQuantity = (e) => {
           e.preventDefault()
           const nuevaCantidad = quantity + 1
-            const nuevoTotal = nuevaCantidad * precioPorTicket
+            const nuevoTotal = nuevaCantidad * 7500
             const nuevoTotalConRecargo = Math.round(nuevoTotal * 1.10)
             setQuantity(nuevaCantidad)
             setTotal(nuevoTotal)
@@ -60,7 +60,7 @@ const Evento = () => {
                     setMessage(true)
                 }
                 else{
-                    const data = await buyTicketsRequest(nombreCompleto, dni, quantity, mail, 1, total);
+                    const data = await buyTicketsRequest(nombreCompleto, dni, quantity, mail, 1, totalConRecargo);
     
                     if (!data?.init_point) {
                         console.error("init_point no recibido");
