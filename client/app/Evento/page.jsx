@@ -25,15 +25,18 @@ const Evento = () => {
          return () => mediaQuery.removeEventListener("change", handleResize);
      }, [])
 
-    const restQuantity = (e) => {
-        e.preventDefault()
-        if(quantity <= 0){
-            setQuantity(0)
-        }else{
-            setQuantity(quantity - 7500)
-            setTotal(total - 7500)
-        }
-    };
+ const restQuantity = (e) => {
+    e.preventDefault()
+    if (quantity > 0) {
+        const nuevaCantidad = quantity - 1
+        const nuevoTotal = nuevaCantidad * 7500
+        const nuevoTotalConRecargo = Math.round(nuevoTotal * 1.10)
+
+        setQuantity(nuevaCantidad)
+        setTotal(nuevoTotal)
+        setTotalConRecargo(nuevoTotalConRecargo)
+    }
+}
 
     const addQuantity = (e) => {
           e.preventDefault()
