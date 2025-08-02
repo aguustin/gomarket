@@ -37,10 +37,12 @@ const Evento = () => {
 
     const addQuantity = (e) => {
           e.preventDefault()
-    const nuevoTotal = total + 7500
-    setQuantity(quantity + 1)
-    setTotal(nuevoTotal)
-    setTotalConRecargo(nuevoTotal * 1.10) // Aplica el 10% de recargo
+          const nuevaCantidad = quantity + 1
+            const nuevoTotal = nuevaCantidad * precioPorTicket
+            const nuevoTotalConRecargo = Math.round(nuevoTotal * 1.10)
+            setQuantity(nuevaCantidad)
+            setTotal(nuevoTotal)
+            setTotalConRecargo(nuevoTotalConRecargo) // Ya viene redondeado// Aplica el 10% de recargo
     }
     
     const buyTickets = async (e) => {
