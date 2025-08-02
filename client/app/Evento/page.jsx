@@ -123,7 +123,7 @@ const Evento = () => {
                              <p className="mt-5 text-xl">Precio c/u: $7.500</p>
                     </div>
                    } 
-                <p className="text-2xl mt-6">Total:${total}</p>
+                <p className="text-2xl mt-6">Total:${totalConRecargo}</p>
                 <p className="text-xl mt-6">Se cargara un 10% al monto total por el servicio</p>
                 {message && <p className="text-xl text-red-600 mt-4">Los emails no coinciden</p>}
                 <button className="bg-violet-900 p-4 mt-6 w-[280px] rounded-lg text-2xl cursor-pointer" type="submit">Comprar</button>
