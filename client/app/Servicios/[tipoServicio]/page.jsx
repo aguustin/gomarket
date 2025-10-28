@@ -2,7 +2,7 @@ import socialMediaPng from '@/app/assets/socialMedia.png'
 import deligencePng from '@/app/assets/diligence.png'
 import happyfacePng from '@/app/assets/happyface.png'
 import fondoAPng from '@/app/assets/fondoA.png'
-import { AnimationD } from '@/app/animations/AnimationA/page'
+import { AnimationD } from '@/components/animations/AnimationA/page'
 //desarrollo imgs
 import desarrolloPng from '@/app/assets/desarrollo.png'
 import desarrolloBPng from '@/app/assets/web developmentB.png'

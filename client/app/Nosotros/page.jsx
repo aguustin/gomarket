@@ -1,7 +1,7 @@
 "use client"
 import '@/app/Nosotros/nosotros.css';
 import goEPng from '@/app/assets/goE.png'
-import { AnimationA, AnimationB, AnimationC, AnimationD } from '../animations/AnimationA/page';
+import { AnimationA, AnimationB, AnimationC, AnimationD } from '../../components/animations/AnimationA/page';
 import { useContext } from 'react';
 import UserContext from '../context/sessionContext';
 import FormCp from '../components/formCp/page';
