@@ -92,11 +92,10 @@ import optimizacionSEOPng from '@/app/assets/servicios/png/Seo y posicionamiento
 import APng from '@/app/assets/servicios/steps/1.png'
 import BPng from '@/app/assets/servicios/steps/2.png'
 import CPng from '@/app/assets/servicios/steps/3.png'
-import { useContext } from 'react'
-import UserContext from '@/app/context/sessionContext'
+
 
 const TipoServicio = async ({params}) => {
-    const par = await params.tipoServicio
+    const par = params.tipoServicio
 
     return(
         <>
