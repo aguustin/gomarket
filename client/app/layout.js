@@ -8,6 +8,7 @@ import CreateBlog from "./components/createBlog/page";
 import { icons } from "lucide-react";
 import Head from "next/head";
 import Evento from "./Evento/page";
+export const dynamic = 'force-static';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
