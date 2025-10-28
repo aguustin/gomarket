@@ -94,6 +94,18 @@ import BPng from '@/app/assets/servicios/steps/2.png'
 import CPng from '@/app/assets/servicios/steps/3.png'
 
 
+export async function generateStaticParams() {
+  return [
+    { tipoServicio: 'desarrollo' },
+    { tipoServicio: 'marketing' },
+    { tipoServicio: 'branding' },
+    { tipoServicio: 'publicidad' },
+    { tipoServicio: 'redes' },
+    { tipoServicio: 'mercado' },
+    { tipoServicio: 'seo' },
+  ];
+}
+
 const TipoServicio = async ({params}) => {
     const par = params.tipoServicio
 
