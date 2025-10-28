@@ -42,10 +42,8 @@ p, label{
 }
 
 .list-services{
-    top:60px;
     width: 320px;
-    top: 100%;
-    right: 0px;
+    right: -105px;
     opacity: 0;
     transform: translateY(-20px); /* Se posiciona ligeramente arriba */
     visibility: hidden;

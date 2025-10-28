@@ -16,7 +16,7 @@ export const UserContextProvider = ({children}) => {
     const [isVisible, setVisible] = useState(false)
     const [animate, setAnimate] = useState(false)
 
-    useEffect(() => {
+    /*useEffect(() => {
         const useGet = async () => {
             const localExist = JSON.parse(localStorage.getItem('session'))
             const res = await getAllBlogsRequest()
@@ -28,7 +28,7 @@ export const UserContextProvider = ({children}) => {
 
         }
         useGet()
-    }, [])
+    }, [])*/
 
     const loginContext = async (loginData) => {
         console.log(loginData)

@@ -13,7 +13,7 @@ const FormCp = () => {
                     <div className={`form-container ${animate ? 'show' : ''} bg-slate-800`}>
                         <button onClick={() => openFormFunc()}><img src={closePng.src} alt=""></img></button>
                         <form className='p-4'>
-                            <h2 className='text-center text-xl'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
+                            <h2 className='text-center text-md'>Rellena a continuación nuestro formulario para ponerte en contacto. Recibiremos esta información y nos comunicaremos contigo lo más rápido posible (es una promesa)</h2>
                             <div className='mt-4 mb-6'>
                                 <div className='flex items-center justify-between max-[760px]:block'>
                                     <input className='bg-slate-900 m-4 w-full max-[760px]:ml-0' type="text" id="name" name="name" placeholder='Nombre' required />

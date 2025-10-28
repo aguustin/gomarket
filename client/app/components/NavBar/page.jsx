@@ -143,22 +143,22 @@ const NavBar = () => {
             {width >= 850 
             ?
             <div className="absolute right-9 flex justify-between">
-                <Link href="/Home" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl"><p>Inicio</p></Link>
-                <Link href="/Blogs" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>
+                <Link href="/Home" className="nav-link pt-4 pb-4 pl-5 pr-5 text-md"><p>Inicio</p></Link>
+                {/*<Link href="/Blogs" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Blogs</Link>*/}
                 <div className="cc relative pt-4 pb-4 pl-5 pr-5">
-                    <Link href="/Servicios" className="pb-4 text-xl">Servicios</Link>
-                    <div className="list-services absolute bg-slate-800 text-center right-10">
-                        <Link href="/Servicios/desarrollo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
-                        <Link href="/Servicios/marketing" className="text-xl"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
-                        <Link href="/Servicios/branding" className="text-xl"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
-                        <Link href="/Servicios/publicidad" className="text-xl"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
-                        <Link href="/Servicios/redes" className="text-xl"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
-                        <Link href="/Servicios/mercado" className="text-xl"><div className="services-link flex items-center justify-center"><p>Investigación de mercado</p></div></Link>
-                        <Link href="/Servicios/seo" className="text-xl"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
+                    <Link href="/Servicios" className="pb-4 text-md">Servicios</Link>
+                    <div className="list-services absolute bg-slate-800 text-center mt-7">
+                        <Link href="/Servicios/desarrollo" className="text-md"><div className="services-link flex items-center justify-center"><p>Desarrollo Web</p></div></Link>
+                        <Link href="/Servicios/marketing" className="text-md"><div className="services-link flex items-center justify-center"><p>Marketing digital</p></div></Link>
+                        <Link href="/Servicios/branding" className="text-md"><div className="services-link flex items-center justify-center"><p>Branding e Identidad Visual</p></div></Link>
+                        <Link href="/Servicios/publicidad" className="text-md"><div className="services-link flex items-center justify-center"><p>Publicidad Digital</p></div></Link>
+                        <Link href="/Servicios/redes" className="text-md"><div className="services-link flex items-center justify-center"><p>Manejo de Redes</p></div></Link>
+                        <Link href="/Servicios/mercado" className="text-md"><div className="services-link flex items-center justify-center"><p>Investigación de mercado</p></div></Link>
+                        <Link href="/Servicios/seo" className="text-md"><div className="services-link flex items-center justify-center"><p>Posicionamiento Web (SEO)</p></div></Link>
                     </div>
                 </div>
-                <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Nosotros</Link>
-                <button onClick={() => openFormFunc()} className="nav-link pt-4 pb-4 pl-5 pr-5 text-xl">Contactanos</button>
+                <Link href="/Nosotros" className="nav-link pt-4 pb-4 pl-5 pr-5 text-md">Nosotros</Link>
+                <button onClick={() => openFormFunc()} className="nav-link pt-4 pb-4 pl-5 pr-5 text-md">Contactanos</button>
                 {session?.length < 0 && <button><img src={userPng.src} alt="" width={50} height={50}></img></button>}
             </div>
             :
@@ -172,23 +172,23 @@ const NavBar = () => {
                                 <img src={arrowPng.src} alt="" className="relative left-4" width={24} height={24}></img>
                             </button>
                         </div>
-                            <div className="pl-3 pr-3"><Link href="/Home" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Inicio</p></div></Link></div>
-                            <div className="pl-3 pr-3"><Link href="/Blogs" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Blogs</p></div></Link></div>
+                            <div className="pl-3 pr-3"><Link href="/Home" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Inicio</p></div></Link></div>
+                            {/*<div className="pl-3 pr-3"><Link href="/Blogs" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b "><p>Blogs</p></div></Link></div>*/}
                             <div className="relative flex item-center justify-center pl-3 pr-3">
-                                <button className="w-full text-xl" onClick={() => setOpenTab(!openTab)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b"><p>Servicios</p></div></button>
+                                <button className="w-full text-md" onClick={() => setOpenTab(!openTab)}><div className="services-link flex items-center justify-center hover:bg-slate-800 border-b"><p>Servicios</p></div></button>
                                 {openTab ? <img className="absolute right-3 top-7" src={upArrowPng.src} alt="" width={16} height={10}></img> : <img className="absolute right-3 top-7" src={downArrowPng.src} alt="" width={16} height={10}></img>}
                             </div>
                             {openTab && <div>
-                                <Link href="/Servicios/desarrollo" onClick={() => setResponsiveNav(false)} className="text-xl"><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Desarrollo Web</p></div></Link>
-                                <Link href="/Servicios/marketing" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Marketing digital</p></div></Link>
-                                <Link href="/Servicios/branding" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Branding e Identidad Visual</p></div></Link>
-                                <Link href="/Servicios/publicidad" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Publicidad Digital</p></div></Link>
-                                <Link href="/Servicios/redes" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Manejo de Redes</p></div></Link>
-                                <Link href="/Servicios/mercado" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Investigaion de mercado</p></div></Link>
-                                <Link href="/Servicios/seo" className="text-xl text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800 "><p>Posicionamiento Web (SEO)</p></div></Link>
+                                <Link href="/Servicios/desarrollo" onClick={() => setResponsiveNav(false)} className="text-md"><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Desarrollo Web</p></div></Link>
+                                <Link href="/Servicios/marketing" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Marketing digital</p></div></Link>
+                                <Link href="/Servicios/branding" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Branding e Identidad Visual</p></div></Link>
+                                <Link href="/Servicios/publicidad" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Publicidad Digital</p></div></Link>
+                                <Link href="/Servicios/redes" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Manejo de Redes</p></div></Link>
+                                <Link href="/Servicios/mercado" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800"><p>Investigaion de mercado</p></div></Link>
+                                <Link href="/Servicios/seo" className="text-md text-center" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center bg-slate-900 hover:bg-slate-800 "><p>Posicionamiento Web (SEO)</p></div></Link>
                             </div>}
-                            <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-xl" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center border-b"><p>Nosotros</p></div></Link></div>
-                            <div className="pl-3 pr-3"><button className="text-xl text-center w-full" onClick={() => openFormFunc()}><div className="services-link flex items-center justify-center hover:bg-slate-800 "><p>Contactanos</p></div></button></div>
+                            <div className="pl-3 pr-3"><Link href="/Nosotros" className="text-md" onClick={() => setResponsiveNav(false)}><div className="services-link flex items-center justify-center border-b"><p>Nosotros</p></div></Link></div>
+                            <div className="pl-3 pr-3"><button className="text-md text-center w-full" onClick={() => openFormFunc()}><div className="services-link flex items-center justify-center hover:bg-slate-800 "><p>Contactanos</p></div></button></div>
                         </>
                     </div>
                 }
